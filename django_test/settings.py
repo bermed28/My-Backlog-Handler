@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-import os, django_heroku
+import django_heroku
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -78,11 +79,11 @@ WSGI_APPLICATION = 'django_test.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "Django_DB",
-        'USER': "root",
+        'NAME': "mydb",
+        'USER': "admin",
         'PASSWORD': "newrootpassword",
-        'HOST': "localhost",
-        'PORT': '3306',
+        'HOST': "mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com",
+        'PORT': '5000',
     }
 }
 
