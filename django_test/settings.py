@@ -16,7 +16,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -27,7 +26,6 @@ SECRET_KEY = '+d@m_8gzm-bu46)srp$xpk8_y&#-x^g!yrqhab(r$n#8h19a0!'
 DEBUG = False
 
 ALLOWED_HOSTS = ['django-test-inso.herokuapp.com']
-
 
 # Application definition
 
@@ -72,7 +70,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_test.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -84,9 +81,16 @@ DATABASES = {
         'PASSWORD': 'newrootpassword',
         'HOST': 'mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com',
         'PORT': '5000',
+    },
+    'TestingDB': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ProductionDB',
+        'USER': 'admin',
+        'PASSWORD': 'newrootpassword',
+        'HOST': 'mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com',
+        'PORT': '5000',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -106,7 +110,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -119,7 +122,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
