@@ -82,7 +82,7 @@ DATABASES = {
         'HOST': 'mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com',
         'PORT': '5000',
     },
-    'TestingDB': {
+    'ProductionDB': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ProductionDB',
         'USER': 'admin',
