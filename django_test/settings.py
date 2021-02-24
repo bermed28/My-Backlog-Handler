@@ -70,7 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_test.wsgi.application'
 
-# Database
+# Databases
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
