@@ -25,21 +25,22 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="95650d71-725d-4118-8200-6653ae02f376">
-        <schema name="dbtest" object-types="procedure, column, dataset trigger, function, index, table, constraint, view" />
+      <connection connection-id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8">
+        <schema name="ProductionDB" object-types="procedure, table, function, view" />
+        <schema name="dbtest" object-types="procedure, table, function, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="95650d71-725d-4118-8200-6653ae02f376">
-      <console name="mydb" type="STANDARD" schema="" session="Main" />
+    <connection id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8">
+      <console name="MainServer" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="95650d71-725d-4118-8200-6653ae02f376" />
+    <connection id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -67,9 +68,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="95650d71-725d-4118-8200-6653ae02f376" active="true">
+      <connection id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8" active="true">
         <database>
-          <name value="mydb" />
+          <name value="MainServer" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
