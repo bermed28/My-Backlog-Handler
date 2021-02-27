@@ -12,3 +12,19 @@ class UserViewSet(viewsets.ModelViewSet):
 
 def homepage(request):
     return render(request,"home/homepage.html")
+
+def registration(request):
+    return render(request, 'home/registration.html')
+
+def aboutUs(request):
+    return render(request, 'home/about-us.html')
+
+def backlog(request):
+    return render(request, 'home/backlog.html')
+
+def gameArticleTemplate(request):
+    return render(request, 'home/game-article-template.html')
+
+def library(request):
+    return render(request, 'home/library.html')
+

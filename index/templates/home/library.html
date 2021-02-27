@@ -7,7 +7,7 @@
     <link rel="icon" href="Images/controller-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="Styling/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="/static/home/stylesheet.css" type="text/css">
 </head>
 
 <body class="text-white bg-dark">
@@ -15,8 +15,8 @@
         <div id="primary-nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-dark navbar-expand-lg fixed-top" style="font-family: 'arcadeclassicregular';">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="Images/controller-logo.png" width="30" height="30" alt="Logo">
+                    <a class="navbar-brand" href="{% url 'homepage' %}">
+                        <img src="/static/Images/controller-logo.png" width="30" height="30" alt="Logo">
                         My Backlog Handler
                     </a>
                     <button data-toggle="collapse" data-target="#navbarToggler" type="button"
@@ -24,7 +24,7 @@
                     <div class="collapse navbar-collapse" id="navbarToggler">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html">Home</a>
+                                <a class="nav-link active" href="{% url 'homepage' %}">Home</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
@@ -35,14 +35,14 @@
                                     <a href="#" class="dropdown-item">Upcoming</a>
                                     <a href="#" class="dropdown-item">Recently Added</a>
                                     <div class="dropdown-divider bg-light"></div>
-                                    <a href="about-us.html" class="dropdown-item">About Us</a>
+                                    <a href="{% url 'about-us' %}" class="dropdown-item">About Us</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="library.html">Library</a>
+                                <a class="nav-link" href="{% url 'library' %}">Library</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="backlog.html">Backlog</a>
+                                <a class="nav-link" href="{% url 'backlog' %}">Backlog</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav">
@@ -55,9 +55,9 @@
                             </li>
                             <li class="nav-item">
                                 <button class="btn navbar-btn btn-outline-primary me-1"
-                                    onclick="window.location.href='registration.html'">Sign up</button>
+                                    onclick='window.location.href="{% url 'register' %}"'>Sign up</button>
                                 <button class="btn navbar-btn btn-outline-primary me-1"
-                                    onclick="window.location.href='Template/Login_v1/login.html'">Login</button>
+                                    onclick="window.location.href='#'">Login</button>
                             </li>
                         </ul>
                     </div>

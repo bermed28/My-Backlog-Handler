@@ -26,13 +26,13 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8">
-        <schema name="TestingDB" object-types="constraint, function, view, index, table, procedure, column, dataset trigger" />
+        <schema name="TestingDB" object-types="function, procedure, view, table" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8">
-      <console name="MainServer" type="STANDARD" schema="TestingDB" session="Main"><![CDATA[SELECT * FROM index_user;]]></console>
+      <console name="MainServer" type="STANDARD" schema="TestingDB" session="Main">SELECT * FROM index_user;</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -210,8 +210,6 @@
           <object-type name="TABLE" enabled="true" />
           <object-type name="VIEW" enabled="true" />
           <object-type name="MATERIALIZED VIEW" enabled="true" />
-          <object-type name="NESTED TABLE" enabled="false" />
-          <object-type name="COLUMN" enabled="false" />
           <object-type name="INDEX" enabled="true" />
           <object-type name="CONSTRAINT" enabled="true" />
           <object-type name="DATASET TRIGGER" enabled="true" />
@@ -222,8 +220,6 @@
           <object-type name="FUNCTION" enabled="true" />
           <object-type name="PACKAGE" enabled="true" />
           <object-type name="TYPE" enabled="true" />
-          <object-type name="TYPE ATTRIBUTE" enabled="false" />
-          <object-type name="ARGUMENT" enabled="false" />
           <object-type name="DIMENSION" enabled="false" />
           <object-type name="CLUSTER" enabled="false" />
           <object-type name="DBLINK" enabled="true" />
