@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'index.apps.IndexConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -76,7 +78,7 @@ WSGI_APPLICATION = 'django_test.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dbtest',
+        'NAME': 'TestingDB',
         'USER': 'admin',
         'PASSWORD': 'newrootpassword',
         'HOST': 'mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com',
@@ -90,6 +92,7 @@ DATABASES = {
         'HOST': 'mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com',
         'PORT': '5000',
     }
+
 }
 
 # Password validation

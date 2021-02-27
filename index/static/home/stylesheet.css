@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'arcadeclassicregular';
+    src: url('arcadeclassic-webfont.woff2') format('woff2'),
+         url('arcadeclassic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-size: 250px;
+    background-image: url("controller-vector.png");
+    background-repeat: inherit;
+}
+fieldset {
+    font-family: 'arcadeclassicregular';
+}
+.dropdown-menu a {
+    background-color: #212529;
+    color: white;
+}
+.dropdown-menu a:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+.site-content {
+    border-radius: 15px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4);
+}
+#primary-nav {
+    background-color: black;
+}
+h1, h2 {
+    font-family: 'arcadeclassicregular';
+}
+nav {
+    background-color: black;
+    justify-content: space-between;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+}
+.navbar-collapse {
+    padding-left: 5px;
+}
+#navbarToggler {
+    justify-content: space-between;
+}
+div.carousel-caption > h5 {
+    font-family: 'arcadeclassicregular';
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.6);
+    margin-bottom: 0;
+}
+div.carousel-caption > p {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.6);
+}
+@media (min-width: 768px) {
+    .carousel {
+        margin: auto;
+        width: 64%;
+        height:36%;
+      }
+}
+.myform{
+    /* position: relative; */
+    /* display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;  */
+    /* width: 100%; */
+    pointer-events: auto;
+    background-color: rgba(0,0,0, 0.4);
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 1.1rem;
+    /* outline: 0; */
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#dev{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
