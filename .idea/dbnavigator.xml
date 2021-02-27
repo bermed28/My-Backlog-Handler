@@ -26,14 +26,13 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8">
-        <schema name="ProductionDB" object-types="procedure, table, function, view" />
-        <schema name="dbtest" object-types="procedure, table, function, view" />
+        <schema name="TestingDB" object-types="constraint, function, view, index, table, procedure, column, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8">
-      <console name="MainServer" type="STANDARD" schema="" session="Main" />
+      <console name="MainServer" type="STANDARD" schema="TestingDB" session="Main"><![CDATA[SELECT * FROM index_user;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
