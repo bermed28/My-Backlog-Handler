@@ -10,18 +10,22 @@ body {
     background-image: url("controller-vector.png");
     background-repeat: inherit;
 }
-section {
-    /* padding-left: 5px;
-    padding-right: 5px; */
-    margin: auto;
-}
 fieldset {
     font-family: 'arcadeclassicregular';
 }
-/* .container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-} */
+.dropdown-menu a {
+    background-color: #212529;
+    color: white;
+}
+.dropdown-menu a:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+.site-content {
+    border-radius: 15px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4);
+}
 #primary-nav {
     background-color: black;
 }
@@ -35,27 +39,42 @@ nav {
 .navbar-brand {
     font-size: 1.5rem;
 }
-/* #nav-left {
-    margin-left: 0% !important;
-    justify-content: left !important;
-    display: inline-flex !important;
-} */
+.navbar-collapse {
+    padding-left: 5px;
+}
 #navbarToggler {
     justify-content: space-between;
-}
-.carousel {
-    width: 75%;
-    height:45%;
-    margin: auto;
 }
 div.carousel-caption > h5 {
     font-family: 'arcadeclassicregular';
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.6);
     margin-bottom: 0;
-
 }
 div.carousel-caption > p {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.6);
+}
+@media (min-width: 768px) {
+    .carousel {
+        margin: auto;
+        width: 64%;
+        height:36%;
+      }
+}
+.myform{
+    /* position: relative; */
+    /* display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;  */
+    /* width: 100%; */
+    pointer-events: auto;
+    background-color: rgba(0,0,0, 0.4);
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 1.1rem;
+    /* outline: 0; */
+    max-width: 500px;
 }
