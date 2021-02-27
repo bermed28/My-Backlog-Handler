@@ -9,3 +9,6 @@ from .models import User
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('username')
     serializer_class = UserSerializer
+
+def homepage(request):
+    return render(request,"home/homepage.html")
