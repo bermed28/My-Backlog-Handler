@@ -10,8 +10,7 @@ try:
             # database = 'testingDB'
     ) as connection:
         print(connection)
-        with connection.cursor() as cursor:
-            cursor.execute("SHOW DATABASES")
+        
 
 except Error as e:
     print(e)
