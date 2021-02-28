@@ -17,7 +17,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="UTF-8" />
+      <charset value="windows-1252" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -25,8 +25,9 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8">
-        <schema name="TestingDB" object-types="index, function, dataset trigger, view, column, table, procedure" />
+      <connection connection-id="c70a383d-238e-41c7-a9f7-908e3b32018c">
+        <schema name="productiondb" object-types="table, sequence, function, view" />
+        <schema name="testingdb" object-types="table, sequence, function, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -34,12 +35,19 @@
     <connection id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8">
       <console name="MainServer" type="STANDARD" schema="TestingDB" session="Main" />
     </connection>
+    <connection id="c70a383d-238e-41c7-a9f7-908e3b32018c">
+      <console name="PSQLSERVER" type="STANDARD" schema="information_schema" session="Main" />
+    </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8" />
+    <connection id="c70a383d-238e-41c7-a9f7-908e3b32018c" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8" dataset="TestingDB.auth_user_user_permissions" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -84,6 +92,90 @@
           <type value="USER_PASSWORD" />
           <user value="admin" />
           <deprecated-pwd value="bmV3cm9vdHBhc3N3b3Jk" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="false" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="true" />
+          <environment-type value="default" />
+          <connectivity-timeout value="5" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter use-master-settings="true">
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+      <connection id="c70a383d-238e-41c7-a9f7-908e3b32018c" active="true">
+        <database>
+          <name value="PSQLSERVER" />
+          <description value="Heroku" />
+          <database-type value="POSTGRES" />
+          <config-type value="BASIC" />
+          <database-version value="13.1" />
+          <driver-source value="BUILTIN" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="ec2-3-221-243-122.compute-1.amazonaws.com" />
+          <port value="5432" />
+          <database value="d3ufdgbv33stba" />
+          <type value="USER_PASSWORD" />
+          <user value="pstrvwkgawgebj" />
+          <deprecated-pwd value="MmEzZTA5NjUzYjUxMjEzMzU4MGE0MmU3NGEyMjRhN2M2NmIyY2FjYzBlNDc1YmMzMmI0NWJlYmVmYWMxZDQwMg==" />
         </database>
         <properties>
           <auto-commit value="false" />

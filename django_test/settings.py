@@ -77,20 +77,22 @@ WSGI_APPLICATION = 'django_test.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'TestingDB',
-        'USER': 'admin',
-        'PASSWORD': 'newrootpassword',
-        'HOST': 'mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com',
-        'PORT': '5000',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3ufdgbv33stba',
+        'USER': 'pstrvwkgawgebj',
+        'PASSWORD': '2a3e09653b512133580a42e74a224a7c66b2cacc0e475bc32b45bebefac1d402',
+        'HOST': 'ec2-3-221-243-122.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'DATABASE': 'testingdb',
     },
-    'ProductionDB': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ProductionDB',
-        'USER': 'admin',
-        'PASSWORD': 'newrootpassword',
-        'HOST': 'mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com',
-        'PORT': '5000',
+    'Production': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3ufdgbv33stba',
+        'USER': 'pstrvwkgawgebj',
+        'PASSWORD': '2a3e09653b512133580a42e74a224a7c66b2cacc0e475bc32b45bebefac1d402',
+        'HOST': 'ec2-3-221-243-122.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'DATABASE': 'productiondb',
     }
 
 }
