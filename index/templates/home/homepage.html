@@ -4,112 +4,119 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" charset="UTF-8">
     <title>My Backlog Handler</title>
-    <link rel="icon" href="Images/controller-logo.png">
+    <link rel="icon" href="/static/Images/controller-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/home/stylesheet.css" type="text/css">
 </head>
 
 <body class="text-white bg-dark">
-    <!-- Beginning of Header/Navbar -->
-    <header>
-        <div id="primary-nav">
-            <div class="container-fluid">
-                <nav class="navbar navbar-dark navbar-expand-lg" style="font-family: 'arcadeclassicregular';">
-                    <a class="navbar-brand" href="{% url 'homepage' %}">
-                        <img src="/static/Images/controller-logo.png" width="30" height="30" alt="Logo">
-                        My Backlog Handler
-                    </a>
-                    <button data-toggle="collapse" data-target="#navbarToggler" type="button"
+<!-- Beginning of Header/Navbar -->
+<header>
+    <div id="primary-nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-dark navbar-expand-lg" style="font-family: 'arcadeclassicregular';">
+                <a class="navbar-brand" href="{% url 'homepage' %}">
+                    <img src="/static/Images/controller-logo.png" width="30" height="30" alt="Logo">
+                    My Backlog Handler
+                </a>
+                <button data-toggle="collapse" data-target="#navbarToggler" type="button"
                         class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarToggler">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="{% url "homepage" %}">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                    href="#">Games</a>
-                                <div class="dropdown-menu bg-dark">
-                                    <a href="#" class="dropdown-item">New Releases</a>
-                                    <a href="#" class="dropdown-item">Popular</a>
-                                    <a href="#" class="dropdown-item">Upcoming</a>
-                                    <a href="#" class="dropdown-item">Recently Added</a>
-                                    <div class="dropdown-divider bg-light"></div>
-                                    <a href="{% url 'about-us' %}" class="dropdown-item">About Us</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Tools
-                                    & Tips</a>
-                                <div class="dropdown-menu bg-dark">
-                                    <a href="{% url 'game-article-template' %}" class="dropdown-item">Tips</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'library' %}">Library</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'backlog' %}">Backlog</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                    <button class="btn btn-outline-success me-2" type="submit">Search</button>
-                                </form>
-                            </li>
-                            <li class="nav-item">
-                                <button class="btn navbar-btn btn-outline-primary me-1"
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url "homepage" %}">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                               href="#">Games</a>
+                            <div class="dropdown-menu bg-dark">
+                                <a href="#" class="dropdown-item">New Releases</a>
+                                <a href="#" class="dropdown-item">Popular</a>
+                                <a href="#" class="dropdown-item">Upcoming</a>
+                                <a href="#" class="dropdown-item">Recently Added</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'library' %}">Library</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'backlog' %}">Backlog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Misc.</a>
+                            <div class="dropdown-menu bg-dark">
+                                <a href="{% url 'game-article-template' %}" class="dropdown-item">Tips</a>
+                                <div class="dropdown-divider bg-light"></div>
+                                <a href="{% url 'about-us' %}" class="dropdown-item">About Us</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search"
+                                       aria-label="Search">
+                                <button class="btn btn-outline-success me-2" type="submit">Search</button>
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn navbar-btn btn-outline-primary me-1"
                                     onclick="window.location.href='{% url "register" %}'">Sign up</button>
-                                <button class="btn navbar-btn btn-outline-primary me-1"
+                            <button class="btn navbar-btn btn-outline-primary me-1"
                                     onclick='window.location.href="{% url 'login' %}"'>Login</button>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </header>
-    <!-- End of Header/Navbar -->
-    <br>
-    <section class="container site-content">
-        <div class="container pb-3">
-            <h2>Latest Releases:</h2>
-            <p style="padding-left: 2em;">Here are some of the most recent releases.</p>
-            <div class="container-fluid">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="{% url 'game-article-template' %}"><img class="d-block w-100" src="/static/Images/P5S-img.jpg"
-                                    alt="First slide"></a>
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Persona 5 Strikers</h5>
-                                <p>The Phantom Thieves are back in action!</p>
-                            </div>
+    </div>
+</header>
+<!-- End of Header/Navbar -->
+<br>
+<section class="container site-content">
+    <div class="container pb-3">
+        <h2>Latest Releases:</h2>
+        <p style="padding-left: 2em;">Here are some of the most recent releases.</p>
+        <div class="container-fluid">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="{% url 'game-article-template' %}"><img class="d-block w-100" src="/static/Images/P5S-img.jpg"
+                                                                         alt="First slide"></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Persona 5 Strikers</h5>
+                            <p>The Phantom Thieves are back in action!</p>
                         </div>
-                        <div class="carousel-item">
-                            <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
-                                    src="/static/Images/Mario-3D-World.jpg" alt="Second slide"></a>
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Super Mario 3D World + Bowser's Fury</h5>
-                                <p>Mario's back with both old and new adventures</p>
-                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
+                                                                         src="/static/Images/Mario-3D-World.jpg" alt="Second slide"></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Super Mario 3D World + Bowser's Fury</h5>
+                            <p>Mario's back with both old and new adventures</p>
                         </div>
-                        <div class="carousel-item">
-                            <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
-                                    src="/static/Images/nier-replicant.jpg" alt="Third slide">
-                                <div class="carousel-caption d-none d-md-block">
-                            </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
+                                                                         src="/static/Images/nier-replicant.jpg" alt="Third slide"></a>
+                        <div class="carousel-caption d-none d-md-block">
                             <h5>Nier Replicant</h5>
                             <p>Witness the events that lead to the critically-acclaimed Nier Automata</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
+                                                                         src="/static/Images/bravely-default-2-box-art.png" alt="Fourth slide"></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Bravely Default II</h5>
+                            <p>The anticipated sequel to the 3DS JRPG hit</p>
                         </div>
                     </div>
                 </div>
@@ -121,18 +128,16 @@
                 </a>
             </div>
         </div>
-    </section>
-    <section class="container site-content">
-
-    </section><br>
-    <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    </div>
+</section>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 </body>

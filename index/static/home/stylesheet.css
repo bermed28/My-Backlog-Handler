@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'arcadeclassicregular';
     src: url('arcadeclassic-webfont.woff2') format('woff2'),
-         url('arcadeclassic-webfont.woff') format('woff');
+    url('arcadeclassic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -60,29 +60,22 @@ div.carousel-caption > p {
         margin: auto;
         width: 64%;
         height:36%;
-      }
+    }
+    .myform {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-.myform{
-    /* position: relative; */
-    /* display: -ms-flexbox;
-    display: flex;
-    padding: 1rem;
-    -ms-flex-direction: column;
-    flex-direction: column;  */
-    /* width: 100%; */
-    pointer-events: auto;
+.mybtn {
+    background-color: black;
+}
+/*.mybtn a:hover {*/
+
+/*}*/
+.myform {
     background-color: rgba(0,0,0, 0.4);
-    background-clip: padding-box;
     border: 1px solid rgba(0,0,0,0.6);
     border-radius: 1.1rem;
-    /* outline: 0; */
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-#dev{
-    display: flex;
-    align-items: center;
-    justify-content: center
 }
