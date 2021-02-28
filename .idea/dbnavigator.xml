@@ -17,7 +17,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1252" />
+      <charset value="UTF-8" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -25,29 +25,29 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="c70a383d-238e-41c7-a9f7-908e3b32018c">
-        <schema name="productiondb" object-types="table, sequence, function, view" />
-        <schema name="testingdb" object-types="table, sequence, function, view" />
+      <connection connection-id="a157404e-189d-4298-9fa6-c2f4f6d6d996">
+        <schema name="pg_catalog" object-types="view, table, function" />
+        <schema name="public" object-types="view, sequence, column, table, index, constraint, function, dataset trigger" />
+      </connection>
+      <connection connection-id="61013b2d-2891-47a5-817d-7d296405c73f">
+        <schema name="public" object-types="view, sequence, table, function" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8">
-      <console name="MainServer" type="STANDARD" schema="TestingDB" session="Main" />
+    <connection id="a157404e-189d-4298-9fa6-c2f4f6d6d996">
+      <console name="TestingDB" type="STANDARD" schema="testing_db" session="Main"><![CDATA[select * from "public".app_playeraccount]]></console>
     </connection>
-    <connection id="c70a383d-238e-41c7-a9f7-908e3b32018c">
-      <console name="PSQLSERVER" type="STANDARD" schema="information_schema" session="Main" />
+    <connection id="61013b2d-2891-47a5-817d-7d296405c73f">
+      <console name="ProductionDB" type="STANDARD" schema="information_schema" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8" />
-    <connection id="c70a383d-238e-41c7-a9f7-908e3b32018c" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8" dataset="TestingDB.auth_user_user_permissions" active-filter-id="" />
+    <connection id="a157404e-189d-4298-9fa6-c2f4f6d6d996" />
+    <connection id="61013b2d-2891-47a5-817d-7d296405c73f" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -75,23 +75,23 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="af2aa03a-5ac3-4bd3-b21f-cabe71b64cd8" active="true">
+      <connection id="a157404e-189d-4298-9fa6-c2f4f6d6d996" active="true">
         <database>
-          <name value="MainServer" />
+          <name value="TestingDB" />
           <description value="" />
-          <database-type value="MYSQL" />
+          <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="8.0" />
+          <database-version value="12.5" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com" />
+          <host value="backlog-handler-db.cobkfpis7wr9.us-east-2.rds.amazonaws.com" />
           <port value="5000" />
-          <database value="mysql" />
+          <database value="testing_db" />
           <type value="USER_PASSWORD" />
-          <user value="admin" />
-          <deprecated-pwd value="bmV3cm9vdHBhc3N3b3Jk" />
+          <user value="psqlMaster" />
+          <deprecated-pwd value="cHNxbG1hc3RlcnBhc3N3b3Jk" />
         </database>
         <properties>
           <auto-commit value="false" />
@@ -159,23 +159,23 @@
           <object-name-filters />
         </object-filters>
       </connection>
-      <connection id="c70a383d-238e-41c7-a9f7-908e3b32018c" active="true">
+      <connection id="61013b2d-2891-47a5-817d-7d296405c73f" active="true">
         <database>
-          <name value="PSQLSERVER" />
-          <description value="Heroku" />
+          <name value="ProductionDB" />
+          <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="13.1" />
+          <database-version value="12.5" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="ec2-3-221-243-122.compute-1.amazonaws.com" />
-          <port value="5432" />
-          <database value="d3ufdgbv33stba" />
+          <host value="backlog-handler-db.cobkfpis7wr9.us-east-2.rds.amazonaws.com" />
+          <port value="5000" />
+          <database value="production_db" />
           <type value="USER_PASSWORD" />
-          <user value="pstrvwkgawgebj" />
-          <deprecated-pwd value="MmEzZTA5NjUzYjUxMjEzMzU4MGE0MmU3NGEyMjRhN2M2NmIyY2FjYzBlNDc1YmMzMmI0NWJlYmVmYWMxZDQwMg==" />
+          <user value="psqlMaster" />
+          <deprecated-pwd value="cHNxbG1hc3RlcnBhc3N3b3Jk" />
         </database>
         <properties>
           <auto-commit value="false" />
