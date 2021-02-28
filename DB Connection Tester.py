@@ -7,11 +7,12 @@ try:
             user='admin',
             password='newrootpassword',
             port='5000',
-            # database = 'testingDB'
+            database='TestingDB'
     ) as connection:
         print(connection)
-        with connection.cursor() as cursor:
-            cursor.execute("SHOW DATABASES")
+        # with connection.cursor() as cursor:
+        #     cursor.execute("DROP TABLE index_user;")
+        
 
 except Error as e:
     print(e)
