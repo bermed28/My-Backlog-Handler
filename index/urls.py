@@ -17,4 +17,5 @@ urlpatterns = [
     path('api', include(router.urls)),
     path('/api-auth/', include('rest_framework.urls', namespace="rest framework")),
     path('login/', views.login, name="login"),
+    path('tips-tricks/', views.tips, name="tips-tricks"),
 ]

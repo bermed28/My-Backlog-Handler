@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>My Backlog Handler</title>
     <link rel="icon" href="/static/Images/controller-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,7 +15,7 @@
 <header>
     <div id="primary-nav">
         <div class="container-fluid">
-            <nav class="navbar navbar-dark navbar-expand-lg" style="font-family: 'arcadeclassicregular';">
+            <nav class="navbar navbar-dark navbar-expand-xl" style="font-family: 'arcadeclassicregular';">
                 <a class="navbar-brand" href="{% url 'homepage' %}">
                     <img src="/static/Images/controller-logo.png" width="30" height="30" alt="Logo">
                     My Backlog Handler
@@ -40,16 +40,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'library' %}">Library</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'backlog' %}">Backlog</a>
-                        </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Misc.</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Backlog</a>
                             <div class="dropdown-menu bg-dark">
-                                <a href="{% url 'game-article-template' %}" class="dropdown-item">Tips</a>
+                                <a href="{% url 'backlog' %}" class="dropdown-item">My Backlog</a>
                                 <div class="dropdown-divider bg-light"></div>
-                                <a href="{% url 'about-us' %}" class="dropdown-item">About Us</a>
+                                <a href="{% url 'tips-tricks' %}" class="dropdown-item">Tips</a>
                             </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about-us' %}">About Us</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
@@ -85,6 +84,7 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -113,7 +113,15 @@
                     </div>
                     <div class="carousel-item">
                         <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
-                                                                         src="/static/Images/bravely-default-2-box-art.png" alt="Fourth slide"></a>
+                                                                         src="/static/Images/control-ultimate-edition.jpg" alt="Fourth slide"></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Control Ultimate Edition</h5>
+                            <p>Remedy's latest and greatest, now with all DLC</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
+                                                                         src="/static/Images/bravely-default-2-box-art.png" alt="Fifth slide"></a>
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Bravely Default II</h5>
                             <p>The anticipated sequel to the 3DS JRPG hit</p>

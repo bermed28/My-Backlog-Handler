@@ -13,66 +13,64 @@
 <body class="text-white bg-dark">
     <!-- Beginning of Header/Navbar -->
     <header>
-        <div id="primary-nav">
-            <div class="container-fluid">
-                <nav class="navbar navbar-dark navbar-expand-lg" style="font-family: 'arcadeclassicregular';">
-                    <a class="navbar-brand" href="{% url 'homepage' %}">
-                        <img src="/static/Images/controller-logo.png" width="30" height="30" alt="Logo">
-                        My Backlog Handler
-                    </a>
-                    <button data-toggle="collapse" data-target="#navbarToggler" type="button"
+    <div id="primary-nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-dark navbar-expand-xl" style="font-family: 'arcadeclassicregular';">
+                <a class="navbar-brand" href="{% url 'homepage' %}">
+                    <img src="/static/Images/controller-logo.png" width="30" height="30" alt="Logo">
+                    My Backlog Handler
+                </a>
+                <button data-toggle="collapse" data-target="#navbarToggler" type="button"
                         class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarToggler">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url "homepage" %}">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                    href="#">Games</a>
-                                <div class="dropdown-menu bg-dark">
-                                    <a href="#" class="dropdown-item">New Releases</a>
-                                    <a href="#" class="dropdown-item">Popular</a>
-                                    <a href="#" class="dropdown-item">Upcoming</a>
-                                    <a href="#" class="dropdown-item">Recently Added</a>
-                                    <div class="dropdown-divider bg-light"></div>
-                                    <a href="{% url 'about-us' %}" class="dropdown-item">About Us</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Tools
-                                    & Tips</a>
-                                <div class="dropdown-menu bg-dark">
-                                    <a href="{% url 'game-article-template' %}" class="dropdown-item">Tips</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="{% url 'library' %}">Library</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'backlog' %}">Backlog</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                    <button class="btn btn-outline-success me-2" type="submit">Search</button>
-                                </form>
-                            </li>
-                            <li class="nav-item">
-                                <button class="btn navbar-btn btn-outline-primary me-1"
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url "homepage" %}">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                               href="#">Games</a>
+                            <div class="dropdown-menu bg-dark">
+                                <a href="#" class="dropdown-item">New Releases</a>
+                                <a href="#" class="dropdown-item">Popular</a>
+                                <a href="#" class="dropdown-item">Upcoming</a>
+                                <a href="#" class="dropdown-item">Recently Added</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'library' %}">Library</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Backlog</a>
+                            <div class="dropdown-menu bg-dark">
+                                <a href="{% url 'backlog' %}" class="dropdown-item">My Backlog</a>
+                                <div class="dropdown-divider bg-light"></div>
+                                <a href="{% url 'tips-tricks' %}" class="dropdown-item">Tips</a>
+                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about-us' %}">About Us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search"
+                                       aria-label="Search">
+                                <button class="btn btn-outline-success me-2" type="submit">Search</button>
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn navbar-btn btn-outline-primary me-1"
                                     onclick="window.location.href='{% url "register" %}'">Sign up</button>
-                                <button class="btn navbar-btn btn-outline-primary me-1"
+                            <button class="btn navbar-btn btn-outline-primary me-1"
                                     onclick='window.location.href="{% url 'login' %}"'>Login</button>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </header>
+    </div>
+</header>
     <!-- End of Header/Navbar -->
     <br>
     <div>

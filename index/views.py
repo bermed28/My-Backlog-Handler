@@ -29,4 +29,6 @@ def library(request):
     return render(request, 'home/library.html')
 def login(request):
     return render(request, 'home/log-in.html')
+def tips(request):
+    return render(request, 'home/tips.html')
 

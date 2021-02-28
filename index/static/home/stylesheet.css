@@ -10,8 +10,8 @@ body {
     background-image: url("controller-vector.png");
     background-repeat: inherit;
 }
-fieldset {
-    font-family: 'arcadeclassicregular';
+h1, h2, fieldset {
+    font-family: 'arcadeclassicregular', sans-serif;
 }
 .dropdown-menu a {
     background-color: #212529;
@@ -29,9 +29,6 @@ fieldset {
 #primary-nav {
     background-color: black;
 }
-h1, h2 {
-    font-family: 'arcadeclassicregular';
-}
 nav {
     background-color: black;
     justify-content: space-between;
@@ -46,7 +43,7 @@ nav {
     justify-content: space-between;
 }
 div.carousel-caption > h5 {
-    font-family: 'arcadeclassicregular';
+    font-family: 'arcadeclassicregular', sans-serif;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.6);
     margin-bottom: 0;
@@ -77,5 +74,10 @@ div.carousel-caption > p {
     background-color: rgba(0,0,0, 0.4);
     border: 1px solid rgba(0,0,0,0.6);
     border-radius: 1.1rem;
-
+}
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color: #fff;  }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
 }
