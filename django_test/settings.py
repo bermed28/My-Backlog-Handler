@@ -76,21 +76,23 @@ WSGI_APPLICATION = 'django_test.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'TestingDB',
-        'USER': 'admin',
-        'PASSWORD': 'newrootpassword',
-        'HOST': 'mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com',
-        'PORT': '5000',
+
+    'default' : {
+        'ENGINE' : 'django.db.backends.postgresql_psycopg2',
+        'NAME' : 'testing_db',
+        'USER' : 'psqlMaster',
+        'PASSWORD' : 'psqlmasterpassword',
+        'HOST' : 'backlog-handler-db.cobkfpis7wr9.us-east-2.rds.amazonaws.com',
+        'PORT' : '5000'
     },
-    'ProductionDB': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ProductionDB',
-        'USER': 'admin',
-        'PASSWORD': 'newrootpassword',
-        'HOST': 'mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com',
-        'PORT': '5000',
+
+    'production' : {
+        'ENGINE' : 'django.db.backends.postgresql_psycopg2',
+        'NAME' : 'production_db',
+        'USER' : 'psqlMaster',
+        'PASSWORD' : 'psqlmasterpassword',
+        'HOST' : 'backlog-handler-db.cobkfpis7wr9.us-east-2.rds.amazonaws.com',
+        'PORT' : '5000'
     }
 
 }
