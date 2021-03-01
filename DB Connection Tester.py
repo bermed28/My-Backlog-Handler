@@ -1,16 +1,18 @@
 from getpass import getpass
-from mysql.connector import connect, Error
+from psycopg2 import connect, Error
 
 try:
     with connect(
-            host="mydb.cgvx1gn2r43i.us-east-2.rds.amazonaws.com",
-            user='admin',
-            password='newrootpassword',
+            host="backlog-handler-db.cobkfpis7wr9.us-east-2.rds.amazonaws.com",
+            user='psqlMaster',
+            password='psqlmasterpassword',
             port='5000',
-            # database = 'testingDB'
+            database='testing_db'
     ) as connection:
         print(connection)
-        
+
+        with connection.cursor() as cursor:
+             cursor.execute("CREATE SCHEMA test")
 
 except Error as e:
     print(e)

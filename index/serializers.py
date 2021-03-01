@@ -1,9 +1,8 @@
 # serializers.py
 from rest_framework import serializers
+from .models import PlayerAccount
 
-from .models import User
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class PlayerAccountSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = User
-        fields = ('id', 'username', 'email', 'password')
+        model = PlayerAccount
+        fields = ('player_name', 'user_name', 'email', 'password')

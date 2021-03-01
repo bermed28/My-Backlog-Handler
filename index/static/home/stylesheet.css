@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'arcadeclassicregular';
     src: url('arcadeclassic-webfont.woff2') format('woff2'),
-         url('arcadeclassic-webfont.woff') format('woff');
+    url('arcadeclassic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -10,8 +10,8 @@ body {
     background-image: url("controller-vector.png");
     background-repeat: inherit;
 }
-fieldset {
-    font-family: 'arcadeclassicregular';
+h1, h2, fieldset {
+    font-family: 'arcadeclassicregular', sans-serif;
 }
 .dropdown-menu a {
     background-color: #212529;
@@ -29,9 +29,6 @@ fieldset {
 #primary-nav {
     background-color: black;
 }
-h1, h2 {
-    font-family: 'arcadeclassicregular';
-}
 nav {
     background-color: black;
     justify-content: space-between;
@@ -46,7 +43,7 @@ nav {
     justify-content: space-between;
 }
 div.carousel-caption > h5 {
-    font-family: 'arcadeclassicregular';
+    font-family: 'arcadeclassicregular', sans-serif;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.6);
     margin-bottom: 0;
@@ -60,29 +57,41 @@ div.carousel-caption > p {
         margin: auto;
         width: 64%;
         height:36%;
-      }
+    }
+    .myform {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-.myform{
-    /* position: relative; */
-    /* display: -ms-flexbox;
-    display: flex;
-    padding: 1rem;
-    -ms-flex-direction: column;
-    flex-direction: column;  */
-    /* width: 100%; */
-    pointer-events: auto;
+.mybtn {
+    background-color: black;
+}
+/*.mybtn a:hover {*/
+
+/*}*/
+.myform {
     background-color: rgba(0,0,0, 0.4);
-    background-clip: padding-box;
     border: 1px solid rgba(0,0,0,0.6);
     border-radius: 1.1rem;
-    /* outline: 0; */
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
 }
-
-#dev{
-    display: flex;
-    align-items: center;
-    justify-content: center
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color: #fff;  }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
 }
+/*.transition-fade {*/
+/*    opacity: 1;*/
+/*    transition: 500ms;*/
+/*    transform: translateX(0);*/
+/*    transform-origin: left;*/
+/*}*/
+/*.site-content.is-animating .transition-fade {*/
+/*    opacity: 1;*/
+/*    transform: translateX(100%);*/
+/*}*/
+/*.site-content.is-leaving .transition-fade {*/
+/*    opacity: 0;*/
+/*    transform: translateX(0);*/
+/*}*/

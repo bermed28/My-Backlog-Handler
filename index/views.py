@@ -3,12 +3,12 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import viewsets
 
-from .serializers import UserSerializer
-from .models import User
+from .serializers import PlayerAccountSerializer
+from .models import PlayerAccount
 
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all().order_by('username')
-    serializer_class = UserSerializer
+class PlayerAccountViewSet(viewsets.ModelViewSet):
+    queryset = PlayerAccount.objects.all().order_by('player_name')
+    serializer_class = PlayerAccountSerializer
 
 def homepage(request):
     return render(request,"home/homepage.html")
@@ -29,4 +29,8 @@ def library(request):
     return render(request, 'home/library.html')
 def login(request):
     return render(request, 'home/log-in.html')
+def tips(request):
+    return render(request, 'home/tips.html')
+def logged(request):
+    return render(request, 'home/logged-index.html')
 

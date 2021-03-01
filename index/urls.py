@@ -3,7 +3,7 @@ from rest_framework import routers
 from . import views
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
+router.register(r'users', views.PlayerAccountViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
@@ -15,6 +15,8 @@ urlpatterns = [
     path('game-article-template/', views.gameArticleTemplate, name="game-article-template"),
     path('library/', views.library, name="library"),
     path('api', include(router.urls)),
-    path('/api-auth/', include('rest_framework.urls', namespace="rest framework")),
+    path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
     path('login/', views.login, name="login"),
+    path('tips-tricks/', views.tips, name="tips-tricks"),
+    path('logged-in-index/', views.logged, name="logged-in-index"),
 ]
