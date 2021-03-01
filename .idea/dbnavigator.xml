@@ -24,19 +24,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="a157404e-189d-4298-9fa6-c2f4f6d6d996">
-        <schema name="pg_catalog" object-types="view, table, function" />
-        <schema name="public" object-types="view, sequence, column, table, index, constraint, function, dataset trigger" />
-      </connection>
-      <connection connection-id="61013b2d-2891-47a5-817d-7d296405c73f">
-        <schema name="public" object-types="view, sequence, table, function" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a157404e-189d-4298-9fa6-c2f4f6d6d996">
-      <console name="TestingDB" type="STANDARD" schema="testing_db" session="Main"><![CDATA[select * from "public".app_playeraccount]]></console>
+      <console name="TestingDB" type="STANDARD" schema="testing_db" session="Main">select * from &quot;public&quot;.app_playeraccount</console>
     </connection>
     <connection id="61013b2d-2891-47a5-817d-7d296405c73f">
       <console name="ProductionDB" type="STANDARD" schema="information_schema" session="Main" />
