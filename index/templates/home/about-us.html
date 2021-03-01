@@ -6,124 +6,123 @@
     <title>My Backlog Handler</title>
     <link rel="icon" href="/static/Images/controller-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/home/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 
 <body class="text-white bg-dark">
-    <header>
-        <div id="primary-nav">
-            <div class="container-fluid">
-                <nav class="navbar navbar-dark navbar-expand-lg" style="font-family: 'arcadeclassicregular';">
-                    <a class="navbar-brand" href="{% url 'homepage' %}">
-                        <img src="/static/Images/controller-logo.png" width="30" height="30" alt="Logo">
-                        My Backlog Handler
-                    </a>
-                    <button data-toggle="collapse" data-target="#navbarToggler" type="button"
+<header>
+    <div id="primary-nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-dark navbar-expand-xl" style="font-family: 'arcadeclassicregular';">
+                <a class="navbar-brand" href="{% url 'homepage' %}">
+                    <img src="/static/Images/controller-logo.png" width="30" height="30" alt="Logo">
+                    My Backlog Handler
+                </a>
+                <button data-toggle="collapse" data-target="#navbarToggler" type="button"
                         class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarToggler">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="{% url 'homepage' %}">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                    href="#">Games</a>
-                                <div class="dropdown-menu bg-dark">
-                                    <a href="#" class="dropdown-item">New Releases</a>
-                                    <a href="#" class="dropdown-item">Popular</a>
-                                    <a href="#" class="dropdown-item">Upcoming</a>
-                                    <a href="#" class="dropdown-item">Recently Added</a>
-                                    <div class="dropdown-divider bg-light"></div>
-                                    <a href="{% url 'about-us' %}" class="dropdown-item">About Us</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                    href="#">Tools & Tips</a>
-                                <div class="dropdown-menu bg-dark">
-                                    <a href="#" class="dropdown-item">Tips</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'library' %}">Library</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'backlog' %}">Backlog</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                    <button class="btn btn-outline-success me-2" type="submit">Search</button>
-                                </form>
-                            </li>
-                            <li class="nav-item">
-                                <button class="btn navbar-btn btn-outline-primary me-1"
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url "homepage" %}">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                               href="#">Games</a>
+                            <div class="dropdown-menu bg-dark">
+                                <a href="#" class="dropdown-item">New Releases</a>
+                                <a href="#" class="dropdown-item">Popular</a>
+                                <a href="#" class="dropdown-item">Upcoming</a>
+                                <a href="#" class="dropdown-item">Recently Added</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'library' %}">Library</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Backlog</a>
+                            <div class="dropdown-menu bg-dark">
+                                <a href="{% url 'backlog' %}" class="dropdown-item">My Backlog</a>
+                                <div class="dropdown-divider bg-light"></div>
+                                <a href="{% url 'tips-tricks' %}" class="dropdown-item">Tips</a>
+                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'about-us' %}">About Us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search"
+                                       aria-label="Search">
+                                <button class="btn btn-outline-success me-2" type="submit">Search</button>
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn navbar-btn btn-outline-primary me-1"
                                     onclick="window.location.href='{% url "register" %}'">Sign up</button>
-                                <button class="btn navbar-btn btn-outline-primary me-1"
+                            <button class="btn navbar-btn btn-outline-primary me-1"
                                     onclick='window.location.href="{% url 'login' %}"'>Login</button>
-                                                        <!--NEED TO IMPLEMENT LOGIN SO WE CAN CHANGE THIS-->
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </header>
-    <br>
-    <section class="container-fluid">
-        <section class="site-content pb-1">
-            <div class="container">
-                <h2>About us:</h2>
-                <p style="padding-left: 2em;">As a group of gamers ourselves, we are not immune to the woes and
-                    struggles that come with (either accidentally or willingly) amassing a gaming backlog of 
-                    games. We at StackOverflowers Studios &copy; created
-                    <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong>
-                    in order to help fellow gamers tackle this
-                    problem by and guide them in the process that is growing their collections, as well as tracking
-                    their progress in each game they have in their collection so everyone can have a complete gaming
-                    experience!
-                </p>
-            </div>
+    </div>
+</header>
+<br>
+<section class="container animate__animated animate__backInDown animate__faster">
+    <section class="site-content pb-1">
+        <div class="container">
+            <h2>About us:</h2>
+            <p style="padding-left: 2em;">As a group of gamers ourselves, we are not immune to the woes and
+                struggles that come with (either accidentally or willingly) amassing a gaming backlog of
+                games. We at StackOverflowers Studios &copy; created
+                <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong>
+                in order to help fellow gamers tackle this
+                problem by and guide them in the process that is growing their collections, as well as tracking
+                their progress in each game they have in their collection so everyone can have a complete gaming
+                experience!
+            </p>
+        </div>
 
-            <div class="container">
-                <h2>Meet the Team!:</h2>
-                <p style="padding-left: 2em;"> Take a look at the developers who made My Backlog Handler &trade; come to life!</p>
-                <details style="padding-left: 2em;">
-                    <summary>Fernando J. Bermudez Medina</summary>
-                    <div id="dev">
-                        <img width="300px" height="300px" src="/static/Images/devTeam/fernando.png">
-                    </div>
+        <div class="container">
+            <h2>Meet the Team!:</h2>
+            <p style="padding-left: 2em;"> Take a look at the developers who made My Backlog Handler &trade; come to life!</p>
+            <details style="padding-left: 2em;">
+                <summary>Fernando J. Bermúdez Medina</summary>
+                <div class="dev pt-2 pb-1">
+                    <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/fernando.png">
+                </div>
 
-                    <p style="padding-left: 2em;">Fernando is the team's lead back end developer. He's in charge of
+                <p style="padding-left: 1em;">Fernando is the team's lead back end developer. He's in charge of
                     maintaining and working on the database system used in the website, as well as keep other backend
                     developers on track. A 3rd year Software Engineering undergraduate student at the University of Puerto Rico -
                     Mayagüez Campus, as well as an incoming Software Engineering Intern this summer, Fernando is always
                     eager to learn new things and be ready to face new challenges!</p>
 
-                </details>
+            </details>
 
-                <details style="padding-left: 2em;">
-                    <summary>Christopher Castillo Carrero</summary>
-                    <div id="dev">
-                        <img width="300px" height="300px" src="/static/Images/devTeam/chris.png">
-                    </div>
+            <details style="padding-left: 2em;">
+                <summary>Christopher Castillo Carrero</summary>
+                <div class="dev pt-2 pb-1">
+                    <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/chris.png">
+                </div>
 
-                    <p style="padding-left: 2em;">Christopher is the team's lead front end developer. He's in charge of
+                <p style="padding-left: 1em;">Christopher is the team's lead front end developer. He's in charge of
                     maintaining and working on the design, feel and overall look of the website users will see, as well as keep other
                     front end developers on track. A junior Computer Science & Engineering undergraduate student at the University of Puerto Rico -
                     Mayagüez Campus, Christopher is the pioneer that made <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>
 
-                </details>
+            </details>
 
-                <details style="padding-left: 2em;">
-                    <summary>Kevin J. Lugo Rosado</summary>
-                    <div id="dev">
-                        <img width="300px" height="300px" src="/static/Images/devTeam/lugo.png">
-                    </div>
+            <details style="padding-left: 2em;">
+                <summary>Kevin J. Lugo Rosado</summary>
+                <div class="dev pt-2 pb-1">
+                    <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/lugo.png">
+                </div>
 
                     <p style="padding-left: 2em;">Kevin is the team's lead full stack developer. He is a hybrid member
                     of both front end & back end teams, given that he has worked before on both sides
@@ -132,13 +131,14 @@
                     Software Engineering Intern this summer at companies like Amazon & Microsoft, Kevin is always
                     eager to showcase his talents and bring a big impact to wherever he works!</p>
 
-                </details>
+            </details>
 
-                <details style="padding-left: 2em;">
-                    <summary>Angel K. Vazquez Sanchez</summary>
-                    <div id="dev">
-                        <img width="300px" height="300px" src="/static/Images/devTeam/angel.png">
-                    </div>
+            <details style="padding-left: 2em;">
+                <summary>Ángel K. Vázquez Sánchez</summary>
+                <div class="dev pt-2 pb-1">
+                    <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/angel.png">
+                </div>
+
 
                     <p style="padding-left: 2em;">Angel is the team's associate full stack developer. He's in charge of
                     helping Kevin keep both teams on pace, as well as helping out the lead developers tinker and come up with new features
@@ -146,45 +146,35 @@
                     A 3rd year Computer Science & Engineering undergraduate student at the University of Puerto Rico - Mayagüez Campus,
                     as well as a Systems Informations Undergrad COOP at AMGEN, Angel is the teams' "Swiss Army Knife" that the team needs
                     to make <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>
-                </details>
+            </details>
 
-                <details style="padding-left: 2em;">
-                    <summary>Gabriel Y. Diaz Morro</summary>
-                    <div id="dev">
-                        <img width="300px" height="300px" src="/static/Images/devTeam/gabriel.png">
-                    </div>
+            <details style="padding-left: 2em;">
+                <summary>Gabriel Y. Díaz Morro</summary>
+                <div class="dev pt-2 pb-1">
+                    <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/gabriel.png">
+                </div>
 
-                    <p style="padding-left: 2em;">Gabriel is the team's associate back end developer. He's in charge of
+                <p style="padding-left: 1em;">Gabriel is the team's associate back end developer. He's in charge of
                     maintaining and working on the database system used in the website alongside Fernando.
+
                     A 3rd year Software Engineering undergraduate student at the University of Puerto Rico - Mayagüez Campus,
                     as well as an incoming Software Engineering Intern this summer at Microsoft, Gabriel is always
                     willing to help his teammates, as well as bring some fun to the development process!</p>
 
-                </details>
+            </details>
 
-                <details style="padding-left: 2em;">
-                    <summary>Leonel Aviles Guzman</summary>
-                    <div id="dev">
-                        <img width="300px" height="300px" src="/static/Images/devTeam/leonel.png">
-                    </div>
+        </div>
+    </section>
+</section><br>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 
-                    <p style="padding-left: 2em;">Leonel is the team's associate front end developer. He's in charge of
-                    helping Christopher design and construct the website for users to enjoy. A 3rd year Software Engineering
-                    undergraduate student at the University of Puerto Rico - Mayagüez Campus, Leonel is a great asset to an already great team!</p>
-
-                </details>
-
-            </div>
-        </section>
-    </section><br>
-    <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 </body>
