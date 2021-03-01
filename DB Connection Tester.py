@@ -14,7 +14,5 @@ try:
         with connection.cursor() as cursor:
              cursor.execute("CREATE SCHEMA test")
 
-        
-
 except Error as e:
     print(e)
