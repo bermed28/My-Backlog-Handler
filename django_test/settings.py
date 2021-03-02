@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'index.apps.IndexConfig',
-    'rest_framework'
+    'rest_framework',
+    'register.apps.RegisterConfig',
+    "crispy_forms"
 ]
 
 MIDDLEWARE = [
@@ -137,3 +139,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+CRISPY_TEMPLATE_PACK="bootstrap4"
