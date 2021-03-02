@@ -16,7 +16,7 @@ urlpatterns = [
     path('library/', views.library, name="library"),
     path('api', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
-    path('login/', views.login, name="login"),
+    #path('login/', views.login, name="login"),
     path('tips-tricks/', views.tips, name="tips-tricks"),
     path('logged-in-index/', views.logged, name="logged-in-index"),
 

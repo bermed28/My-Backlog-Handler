@@ -1,5 +1,4 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
 # Create your views here.
 from rest_framework import viewsets
 
@@ -32,5 +31,9 @@ def login(request):
 def tips(request):
     return render(request, 'home/tips.html')
 def logged(request):
-    return render(request, 'home/logged-index.html')
+    if request.user.is_authenticated:
+        username = request.user.get_username()
+        return render(request, 'home/logged-index.html', {"user": username})
+    else:
+        return redirect("homepage")
 
