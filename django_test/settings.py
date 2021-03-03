@@ -142,5 +142,6 @@ django_heroku.settings(locals())
 
 CRISPY_TEMPLATE_PACK="bootstrap4"
 #Crispy changes the format of the form and the login redirect url literally does that
-LOGIN_REDIRECT_URL ="/logged-in-index"
+LOGIN_REDIRECT_URL ="/"
 LOGOUT_REDIRECT_URL ="/"
+

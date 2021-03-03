@@ -26,14 +26,13 @@ def gameArticleTemplate(request):
 
 def library(request):
     return render(request, 'home/library.html')
-def login(request):
-    return render(request, 'home/log-in.html')
+
 def tips(request):
     return render(request, 'home/tips.html')
-def logged(request):
-    if request.user.is_authenticated:
-        username = request.user.get_username()
-        return render(request, 'home/logged-index.html', {"user": username})
-    else:
-        return redirect("homepage")
+
+
+
+
+
+
 
