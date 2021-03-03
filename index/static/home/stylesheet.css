@@ -10,7 +10,7 @@ body {
     background-image: url("controller-vector.png");
     background-repeat: inherit;
 }
-h1, h2, fieldset {
+h1, h2, h3, h4, h5, h6, li, fieldset {
     font-family: 'arcadeclassicregular', sans-serif;
 }
 .dropdown-menu a {

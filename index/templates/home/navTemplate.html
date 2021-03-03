@@ -33,7 +33,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                href="#">Games</a>
-                            <div class="dropdown-menu bg-dark">
+                            <div class="dropdown-menu bg-dark animate__animated animate__zoomIn animate__faster">
                                 <a href="#" class="dropdown-item">New Releases</a>
                                 <a href="#" class="dropdown-item">Popular</a>
                                 <a href="#" class="dropdown-item">Upcoming</a>
@@ -45,7 +45,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Backlog</a>
-                            <div class="dropdown-menu bg-dark">
+                            <div class="dropdown-menu bg-dark animate__animated animate__zoomIn animate__faster">
                                 <a href="{% url 'backlog' %}" class="dropdown-item">My Backlog</a>
                                 <div class="dropdown-divider bg-light"></div>
                                 <a href="{% url 'tips-tricks' %}" class="dropdown-item">Tips</a>
@@ -65,7 +65,7 @@
                         <li class="nav-item dropdown me-3">
                             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
                                 <img src="/static/Images/avatar.svg" height="30px" width="30px" class="avatar me-1" alt="Avatar">{%  block content %}{{user}}{% endblock %}<b class="caret"></b></a>
-                            <div class="dropdown-menu  bg-dark">
+                            <div class="dropdown-menu  bg-dark animate__animated animate__zoomIn animate__faster">
                                 <a href="#" class="dropdown-item"><i class="fas fa-user-circle me-1"></i>Profile</a>
                                 <a href="#" class="dropdown-item"><i class="fas fa-heart me-1"></i>Favorites</a>
                                 <a href="#" class="dropdown-item"><i class="fas fa-cog me-1"></i>Settings</a>

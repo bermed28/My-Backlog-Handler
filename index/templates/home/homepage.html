@@ -74,13 +74,79 @@
                 </a>
             </div>
         </div>
-{#    Checks if user is logged in, looks like trash fix    #}
-{#        {% if user.is_authenticated %}#}
-{#                    {% block content %}#}
-{#                    {% endblock %}#}
-{#                {% else %}#}
-{#                     <br/><p>Login <a href='{% url 'login' %}'>Here</a></p>#}
-{#            {% endif %}#}
+    </div>
+</section>
+<section class="container pt-2">
+    <div class="row">
+        <div class="container col-md site-content animate__animated animate__backInDown animate__faster">
+            <h4>Top Upcoming:</h4>
+            <ol>
+                <li class="container pb-2" style="color: gold">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Ratchet & Clank: Rift Apart" src="https://www.playstationlifestyle.net/assets/uploads/2021/02/image-99.png"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Ratchet & Clank: Rift Apart</a>
+                    </span>
+                </li>
+                <li class="container pb-2" style="color: silver">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Monster Hunter Rise" src="https://gamepreorders.com/wp-content/uploads/2020/09/cover-art-10.jpg"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Monster Hunter Rise</a>
+                    </span>
+                </li>
+                <li class="container pb-2" style="color: #CD7F32">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Resident Evil Village" src="https://www.androidcentral.com/sites/androidcentral.com/files/styles/large/public/article_images/2021/01/resident-evil-village-box-art.jpg"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Resident Evil Village</a>
+                    </span>
+                </li>
+            </ol>
+        </div>
+        <div class="container col-md site-content animate__animated animate__lightSpeedInRight animate__faster" style=" font-family: 'arcadeclassicregular';>
+            <h4>Recently Announced:</h4>
+            <ul>
+                <li class="container pb-2">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="FF7R: Intergrade" src="https://static.wikia.nocookie.net/finalfantasy/images/7/73/FFVII_Remake_Intergrade_standard_edition_cover_art_for_PS5.png/revision/latest/scale-to-width-down/250?cb=20210226030532"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">FF7R: Intergrade</a>
+                    </span>
+                </li>
+                <li class="container pb-2">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Project Triangle Strategy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpghxOOiBgZpeewvlBFX78Um6Cra0DHsvNKA&usqp=CAU"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Project Triangle Strategy</a>
+                    </span>
+                </li>
+                <li class="container pb-2">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Kena: Bridge of Spirits" src="https://cdn2.unrealengine.com/egs-kenabridgeofspirits-emberlab-s6-1200x1600-182980594.jpg"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Kena: Bridge of Spirits</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="container col-md site-content animate__animated animate__backInDown animate__faster">
+            <h4>Most Popular:</h4>
+            <ol>
+                <li class="container pb-2" style="color: gold; font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Minecraft" src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Minecraft</a>
+                    </span>
+                </li>
+                <li class="container pb-2" style="color: silver; font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Fortnite" src="https://store-images.s-microsoft.com/image/apps.39723.70702278257994163.958bb3bc-e151-4401-a360-075b4cb46da9.85b8ec28-bfa4-4a95-9e7a-156869284a19"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Fortnite</a>
+                    </span>
+                </li>
+                <li class="container pb-2" style="color: #CD7F32; font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Call of Duty Warzone" src="https://static.wikia.nocookie.net/callofduty/images/3/3d/Warzone_Artwork_CoDWarzone_MW.jpg/revision/latest/top-crop/width/360/height/450?cb=20200331223136"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Call of Duty Warzone</a>
+                    </span>
+                </li>
+            </ol>
+        </div>
     </div>
 </section>
 <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
