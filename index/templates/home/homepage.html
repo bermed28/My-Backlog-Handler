@@ -2,78 +2,14 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-    <title>My Backlog Handler</title>
-    <link rel="icon" href="/static/Images/controller-logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/home/stylesheet.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    {% if request.user.is_authenticated %}
+        {% include 'home/navTemplate.html' %}
+    {% else %}
+        {% include 'home/navOutTemplate.html' %}
+    {% endif %}
 </head>
 
-<body class="text-white bg-dark">
-<!-- Beginning of Header/Navbar -->
-<header>
-    <div id="primary-nav">
-        <div class="container-fluid">
-            <nav class="navbar navbar-dark navbar-expand-xl" style="font-family: 'arcadeclassicregular';">
-                <a class="navbar-brand" href="{% url 'homepage' %}">
-                    <img src="/static/Images/controller-logo.png" width="30" height="30" alt="Logo">
-                    My Backlog Handler
-                </a>
-                <button data-toggle="collapse" data-target="#navbarToggler" type="button"
-                        class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarToggler">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{% url "homepage" %}">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                               href="#">Games</a>
-                            <div class="dropdown-menu bg-dark">
-                                <a href="#" class="dropdown-item">New Releases</a>
-                                <a href="#" class="dropdown-item">Popular</a>
-                                <a href="#" class="dropdown-item">Upcoming</a>
-                                <a href="#" class="dropdown-item">Recently Added</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'library' %}">Library</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Backlog</a>
-                            <div class="dropdown-menu bg-dark">
-                                <a href="{% url 'backlog' %}" class="dropdown-item">My Backlog</a>
-                                <div class="dropdown-divider bg-light"></div>
-                                <a href="{% url 'tips-tricks' %}" class="dropdown-item">Tips</a>
-                            </div>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about-us' %}">About Us</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search"
-                                       aria-label="Search">
-                                <button class="btn btn-outline-success me-2" type="submit">Search</button>
-                            </form>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn navbar-btn btn-outline-primary me-1"
-                                    onclick="window.location.href='{% url "register" %}'">Sign up</button>
-                            <button class="btn navbar-btn btn-outline-primary me-1"
-                                    onclick='window.location.href="{% url 'login' %}"'>Login</button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
-<!-- End of Header/Navbar -->
+
 <br>
 <section class="container site-content animate__animated animate__fadeIn animate__faster">
     <div class="container pb-3">
@@ -137,6 +73,79 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
             </div>
+        </div>
+    </div>
+</section>
+<section class="container pt-2">
+    <div class="row">
+        <div class="container col-md site-content animate__animated animate__backInDown animate__faster" style=" font-family: 'arcadeclassicregular';">
+            <h4>Top Upcoming:</h4>
+            <ol>
+                <li class="container pb-2" style="font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Ratchet & Clank: Rift Apart" src="https://www.playstationlifestyle.net/assets/uploads/2021/02/image-99.png"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Ratchet & Clank: Rift Apart</a>
+                    </span>
+                </li>
+                <li class="container pb-2" style="font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Monster Hunter Rise" src="https://gamepreorders.com/wp-content/uploads/2020/09/cover-art-10.jpg"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Monster Hunter Rise</a>
+                    </span>
+                </li>
+                <li class="container pb-2" style="font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Resident Evil Village" src="https://www.androidcentral.com/sites/androidcentral.com/files/styles/large/public/article_images/2021/01/resident-evil-village-box-art.jpg"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Resident Evil Village</a>
+                    </span>
+                </li>
+            </ol>
+        </div>
+        <div class="container col-md site-content animate__animated animate__lightSpeedInRight animate__faster" style=" font-family: 'arcadeclassicregular';">
+            <h4>Recently Announced:</h4>
+            <ul>
+                <li class="container pb-2" style=" font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="FF7R: Intergrade" src="https://static.wikia.nocookie.net/finalfantasy/images/7/73/FFVII_Remake_Intergrade_standard_edition_cover_art_for_PS5.png/revision/latest/scale-to-width-down/250?cb=20210226030532"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">FF7R: Intergrade</a>
+                    </span>
+                </li>
+                <li class="container pb-2" style=" font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Project Triangle Strategy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpghxOOiBgZpeewvlBFX78Um6Cra0DHsvNKA&usqp=CAU"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Project Triangle Strategy</a>
+                    </span>
+                </li>
+                <li class="container pb-2" style="family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Kena: Bridge of Spirits" src="https://cdn2.unrealengine.com/egs-kenabridgeofspirits-emberlab-s6-1200x1600-182980594.jpg"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Kena: Bridge of Spirits</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="container col-md site-content animate__animated animate__backInDown animate__faster" style="font-family: 'arcadeclassicregular';">
+            <h4>Most Popular:</h4>
+            <ol>
+                <li class="container pb-2" style=" font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Minecraft" src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Minecraft</a>
+                    </span>
+                </li>
+                <li class="container pb-2" style=" font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Fortnite" src="https://store-images.s-microsoft.com/image/apps.39723.70702278257994163.958bb3bc-e151-4401-a360-075b4cb46da9.85b8ec28-bfa4-4a95-9e7a-156869284a19"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Fortnite</a>
+                    </span>
+                </li>
+                <li class="container pb-2" style=" font-family: 'arcadeclassicregular';">
+                    <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Call of Duty Warzone" src="https://static.wikia.nocookie.net/callofduty/images/3/3d/Warzone_Artwork_CoDWarzone_MW.jpg/revision/latest/top-crop/width/360/height/450?cb=20200331223136"></a>
+                    <span class="data">
+                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Call of Duty Warzone</a>
+                    </span>
+                </li>
+            </ol>
         </div>
     </div>
 </section>

@@ -33,7 +33,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                href="#">Games</a>
-                            <div class="dropdown-menu bg-dark">
+                            <div class="dropdown-menu bg-dark animate__animated animate__zoomIn animate__faster">
                                 <a href="#" class="dropdown-item">New Releases</a>
                                 <a href="#" class="dropdown-item">Popular</a>
                                 <a href="#" class="dropdown-item">Upcoming</a>
@@ -45,7 +45,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Backlog</a>
-                            <div class="dropdown-menu bg-dark">
+                            <div class="dropdown-menu bg-dark animate__animated animate__zoomIn animate__faster">
                                 <a href="{% url 'backlog' %}" class="dropdown-item">My Backlog</a>
                                 <div class="dropdown-divider bg-light"></div>
                                 <a href="{% url 'tips-tricks' %}" class="dropdown-item">Tips</a>
@@ -64,13 +64,13 @@
                         </li>
                         <li class="nav-item dropdown me-3">
                             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
-                                <img src="/static/Images/avatar.svg" height="30px" width="30px" class="avatar me-1" alt="Avatar">userName<b class="caret"></b></a>
-                            <div class="dropdown-menu  bg-dark">
+                                <img src="/static/Images/avatar.svg" height="30px" width="30px" class="avatar me-1" alt="Avatar">{%  block content %}{{user}}{% endblock %}<b class="caret"></b></a>
+                            <div class="dropdown-menu  bg-dark animate__animated animate__zoomIn animate__faster">
                                 <a href="#" class="dropdown-item"><i class="fas fa-user-circle me-1"></i>Profile</a>
                                 <a href="#" class="dropdown-item"><i class="fas fa-heart me-1"></i>Favorites</a>
                                 <a href="#" class="dropdown-item"><i class="fas fa-cog me-1"></i>Settings</a>
                                 <div class="dropdown-divider bg-light"></div>
-                                <a href="{% url 'homepage' %}" class="dropdown-item"><i class="fas fa-sign-out-alt me-1"></i>Logout</a>
+                                <a href="{% url 'logout' %}" class="dropdown-item"><i class="fas fa-sign-out-alt me-1"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -80,73 +80,7 @@
     </div>
 </header>
 <!-- End of Header/Navbar -->
-<br>
-<section class="container site-content animate__animated animate__fadeIn animate__faster">
-    <div class="container pb-3">
-        <h2>Latest Releases:</h2>
-        <p style="padding-left: 2em;">Here are some of the most recent releases.</p>
-        <div class="container-fluid">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <a href="{% url 'game-article-template' %}"><img class="d-block w-100" src="/static/Images/P5S-img.jpg"
-                                                                         alt="First slide"></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Persona 5 Strikers</h5>
-                            <p>The Phantom Thieves are back in action!</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
-                                                                         src="/static/Images/Mario-3D-World.jpg" alt="Second slide"></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Super Mario 3D World + Bowser's Fury</h5>
-                            <p>Mario's back with both old and new adventures</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
-                                                                         src="/static/Images/nier-replicant.jpg" alt="Third slide"></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Nier Replicant</h5>
-                            <p>Witness the events that lead to the critically-acclaimed Nier Automata</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
-                                                                         src="/static/Images/control-ultimate-edition.jpg" alt="Fourth slide"></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Control Ultimate Edition</h5>
-                            <p>Remedy's latest and greatest, now with all DLC</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="{% url 'game-article-template' %}"><img class="d-block w-100 img-responsive"
-                                                                         src="/static/Images/bravely-default-2-box-art.png" alt="Fifth slide"></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Bravely Default II</h5>
-                            <p>The anticipated sequel to the 3DS JRPG hit</p>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

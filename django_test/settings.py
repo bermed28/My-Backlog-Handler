@@ -148,6 +148,7 @@ django_heroku.settings(locals())
 
 CRISPY_TEMPLATE_PACK="bootstrap4"
 
+
 SOCIAL_AUTH_POSTGRES_JSONFIELD = True
 
 SOCIAL_AUTH_GITHUB_KEY = "dc717cb689d0bd2f2348"
@@ -157,3 +158,4 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+
