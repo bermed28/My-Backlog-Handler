@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'index.apps.IndexConfig',
     'rest_framework',
     'register.apps.RegisterConfig',
-    "crispy_forms"
+    "crispy_forms",
+    'social_django'
 ]
 
 MIDDLEWARE = [
@@ -67,6 +68,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -116,7 +119,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -141,7 +147,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 django_heroku.settings(locals())
 
 CRISPY_TEMPLATE_PACK="bootstrap4"
-#Crispy changes the format of the form and the login redirect url literally does that
-LOGIN_REDIRECT_URL ="/"
-LOGOUT_REDIRECT_URL ="/"
+
+
+SOCIAL_AUTH_POSTGRES_JSONFIELD = True
+
+SOCIAL_AUTH_GITHUB_KEY = "dc717cb689d0bd2f2348"
+SOCIAL_AUTH_GITHUB_SECRET = "766e44c6c703203b4e12c351f4b954758a66f246"
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 
