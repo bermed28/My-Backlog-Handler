@@ -83,6 +83,9 @@
         {{ form|crispy }}
         <button type="submit" class="btn btn-success">Register</button>
         </form>
+        <ul>
+        <li><a href="{% url "social:begin" "github" %}">Sign in with Github+</a> </li>
+        </ul>
     {% endblock %}
 </div>
 <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
