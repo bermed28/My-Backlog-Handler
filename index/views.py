@@ -1,5 +1,4 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
 # Create your views here.
 from rest_framework import viewsets
 
@@ -27,10 +26,13 @@ def gameArticleTemplate(request):
 
 def library(request):
     return render(request, 'home/library.html')
-def login(request):
-    return render(request, 'home/log-in.html')
+
 def tips(request):
     return render(request, 'home/tips.html')
-def logged(request):
-    return render(request, 'home/logged-index.html')
+
+
+
+
+
+
 

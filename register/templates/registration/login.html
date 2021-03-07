@@ -10,11 +10,24 @@
 </head>
 
 <br>
-<div>
-    <section class="container site-content animate__animated animate__backInDown animate__faster">
-        <h1>Coming Soon</h1>
-    </section>
-</div><br>
+<div class="container animate__animated animate__backInDown animate__faster" style="font-family: arcadeclassicregular">
+   {% block title %}
+        Login Here
+    {% endblock %}
+
+    {%  load crispy_forms_tags %}
+
+    {% block content %}
+        <form method="POST" class="form-group">
+            {% csrf_token %}
+            {{form|crispy}}
+            <p>Don't have an account? Create one here <a href='{% url "register" %}'>here</a></p>
+            <button type="submit" class="btn btn-success">Login</button>
+            <br/><br/>
+            <p><a href="{% url "social:begin" "github" %}"> <img src="/static/Images/github.png" width="60" height="60"> <br/>Sign in</a> </p>
+        </form>
+    {% endblock %}
+</div>
 <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
