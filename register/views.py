@@ -1,3 +1,6 @@
+import datetime
+
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.http import HttpResponse
@@ -18,6 +21,16 @@ def register(response):
         else:
             form = RegisterForm()
 
-        return render(response, "register/register.html", {"form":form})
+        return render(response, "register/register.html", {"form": form})
 
 
+def process_request(self, request):
+    if request.user.is_authenticated():
+        current_datetime = datetime.datetime.now()
+        if 'last_login' in request.session:
+            last = (current_datetime - request.session['last_login']).seconds
+            if last > settings.SESSION_IDLE_TIMEOUT:
+                logout(request, '/')
+        else:
+            request.session['last_login'] = current_datetime
+    return None
