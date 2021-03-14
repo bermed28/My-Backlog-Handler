@@ -10,6 +10,13 @@ class PlayerAccountViewSet(viewsets.ModelViewSet):
     serializer_class = PlayerAccountSerializer
 
 def homepage(request):
+    """
+    Uncomment to test login and logout
+    if request.user.is_authenticated:
+        print("Logged In")
+    else:
+        print("Logged Out")
+    """
     return render(request,"home/homepage.html")
 
 def registration(request):
