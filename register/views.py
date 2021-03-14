@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
+from django.http import HttpResponse
 from django.contrib.auth.forms import AuthenticationForm
 from django.conf import settings
 
@@ -18,3 +19,5 @@ def register(response):
             form = RegisterForm()
 
         return render(response, "register/register.html", {"form":form})
+
+

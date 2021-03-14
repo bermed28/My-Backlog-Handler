@@ -13,5 +13,7 @@ social-auth-app-django==4.0.0
 requests==2.25.1
 rawgpy==1.0.3
 igdb-api-v4==0.0.3
+django-session-timeout==0.1.0
+
 
 
