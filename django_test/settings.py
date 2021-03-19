@@ -121,6 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 # Internationalization
@@ -154,8 +155,16 @@ SOCIAL_AUTH_POSTGRES_JSONFIELD = True
 SOCIAL_AUTH_GITHUB_KEY = "dc717cb689d0bd2f2348"
 SOCIAL_AUTH_GITHUB_SECRET = "766e44c6c703203b4e12c351f4b954758a66f246"
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1019616602275-0qscpl42his02cseiudp449fadr7oq8v.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '7ksigPxooTXwR-0esavbxXXq'
+
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_LOGIN_URL = '/'
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+# LOGIN_REDIRECT_URL = "http://127.0.0.1:8000"
+# LOGOUT_REDIRECT_URL = "http://127.0.0.1:8000"
 
