@@ -7,24 +7,107 @@
     {% else %}
         {% include 'home/navOutTemplate.html' %}
     {% endif %}
+    <script src="https://kit.fontawesome.com/c6db85c705.js" crossorigin="anonymous"></script>
+<style>
+    table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+    }
+    th,td {
+        width: 150px;
+        text-align: center;
+        padding: 5px;
+    }
+    .nametag {
+        text-align: left;
+    }
+</style>
 </head>
 <body>
-    <br>
-    <div>
-        <section class="container site-content animate__animated animate__backInDown animate__faster">
-            <h1>Coming Soon</h1>
-        </section>
-    </div><br>
-    <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+{#    <br>#}
+{#    <div>#}
+{#        <section class="container site-content animate__animated animate__backInDown animate__faster">#}
+{#            <h1>Coming Soon</h1>#}
+{#        </section>#}
+{#    </div><br>#}
+{#    <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>#}
+{#    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"#}
+<br>
+<div>
+    <section class="container site-content animate__animated animate__backInDown animate__faster">
+        <h1>Library</h1>
+    </section>
+    <div class="container site-content animate__animated animate__lightSpeedInRight animate__faster">
+        {#        <ul class="pt-2 pb-2">#}
+        {#            <li class="container pb-2" style=" font-family: 'arcadeclassicregular';">#}
+        {#                <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="FF7R: Intergrade" src="https://static.wikia.nocookie.net/finalfantasy/images/7/73/FFVII_Remake_Intergrade_standard_edition_cover_art_for_PS5.png/revision/latest/scale-to-width-down/250?cb=20210226030532"></a>#}
+        {#                <span class="data">#}
+        {#                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">FF7R: Intergrade</a>#}
+        {#                    </span>#}
+        {#            </li>#}
+        {#            <li class="container pb-2" style=" font-family: 'arcadeclassicregular';">#}
+        {#                <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Project Triangle Strategy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpghxOOiBgZpeewvlBFX78Um6Cra0DHsvNKA&usqp=CAU"></a>#}
+        {#                <span class="data">#}
+        {#                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Project Triangle Strategy</a>#}
+        {#                    </span>#}
+        {#            </li>#}
+        {#            <li class="container" style="family: 'arcadeclassicregular';">#}
+        {#                <a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Kena: Bridge of Spirits" src="https://cdn2.unrealengine.com/egs-kenabridgeofspirits-emberlab-s6-1200x1600-182980594.jpg"></a>#}
+        {#                <span class="data">#}
+        {#                            <a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Kena: Bridge of Spirits</a>#}
+        {#                    </span>#}
+        {#            </li>#}
+        {#        </ul>#}
+        <table style="width: 100%;">
+            <thead>
+            <tr>
+                <th>Image</th>
+                <th colspan="2" class="nametag">Name</th>
+                <th>Platform</th>
+                <th>Score</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="FF7R: Intergrade" src="https://static.wikia.nocookie.net/finalfantasy/images/7/73/FFVII_Remake_Intergrade_standard_edition_cover_art_for_PS5.png/revision/latest/scale-to-width-down/250?cb=20210226030532"></a>
+                </td>
+                <td colspan="2" class="nametag"><a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">FF7R: Intergrade</a></td>
+                <td><i class="fab fa-playstation"></i></td>
+                <td>N/A</td>
+                <td>Plan to get</td>
+            </tr>
+            <tr>
+                <td><a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="P5R" src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"></a>
+                </td>
+                <td colspan="2" class="nametag"><a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Persona 5 Royal</a></td>
+                <td><i class="fab fa-playstation"></i></td>
+                <td>10</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td><a href="{% url 'game-article-template' %}"><img class="me-1" width="50" height="70" alt="Xenoblade Def Edition" src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"></a>
+                </td>
+                <td colspan="2" class="nametag"><a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Xenoblade Chronicles Definitive Edition</a></td>
+                <td>Nintendo Switch</td>
+                <td>8</td>
+                <td>Backlog</td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div><br>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 </body>
-
-</html>
