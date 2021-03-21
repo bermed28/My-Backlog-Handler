@@ -17,7 +17,8 @@ urlpatterns = [
     path('api', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
     path('tips-tricks/', views.tips, name="tips-tricks"),
-
+    path('games/', views.games, name="games"),
+    path('games/popular', views.popGames, name="popGames"),
 
 
 
