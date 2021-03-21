@@ -30,3 +30,5 @@ class Game_Model(models.Model):
     dev_id = models.ForeignKey(Developer_Model, on_delete=models.CASCADE)
     platforms = JSONField()
     img_id = models.ForeignKey(Image_Model, on_delete=models.CASCADE)
+
+
