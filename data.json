@@ -5,6 +5,10 @@
     "genres": [
       "Hack and slash/Beat 'em up"
     ],
+    "involved_companies": [
+      "Bandai Namco Games",
+      "Koei Tecmo Games"
+    ],
     "name": "One Piece: Pirate Warriors 4 - Deluxe Edition",
     "platforms": [
       "PlayStation 4"
@@ -16,6 +20,9 @@
     "genres": [
       "Fighting",
       "Shooter"
+    ],
+    "involved_companies": [
+      "Sega"
     ],
     "name": "Border Break",
     "platforms": [
@@ -30,6 +37,10 @@
       "Tactical",
       "Indie"
     ],
+    "involved_companies": [
+      "Ghost Town Games",
+      "Team17"
+    ],
     "name": "Overcooked! 2: Gourmet Edition",
     "platforms": [
       "PlayStation 4"
@@ -42,6 +53,10 @@
       "Hack and slash/Beat 'em up",
       "Adventure"
     ],
+    "involved_companies": [
+      "Sony Interactive Entertainment",
+      "SIE Santa Monica Studio"
+    ],
     "name": "God of War: Digital Deluxe Edition",
     "platforms": [
       "PlayStation 4"
@@ -53,6 +68,9 @@
     "genres": [
       "Sport"
     ],
+    "involved_companies": [
+      "Bimboosoft"
+    ],
     "name": "Dream Match Tennis VR",
     "platforms": [
       "PlayStation 4"
@@ -61,6 +79,9 @@
   {
     "id": 53088,
     "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/hfw7p0xkgi0opzxx9hpt.jpg",
+    "involved_companies": [
+      "Zen Studios"
+    ],
     "name": "Zen Pinball 2: South Park Pinball",
     "platforms": [
       "PlayStation 4"
@@ -72,6 +93,10 @@
     "genres": [
       "Role-playing (RPG)",
       "Hack and slash/Beat 'em up"
+    ],
+    "involved_companies": [
+      "Square Enix",
+      "Platinum Games"
     ],
     "name": "NieR: Automata - Black Box Edition",
     "platforms": [
@@ -85,6 +110,10 @@
       "Role-playing (RPG)",
       "Hack and slash/Beat 'em up"
     ],
+    "involved_companies": [
+      "Square Enix",
+      "Platinum Games"
+    ],
     "name": "NieR: Automata - Day One Edition",
     "platforms": [
       "PlayStation 4"
@@ -93,6 +122,9 @@
   {
     "id": 104163,
     "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/co2687.jpg",
+    "involved_companies": [
+      "Baris"
+    ],
     "name": "Caretaker",
     "platforms": [
       "PlayStation 4"
@@ -105,6 +137,10 @@
       "Role-playing (RPG)",
       "Hack and slash/Beat 'em up"
     ],
+    "involved_companies": [
+      "Square Enix",
+      "Platinum Games"
+    ],
     "name": "NieR: Automata - Limited Edition Steelbook",
     "platforms": [
       "PlayStation 4"
@@ -115,6 +151,10 @@
     "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/kwzpbzodcxa7r3gvnk4y.jpg",
     "genres": [
       "Simulator"
+    ],
+    "involved_companies": [
+      "Bandai Namco Entertainment Asia",
+      "tri-Crescendo"
     ],
     "name": "The Idolmaster: Platinum Stars",
     "platforms": [
@@ -135,6 +175,9 @@
     "genres": [
       "Adventure"
     ],
+    "involved_companies": [
+      "Atlus"
+    ],
     "name": "Abyss Odyssey: Extended Dream Edition",
     "platforms": [
       "PlayStation 4"
@@ -147,6 +190,9 @@
       "Role-playing (RPG)",
       "Adventure"
     ],
+    "involved_companies": [
+      "Nihon Falcom"
+    ],
     "name": "Ys IX: Monstrum Nox",
     "platforms": [
       "PlayStation 4"
@@ -157,6 +203,9 @@
     "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/co1l79.jpg",
     "genres": [
       "Simulator"
+    ],
+    "involved_companies": [
+      "Kalypso Media"
     ],
     "name": "Air Conflicts: Double Pack",
     "platforms": [
