@@ -10,7 +10,7 @@ class PlayerAccountSerializer(serializers.HyperlinkedModelSerializer):
 class GameModelSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Game_Model
-        fields = ('game_id', 'genre_id', 'dev_id', 'platforms','img_id')
+        fields = ('game_id','game_title', 'genre_id', 'dev_id', 'platforms','img_id')
 
 class ImageModelSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

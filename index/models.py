@@ -26,6 +26,8 @@ class Image_Model(models.Model):
 
 class Game_Model(models.Model):
     game_id = models.IntegerField(primary_key=True)
+    game_title = models.CharField(max_length=128)
+
     genre_id = models.ForeignKey(Genre_Model, on_delete=models.CASCADE)
     dev_id = models.ForeignKey(Developer_Model, on_delete=models.CASCADE)
     platforms = JSONField()
