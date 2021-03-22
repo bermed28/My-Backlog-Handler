@@ -20,7 +20,9 @@ Main Idea:
     -> Given a certain reference ID, make a query extracting the name, url, etc specifed and return it in a string
     -> Said string will contain the information to be replaced in the main hastable that stores our game infromation
     -> We have to iterate through the transfromed byte array given from the query lookign for the key that is not the id associated
-        ->Hence why we have a double for loop in each getter
+        -> Hence why we have a double for loop in each getter
+    -> Every 'for key in endpoint[0]:' has a in index ([0]) because the api gives us an array of one element,
+       the hashtable containing the requested url, name or array of items
 """
 def getCoverUrl(id):
     covers = json.loads(wrapper.api_request('covers', f'fields url; where id = {id};'))
@@ -43,6 +45,7 @@ def getGenres(id):
 
 def getInvolvedCompanies(id):
 
+    # We do this internal method to avoid over complicating the code and adding an external method to only call it here
     def getCompany(id):
         company = json.loads(wrapper.api_request('companies', f'fields name; where id = {id};'))
         for key in company[0]:
@@ -52,6 +55,7 @@ def getInvolvedCompanies(id):
     involved_companies = json.loads(wrapper.api_request('involved_companies', f'fields company; where id = {id};'))
     for key in involved_companies[0]:
         if key == "company":
+            # Internal method is called and it's value is returned in the main method
             return getCompany(involved_companies[0][key])
 
 
