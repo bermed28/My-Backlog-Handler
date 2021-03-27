@@ -14,11 +14,12 @@ urlpatterns = [
     path('backlog/', views.backlog, name="backlog"),
     path('game-article-template/', views.gameArticleTemplate, name="game-article-template"),
     path('library/', views.library, name="library"),
-    path('api', include(router.urls)),
+    path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
     path('tips-tricks/', views.tips, name="tips-tricks"),
-    path('games/', views.games, name="games"),
-    path('games/popular', views.popGames, name="popGames"),
+    path('games/new-releases/', views.newReleases, name="new-releases"),
+    path('games/popular/', views.popGames, name="popGames"),
+    path('games/upcoming/', views.upGames, name="upGames"),
 
 
 

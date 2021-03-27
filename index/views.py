@@ -29,10 +29,12 @@ def library(request):
 
 def tips(request):
     return render(request, 'home/tips.html')
-def games(request):
-    return render(request, 'home/games.html')
+def newReleases(request):
+    return render(request, 'home/new-releases.html')
 def popGames(request):
     return render(request, 'home/popular-games.html')
+def upGames(request):
+    return render(request, 'home/upcoming-games.html')
 
 
 
