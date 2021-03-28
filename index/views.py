@@ -1,16 +1,54 @@
 from django.shortcuts import render, redirect
 # Create your views here.
 from rest_framework import viewsets
+from django.views.generic import ListView
+from django.db.models import Q
+from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, PlayerAccountSerializer
+from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model
 
-from .serializers import PlayerAccountSerializer
-from .models import PlayerAccount
-
+"""VIEWSETS"""
 class PlayerAccountViewSet(viewsets.ModelViewSet):
     queryset = PlayerAccount.objects.all().order_by('player_name')
     serializer_class = PlayerAccountSerializer
 
+class GameModelViewSet(viewsets.ModelViewSet):
+    queryset = Game_Model.objects.all().order_by('game_id')
+    serializer_class = GameModelSerializer
+
+class ImageModelViewSet(viewsets.ModelViewSet):
+    queryset = Image_Model.objects.all().order_by('img_id')
+    serializer_class = ImageModelSerializer
+
+class DeveloperModelViewSet(viewsets.ModelViewSet):
+    queryset = Developer_Model.objects.all().order_by('dev_id')
+    serializer_class = DeveloperModelSerializer
+
+class GenreModelViewSet(viewsets.ModelViewSet):
+    queryset = Genre_Model.objects.all().order_by('genre_id')
+    serializer_class = GenreModelSerializer
+
+
+"""REDIRECTS"""
 def homepage(request):
+    """
+    Uncomment to test login and logout
+    if request.user.is_authenticated:
+        print("Logged In")
+    else:
+        print("Logged Out")
+    """
     return render(request,"home/homepage.html")
+
+class SearchResultsView(ListView):
+    model = PlayerAccount
+    template_name = 'search_results.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        object_list = PlayerAccount.objects.filter(
+            Q(player_name__icontains=query) | Q(user_name__icontains=query)
+        )
+        return object_list
 
 def registration(request):
     return render(request, 'home/registration.html')

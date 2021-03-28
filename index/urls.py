@@ -2,6 +2,7 @@ from django.urls import include, path
 from rest_framework import routers
 from . import views
 
+
 from register import views as v
 router = routers.DefaultRouter()
 router.register(r'users', views.PlayerAccountViewSet)
@@ -16,12 +17,11 @@ urlpatterns = [
     path('library/', views.library, name="library"),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
+
     path('backlog/tips-tricks/', views.tips, name="tips-tricks"),
     path('games/new-releases/', views.newReleases, name="new-releases"),
     path('games/popular/', views.popGames, name="popGames"),
     path('games/upcoming/', views.upGames, name="upGames"),
-
-
-
+    path('search/', views.SearchResultsView.as_view(), name='search_results')
 ]
 

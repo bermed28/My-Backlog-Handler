@@ -13,6 +13,7 @@ import django_heroku
 import os
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -121,6 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 # Internationalization
@@ -146,7 +149,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
-CRISPY_TEMPLATE_PACK="bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 
 SOCIAL_AUTH_POSTGRES_JSONFIELD = True
@@ -154,8 +157,24 @@ SOCIAL_AUTH_POSTGRES_JSONFIELD = True
 SOCIAL_AUTH_GITHUB_KEY = "dc717cb689d0bd2f2348"
 SOCIAL_AUTH_GITHUB_SECRET = "766e44c6c703203b4e12c351f4b954758a66f246"
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1019616602275-0qscpl42his02cseiudp449fadr7oq8v.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '7ksigPxooTXwR-0esavbxXXq'
+
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_LOGIN_URL = '/'
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+# LOGIN_REDIRECT_URL = "http://127.0.0.1:8000"
+# LOGOUT_REDIRECT_URL = "http://127.0.0.1:8000"
+
+SESSION_EXPIRE_SECONDS = 900
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY_GRACE_PERIOD = 300
+SESSION_TIMEOUT_REDIRECT = '/'
+
+
+
 
