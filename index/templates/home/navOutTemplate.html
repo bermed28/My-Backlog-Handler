@@ -49,13 +49,13 @@
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Backlog</a>
                             <div class="dropdown-menu bg-dark animate__animated animate__zoomIn animate__faster">
                                 <a class="nav-link" href="{% if request.user.is_authenticated %}
-                                                            {% url 'library' %}
+                                                            {% url 'backlog' %}
                                                         {% else %}
                                                             {% url 'register' %}
                                                         {% endif %}">My Backlog</a>
                                 <div class="dropdown-divider bg-light"></div>
                                 <a class="nav-link" href="{% if request.user.is_authenticated %}
-                                                            {% url 'library' %}
+                                                            {% url 'tips-tricks' %}
                                                         {% else %}
                                                             {% url 'register' %}
                                                         {% endif %}">Tips</a>

@@ -57,16 +57,16 @@ def aboutUs(request):
     return render(request, 'home/about-us.html')
 
 def backlog(request):
-    return render(request, 'home/registration.html')
+    return render(request, 'home/backlog.html')
 
 def gameArticleTemplate(request):
     return render(request, 'home/game-article-template.html')
 
 def library(request):
-    return render(request, 'registration')
+    return render(request, 'home/library.html')
 
 def tips(request):
-    return render(request, 'register/register.html')
+    return render(request, 'home/tips.html')
 
 def newReleases(request):
     return render(request, 'home/new-releases.html')
