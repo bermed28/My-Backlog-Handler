@@ -21,7 +21,7 @@
         <form method="POST" class="form-group">
             {% csrf_token %}
             {{form|crispy}}
-            <p>Don't have an account? Create one here <a href='{% url "register" %}'>here</a></p>
+            <p>Don't have an account? Create one <a href='{% url "register" %}'>here</a></p>
             <button type="submit" class="btn btn-success">Login</button>
             <br/><br/>
             <p><a href="{% url "social:begin" "github" %}"> <img src="/static/Images/github.png" width="60" height="60"> <br/>Sign in</a> </p>

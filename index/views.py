@@ -19,20 +19,23 @@ def aboutUs(request):
     return render(request, 'home/about-us.html')
 
 def backlog(request):
-    return render(request, 'home/backlog.html')
+    return render(request, 'home/registration.html')
 
 def gameArticleTemplate(request):
     return render(request, 'home/game-article-template.html')
 
 def library(request):
-    return render(request, 'home/library.html')
+    return render(request, 'registration')
 
 def tips(request):
-    return render(request, 'home/tips.html')
+    return render(request, 'register/register.html')
+
 def newReleases(request):
     return render(request, 'home/new-releases.html')
+
 def popGames(request):
     return render(request, 'home/popular-games.html')
+
 def upGames(request):
     return render(request, 'home/upcoming-games.html')
 

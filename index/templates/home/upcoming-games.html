@@ -27,6 +27,14 @@
             text-decoration: none;
             color: white;
         }
+        .genre {
+            font-size: small;
+            border-radius: 10px;
+            background-color: #007bff;
+            border-bottom-color: #007bff;
+            text-align: center;
+            padding: 2px;
+        }
     </style>
 </head>
 <body>
@@ -92,6 +100,13 @@
                             <div class="card-body">
                                 <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="pb-3">
+                                    <div>
+                                        <span class="genre"><a href="#" title="JRPG">JRPG</a></span>
+                                        <span class="genre"><a href="#" title="Life-Sim">Life-Sim</a></span>
+                                        <span class="genre"><a href="#" title="Turn-Based">Turn-Based</a></span>
+                                    </div>
+                                </div>
                                 <button class="btn" style="background-color: gray; outline-color: gray; color: white" onclick="window.location.href='#'"><i class="far fa-check-square"></i> In Wishlist</button>
                             </div>
                         </div>
@@ -109,6 +124,13 @@
                             <div class="card-body">
                                 <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="pb-3">
+                                    <div>
+                                        <span class="genre"><a href="#" title="JRPG">JRPG</a></span>
+                                        <span class="genre"><a href="#" title="ARPG">Action RPG</a></span>
+                                        <span class="genre"><a href="#" title="Fantasy">Fantasy</a></span>
+                                    </div>
+                                </div>
                                 <button class="btn btn-primary" onclick="window.location.href='#'"><i class="far fa-plus-square"></i> Add to Wishlist</button>
                             </div>
                         </div>

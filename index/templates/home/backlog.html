@@ -38,7 +38,7 @@
     <section class="container site-content animate__animated animate__backInDown animate__faster">
         <h1>Backlog</h1>
     </section>
-    <div class="container site-content animate__animated animate__lightSpeedInRight animate__faster">
+        <div class="container site-content animate__animated animate__lightSpeedInRight animate__faster table-responsive">
         <table class="table text-white" style="width: 100%;">
             <thead>
             <tr>
@@ -71,11 +71,25 @@
                 </td>
                 <td colspan="2" class="nametag"><a href="{% url 'game-article-template' %}" style="text-decoration: none; color: white">Xenoblade Chronicles Definitive Edition</a></td>
                 <td>Nintendo Switch</td>
-                <td>8</td>
+                <td><label class="pt-2 pb-2">
+                    <select class="form-control bg-dark" style="color: white">
+                        <option>Select</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>N/A</option>
+                    </select>
+                </label></td>
                 <td>Haven't Started</td>
             </tr>
             </tbody>
-
         </table>
     </div>
 </div><br>
