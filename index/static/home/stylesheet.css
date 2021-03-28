@@ -63,6 +63,11 @@ div.carousel-caption > p {
         margin-left: auto;
         margin-right: auto;
     }
+    .gamedisp {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 .mybtn {
     background-color: black;
@@ -75,11 +80,22 @@ div.carousel-caption > p {
     border: 1px solid rgba(0,0,0,0.6);
     border-radius: 1.1rem;
 }
+.gamedisp {
+    background-color: rgba(0,0,0, 0.4);
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 1.1rem;
+}
 @media all and (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .nav-link{ color: #fff;  }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
 	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+.dropdown {
+  --animate-duration: 0.25s;
+}
+.rankNum {
+    font-family: 'arcadeclassicregular';
 }
 /*.transition-fade {*/
 /*    opacity: 1;*/
