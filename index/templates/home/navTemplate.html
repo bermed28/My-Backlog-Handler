@@ -28,16 +28,15 @@
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{% url "homepage" %}">Home</a>
+                            <a class="nav-link" href="{% url "homepage" %}">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                href="#">Games</a>
                             <div class="dropdown-menu bg-dark animate__animated animate__zoomIn animate__faster">
-                                <a href="#" class="dropdown-item">New Releases</a>
-                                <a href="#" class="dropdown-item">Popular</a>
-                                <a href="#" class="dropdown-item">Upcoming</a>
-                                <a href="#" class="dropdown-item">Recently Added</a>
+                                <a href="{% url 'new-releases' %}" class="dropdown-item">New Releases</a>
+                                <a href="{% url 'popGames' %}" class="dropdown-item">Popular</a>
+                                <a href="{% url 'upGames' %}" class="dropdown-item">Upcoming</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -68,6 +67,7 @@
                             <div class="dropdown-menu  bg-dark animate__animated animate__zoomIn animate__faster">
                                 <a href="#" class="dropdown-item"><i class="fas fa-user-circle me-1"></i>Profile</a>
                                 <a href="#" class="dropdown-item"><i class="fas fa-heart me-1"></i>Favorites</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-gift"></i>Wishlist</a>
                                 <a href="#" class="dropdown-item"><i class="fas fa-cog me-1"></i>Settings</a>
                                 <div class="dropdown-divider bg-light"></div>
                                 <a href="{% url 'logout' %}" class="dropdown-item"><i class="fas fa-sign-out-alt me-1"></i>Logout</a>

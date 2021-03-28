@@ -10,4 +10,10 @@ psycopg2==2.8.6
 djangorestframework==3.12.2
 django-crispy-forms==1.11.1
 social-auth-app-django==4.0.0
+requests==2.25.1
+rawgpy==1.0.3
+igdb-api-v4==0.0.3
+django-session-timeout==0.1.0
+
+
 
