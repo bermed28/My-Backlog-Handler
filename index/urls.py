@@ -2,6 +2,7 @@ from django.urls import include, path
 from rest_framework import routers
 from . import views
 
+
 from register import views as v
 router = routers.DefaultRouter()
 router.register(r'users', views.PlayerAccountViewSet)
@@ -17,9 +18,7 @@ urlpatterns = [
     path('api', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
     path('tips-tricks/', views.tips, name="tips-tricks"),
-
-
-
+    path('search/', views.SearchResultsView.as_view(), name='search_results')
 
 ]
 

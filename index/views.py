@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 # Create your views here.
 from rest_framework import viewsets
-
+from django.views.generic import ListView
+from django.db.models import Q
 from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, PlayerAccountSerializer
 from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model
 
@@ -37,6 +38,17 @@ def homepage(request):
         print("Logged Out")
     """
     return render(request,"home/homepage.html")
+
+class SearchResultsView(ListView):
+    model = PlayerAccount
+    template_name = 'search_results.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        object_list = PlayerAccount.objects.filter(
+            Q(player_name__icontains=query) | Q(user_name__icontains=query)
+        )
+        return object_list
 
 def registration(request):
     return render(request, 'home/registration.html')
