@@ -12,9 +12,9 @@
 <h1>Search Results</h1>
 
 <ul>
-  {% for user in object_list %}
+  {% for game in object_list %}
     <li>
-      {{ user.player_name }}, {{ user.user_name }}
+      {{game.game_title}}
     </li>
   {% endfor %}
 </ul>

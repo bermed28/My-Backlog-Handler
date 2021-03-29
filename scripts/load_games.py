@@ -2,24 +2,19 @@ import json  # https://docs.python.org/3/library/csv.html
 
 # https://django-extensions.readthedocs.io/en/latest/runscript.html
 
-
+import os
 from index.models import Game_Model, Image_Model
 
 def run():
-    with open('/home/lugozik/PycharmProjects/semester-project-stack-overflowers/res/data.json', "r") as f:
+    with open('res/data.json', "r") as f:
         data = json.load(f)
 
     Game_Model.objects.all().delete()
     Image_Model.objects.all().delete()
-    id_num = 0
+
     for i in data:
         # print("-------------------------------------------------------------------------")
-        id = None
-        cover = None
-        genres = None
-        name = None
-        platforms = None
-        developers = None
+        id, cover, genres, name, platforms, developers = None, None, None, None, None, None
 
         if 'id' in i:
             id = i['id']
@@ -41,8 +36,8 @@ def run():
         print("platforms", platforms)
         print("developers", developers)
 
-        img, created = Image_Model.objects.get_or_create(img_id=id_num,img_url=cover)
-        id_num+=1
+        img, created = Image_Model.objects.get_or_create(img_id=id,img_url=cover)
+
         print(img)
         print(created)
 
@@ -66,5 +61,4 @@ def run():
     #         r = Membership.INSTRUCTOR
     #     m = Membership(role=r, person=p, course=c)
     #     m.save()
-# if __name__ == "__main__":
-#   run()
+

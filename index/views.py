@@ -40,13 +40,13 @@ def homepage(request):
     return render(request,"home/homepage.html")
 
 class SearchResultsView(ListView):
-    model = PlayerAccount
+    model = Game_Model
     template_name = 'search_results.html'
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        object_list = PlayerAccount.objects.filter(
-            Q(player_name__icontains=query) | Q(user_name__icontains=query)
+        object_list = Game_Model.objects.filter(
+            Q(game_title__icontains=query)
         )
         return object_list
 

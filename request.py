@@ -1,4 +1,4 @@
-import json
+import json, os
 from igdb.wrapper import IGDBWrapper
 global wrapper #Global variable to reference wrapper so it can be used across all methods and getters
 
