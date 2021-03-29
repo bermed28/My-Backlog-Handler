@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'register.apps.RegisterConfig',
     "crispy_forms",
-    'social_django'
+    'social_django',
+    'django_extensions',
+
 ]
 
 MIDDLEWARE = [
