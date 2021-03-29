@@ -97,17 +97,3 @@ div.carousel-caption > p {
 .rankNum {
     font-family: 'arcadeclassicregular';
 }
-/*.transition-fade {*/
-/*    opacity: 1;*/
-/*    transition: 500ms;*/
-/*    transform: translateX(0);*/
-/*    transform-origin: left;*/
-/*}*/
-/*.site-content.is-animating .transition-fade {*/
-/*    opacity: 1;*/
-/*    transform: translateX(100%);*/
-/*}*/
-/*.site-content.is-leaving .transition-fade {*/
-/*    opacity: 0;*/
-/*    transform: translateX(0);*/
-/*}*/

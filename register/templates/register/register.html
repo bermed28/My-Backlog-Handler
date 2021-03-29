@@ -8,8 +8,10 @@
         {% include 'home/navOutTemplate.html' %}
     {% endif %}
 </head>
-
 <br>
+<section class="container site-content animate__animated animate__backInDown animate__faster">
+    <h1>Sign Up</h1>
+</section>
 <div class="container site-content animate__animated animate__backInDown animate__faster" style="font-family: arcadeclassicregular">
     {% load crispy_forms_tags %}
     {%  block content %}
@@ -17,7 +19,7 @@
             {% csrf_token %}
             {{ form|crispy }}
             <p>Already have an account? Log in <a href='{% url "login" %}'>here</a></p>
-            <button type="submit" class="btn btn-success">Register</button>
+            <div class="container" style="text-align: center;"><button type="submit" class="btn btn-outline-success mybtn">Register</button></div>
         </form>
         <br/>
         <div class="container row" style="align-content: center; text-align: center">
@@ -26,7 +28,7 @@
         </div>
 
     {% endblock %}
-</div>
+</div><br>
 <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
