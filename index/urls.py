@@ -27,5 +27,6 @@ urlpatterns = [
     path('user/favorites/', views.favorites, name='favorites'),
     path('user/wishlist/', views.wishlist, name='wishlist'),
     path('user/settings/', views.settings, name='settings'),
+    path('404/', views.fourOFour, name='404'),
 ]
 

@@ -25,15 +25,15 @@
 <body>
 <br>
 <div>
-    <section class="container site-content animate__animated animate__backInDown animate__faster">
+    <section class="container site-content">
         <h1>Search Results</h1>
     </section>
 </div>
-<div class="container site-content animate__animated animate__lightSpeedInRight animate__faster pt-1">
+<div class="container site-content pt-1">
     {% if object_list.count == 0 %}
         <p class="pb-1" style="font-size: large;">- No results found.</p>
     {% else %}
-        <div class="container animate__animated animate__lightSpeedInRight animate__faster table-responsive">
+        <div class="container table-responsive">
         <table class="table text-white" style="width: 100%;">
         <thead>
         <tr>
@@ -59,12 +59,11 @@
     </tbody>
     </table>
     </div>
-    {#            {% for user in object_list %}#}
-    {#                <li style="font-family: sans-serif;">#}
-    {#                    {{ user.player_name }}, {{ user.user_name }}#}
-    {#                </li>#}
-    {#            {% endfor %}#}
-    {#        {% endif %}#}
+{#                {% for user in object_list %}#}
+{#                    <li style="font-family: sans-serif;">#}
+{#                        {{ user.player_name }}, {{ user.user_name }}#}
+{#                    </li>#}
+{#                {% endfor %}#}
 </div><br>
 <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

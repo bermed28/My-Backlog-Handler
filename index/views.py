@@ -89,6 +89,9 @@ def profile(request):
 def favorites(request):
     return render(request, 'home/favorites.html')
 
+def fourOFour(request):
+    return render(request, 'home/404.html')
+
 
 
 
