@@ -5,26 +5,24 @@
   <summary>Activating Virtual Enviroments</summary>
 
   <ul>
-  
+	<li>For users to properly install dependencies for this application, a Virtual Enviroment is needed so all packages can be used properly</li>
   <li>
-    Windows 10
+    For Windows 10 users:
     <ol>
-      <li>Enter in the Command Prompt: <strong>python -m venv venv/</strong></li>
-      <li>To activate virtual Enviroment type in the Command Prompt:  <strong>venv\Scripts\activate</strong></li>
-      <li>To install project dependecies type in the Command Prompt: <strong> pip install -r requirements.txt</strong></li>
-      <li>To deactivate virtual Enviroment type in the Command Prompt: <strong>deactivate</strong></li>
-      <li>To run server go into the app folder and type in the Terminal: <strong>python manage.py runserver</strong></li>
+      <li>Enter in the Command Prompt: <code>python -m venv venv/</code></li>
+      <li>To activate Virtual Enviroment, type in the Command Prompt:  <code>venv\Scripts\activate</code></li>
+      <li>To install project dependecies, type in the Command Prompt: <code> pip install -r requirements.txt</code></li>
+      <li>To deactivate Virtual Enviroment, type in the Command Prompt: <code>deactivate</code></li>
     </ol>
   </li>
   
   <li>
-    macOS & Linux
+    For macOS & Linux users:
     <ol>
-      <li>Enter in the Terminal: <strong>python -m venv venv/</strong></li>
-      <li>To activate virtual Enviroment type in the Terminal:  <strong>source venv/bin/activate</strong></li>
-      <li>To install project dependecies type in the Terminal: <strong> pip install -r requirements.txt</strong></li>
-      <li>To deactivate virtual Enviroment type in the Terminal : <strong>deactivate</strong></li>
-      <li>To run server go into the app folder and type in the Terminal: <strong>python manage.py runserver</strong></li>
+      <li>Enter in the Terminal: <code>python -m venv venv/</code></li>
+      <li>To activate Virtual Enviroment, type in the Terminal:  <code>source venv/bin/activate</code></li>
+      <li>To install project dependecies, type in the Terminal: <code> pip install -r requirements.txt</code></li>
+      <li>To deactivate Virtual Enviroment, type in the Terminal : <code>deactivate</code></li>
     </ol>
   </li>
  </ul>
