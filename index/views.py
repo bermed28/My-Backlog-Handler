@@ -88,6 +88,20 @@ def popGames(request):
 def upGames(request):
     return render(request, 'home/upcoming-games.html')
 
+def settings(request):
+    return render(request, 'home/settings.html')
+
+def wishlist(request):
+    return render(request, 'home/wishlist.html')
+
+def profile(request):
+    return render(request, 'home/profile.html')
+
+def favorites(request):
+    return render(request, 'home/favorites.html')
+
+def fourOFour(request):
+    return render(request, 'home/404.html')
 
 
 

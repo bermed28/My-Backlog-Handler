@@ -22,6 +22,11 @@ urlpatterns = [
     path('games/new-releases/', views.newReleases, name="new-releases"),
     path('games/popular/', views.popGames, name="popGames"),
     path('games/upcoming/', views.upGames, name="upGames"),
-    path('search/', views.SearchResultsView.as_view(), name='search_results')
+    path('search/', views.SearchResultsView.as_view(), name='search_results'),
+    path('user/profile/', views.profile, name='profile'),
+    path('user/favorites/', views.favorites, name='favorites'),
+    path('user/wishlist/', views.wishlist, name='wishlist'),
+    path('user/settings/', views.settings, name='settings'),
+    path('404/', views.fourOFour, name='404'),
 ]
 
