@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     {% if request.user.is_authenticated %}
         {% include 'home/navTemplate.html' %}
     {% else %}
         {% include 'home/navOutTemplate.html' %}
     {% endif %}
+    <style>
+        .socialLinks {
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+        .social {
+            position: relative;
+            display: inline-block;
+            padding: .8em;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            background-color: transparent;
+            outline: none;
+            font-family: inherit;
+            font-size: 13px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .col {
+            align-content: center;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
 </head>
 <br>
 <section class="container site-content animate__animated animate__backInDown animate__faster">
@@ -21,9 +44,18 @@
             {{form|crispy}}
             <p class="pt-1">Don't have an account? Create one <a href='{% url "register" %}'>here</a></p>
             <div class="container" style="text-align: center;"><button type="submit" class="btn btn-outline-success mybtn">Login</button></div>
-            <div class="container row" style="align-content: center; text-align: center">
-                <div class="col"><a href="{% url "social:begin" "github" %}"> <img src="/static/Images/github.png" width="60" height="60"> <br/>Sign in</a></div>
-                <div class="col"><a href="{% url "social:begin" "google-oauth2" %}"><img src="/static/Images/googlelogo.png" width="100" height="80"> <br/>Sign in</a></div>
+            <br/>
+            <div class="container row pb-3">
+                {#            <div class="col"><a href="{% url "social:begin" "github" %}"> <img src="/static/Images/github.png" width="60" height="60"> <br/>Sign in</a></div>#}
+                <div class="col"><div class="social"><a class="socialLinks" href="{% url "social:begin" "github" %}">
+                    <div class="social" style="background-color: #2e353d; color: white">
+                        <img class="me-2" src="/static/Images/github.png" width="22" height="22" alt="GitHub">Sign in</div></a>
+                </div></div>
+                {#            <div class="col"><a href="{% url "social:begin" "google-oauth2" %}"><img src="/static/Images/googlelogo.png" width="110" height="80"> <br/>Sign in</a></div>#}
+                <div class="col"><div class="social"><a class="socialLinks" href="{% url "social:begin" "google-oauth2" %}">
+                    <div class="social" style="background-color: white; color: #2e353d">
+                        <img src="/static/Images/google.png" width="25" height="24" alt="Google">Sign in</div></a>
+                </div></div>
             </div>
         </form>
     {% endblock %}
