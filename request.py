@@ -1,4 +1,4 @@
-import json
+import json, os
 from igdb.wrapper import IGDBWrapper
 global wrapper #Global variable to reference wrapper so it can be used across all methods and getters
 
@@ -62,7 +62,7 @@ def getInvolvedCompanies(id):
 """""""""""""""""""""""""""""""""""""""""MAIN METHOD FOR EXTRACTING GAMES"""""""""""""""""""""""""""""""""""""""""""""""
 
 
-def extractAPIGames(endpoint: str, query: str):
+def extractAPIGames(endpoint: str, query: str, fileNumber:int):
 
     byte_array = wrapper.api_request(endpoint, query) #Byte array that stores the infromation given from the API with a given endpoint & query
     games = json.loads(byte_array) #Convert the byte array into a json-like hashtable for easy extraction and iteration
@@ -98,7 +98,7 @@ def extractAPIGames(endpoint: str, query: str):
                     game[key][i] = getInvolvedCompanies(game[key][i])
 
     #We parse the hashtable information to a .json file we deliver as output using json.dump()
-    with open('res/data.json', 'w') as outfile:
+    with open(f'res/data_{fileNumber}.json', 'w') as outfile:
         json.dump(games, outfile, indent=4)
 
     print(f"Games Extracted: {gamesExtracted}")
@@ -107,4 +107,7 @@ def extractAPIGames(endpoint: str, query: str):
 #Command to initialize game extraction every time this file is ran
 if __name__ == "__main__":
     wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "r2raogtcmwho8ja4fv6b8si2h7u7ag")
-    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=49; limit 15;')
+    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=48; limit 100;', 1)
+    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=49; limit 100;', 2)
+    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=130; limit 100;', 3)
+    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=6; limit 100;', 4)

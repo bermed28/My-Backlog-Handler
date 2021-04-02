@@ -3,8 +3,11 @@ from django.shortcuts import render, redirect
 from rest_framework import viewsets
 from django.views.generic import ListView
 from django.db.models import Q
-from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, PlayerAccountSerializer
-from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model
+
+from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, \
+PlayerAccountSerializer,LibraryModelSerializer, LibraryMembershipSerializer
+
+from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, Library_Membership
 
 """VIEWSETS"""
 class PlayerAccountViewSet(viewsets.ModelViewSet):
@@ -27,6 +30,14 @@ class GenreModelViewSet(viewsets.ModelViewSet):
     queryset = Genre_Model.objects.all().order_by('genre_id')
     serializer_class = GenreModelSerializer
 
+class LibraryModelViewSet(viewsets.ModelViewSet):
+    queryset = Library_Model.objects.all().order_by('owner_id')
+    serializer_class = LibraryModelSerializer
+
+class LibraryMembershipViewSet(viewsets.ModelViewSet):
+    queryset = Library_Membership.objects.all().order_by('library')
+    serializer_class = LibraryMembershipSerializer
+
 
 """REDIRECTS"""
 def homepage(request):
@@ -40,13 +51,13 @@ def homepage(request):
     return render(request,"home/homepage.html")
 
 class SearchResultsView(ListView):
-    model = PlayerAccount
+    model = Game_Model
     template_name = 'search_results.html'
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        object_list = PlayerAccount.objects.filter(
-            Q(player_name__icontains=query) | Q(user_name__icontains=query)
+        object_list = Game_Model.objects.filter(
+            Q(game_title__icontains=query)
         )
         return object_list
 
