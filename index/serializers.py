@@ -1,6 +1,6 @@
 # serializers.py
 from rest_framework import serializers
-from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model
+from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, Library_Membership
 
 class PlayerAccountSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -27,5 +27,14 @@ class GenreModelSerializer(serializers.HyperlinkedModelSerializer):
         model = Genre_Model
         fields = ('genre_id','genre_name')
 
+class LibraryModelSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Library_Model
+        fields = ('owner_id','games')
+
+class LibraryMembershipSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Library_Membership
+        fields = ('game','library','last_played','is_finished')
 
 
