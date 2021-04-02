@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -14,13 +15,13 @@
 <br>
 <section class="container site-content animate__animated animate__backInDown animate__faster">
     {#    <h1>Game Title</h1>#}
-    <h1>Persona 5 Strikers</h1>
+    <h1>{{ gameArticle.game_title }}</h1>
 </section>
 <section class="container site-content animate__animated animate__lightSpeedInRight animate__faster">    <br>
     <div class="row">
         <div class="container col pb-1" style="margin: auto; text-align: center">
             <div class="container">
-                <img class="rounded mx-auto d-block" src="/static/Images/persona-5-strikers-box-art.jpg" alt="P5S" width="300" height="420">
+                <img class="rounded mx-auto d-block" src="{{gameArticle.img_id.img_url}}" alt="Game Cover" width="300" height="420">
             </div>
             <div class="container pt-2 form" style="text-align: center">
                 <h3>Edit status:</h3>
@@ -46,15 +47,53 @@
         </div>
         <div class="container col pt-1">
             <h3>Synopsis</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>{{ gameSummary }}</p>
             <h3>Genres</h3>
-            <p>Action, adventure, JRPG</p>
-            <h3>Platforms</h3>
-            <p><i class="fab fa-playstation"></i> PlayStation 4, Nintendo Switch, <i class="fab fa-steam"></i> PC</p>
-            <h3>Developer</h3>
-            <p>Koei Tecmo</p>
-            <h3>Publisher</h3>
-            <p>Atlus</p>
+
+            {% for attr, list in gameArticle.genres.items %}
+                <p>
+                {% if list.count > 0 %}
+                    {% for genre in list %}
+
+                        <p>{{ genre }}</p>
+
+                    {% endfor %}
+                {% else %}
+                        <p>No Genres Available</p>
+                {% endif %}
+                </p>
+            {% endfor %}
+
+            <h3>Platform</h3>
+            {% for attr, platform in gameArticle.platforms.items %}
+                {% if "PlayStation 4" in platform %}
+                    <p><img src="../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"> PlayStation 4</p>
+                {% elif "Xbox One" in platform %}
+                    <p><img src="../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"> Xbox One</p>
+                {% elif "Nintendo Switch" in platform %}
+                    <p><img src="../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"> Nintendo Switch</p>
+                {% elif "PC (Microsoft Windows)" in platform %}
+                    <p><img src="../static/Images/platforms/pc.png" alt="PC" width="30" height="30"> PC</p>
+                {% endif %}
+            {% endfor %}
+
+
+            <h3>Involved Companies</h3>
+
+            {% for attr, list in gameArticle.developers.items %}
+                <p>
+                {% if list.count > 0 %}
+                    {% for dev in list %}
+
+                        <p>{{ dev }}</p>
+
+                    {% endfor %}
+                {% else %}
+                        <p>No Involved Companies Available</p>
+                {% endif %}
+                </p>
+            {% endfor %}
+
         </div>
     </div>
     {#    <div class="container pt-2 form row" style="margin: auto">#}

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'index.apps.IndexConfig',
     'rest_framework',
     'register.apps.RegisterConfig',
-    "crispy_forms",
+    'crispy_forms',
     'social_django',
     'django_extensions',
 
@@ -63,8 +63,7 @@ ROOT_URLCONF = 'django_test.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'templates/home')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

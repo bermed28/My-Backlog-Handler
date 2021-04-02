@@ -58,6 +58,22 @@ def getInvolvedCompanies(id):
             # Internal method is called and it's value is returned in the main method
             return getCompany(involved_companies[0][key])
 
+def getSummary(id, wrapper):
+    # This method is intended to be used externally, import it where needed
+    # summary is a list of dictionaries that follows a json format
+    summary = json.loads(wrapper.api_request('games', f'fields storyline, summary; where id = {id};'))
+
+    # Since some games do not have a storyline description, we can use the summary of the game
+    # or just simply put that it has no summary yet
+
+    # summary[0] is the first dictionary that is in the list of json formatted dictionaries
+    if "storyline" in summary[0]:
+        return summary[0]['storyline']  # summary[0][key], since summary[0] is a dictionary
+    elif "summary" in summary[0]:
+        return summary[0]['summary']
+    else:
+        return "This game has no summary yet"
+
 
 """""""""""""""""""""""""""""""""""""""""MAIN METHOD FOR EXTRACTING GAMES"""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -98,7 +114,7 @@ def extractAPIGames(endpoint: str, query: str, fileNumber:int):
                     game[key][i] = getInvolvedCompanies(game[key][i])
 
     #We parse the hashtable information to a .json file we deliver as output using json.dump()
-    with open(f'res/data_{fileNumber}.json', 'w') as outfile:
+    with open(f'../res/data_{fileNumber}.json', 'w') as outfile:
         json.dump(games, outfile, indent=4)
 
     print(f"Games Extracted: {gamesExtracted}")

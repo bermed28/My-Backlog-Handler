@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if request.user.is_authenticated %}
+        {% include 'home/navTemplate.html' %}
+    {% else %}
+        {% include 'home/navOutTemplate.html' %}
+    {% endif %}
+    <script src="https://kit.fontawesome.com/c6db85c705.js" crossorigin="anonymous"></script>
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+        th,td {
+            width: 150px;
+            text-align: center;
+            vertical-align: middle;
+            padding: 5px;
+        }
+        .nametag {
+            text-align: left;
+        }
+    </style>
+
+</head>
+<body>
+<br>
+<div>
+    <section class="container site-content">
+        <h1>Search Results</h1>
+    </section>
+</div>
+<div class="container site-content pt-1">
+    {% if game_model_list.count == 0 %}
+        <p class="pb-1" style="font-size: large; font-family: 'arcadeclassicregular', sans-serif">The games you were searching for were not found! Please come back later to see if they have been added</p>
+    {% else %}
+        <div class="container table-responsive">
+        <table class="table text-white" style="width: 100%;">
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th colspan="2" class="nametag">Name</th>
+            <th>Platform</th>
+            <th>Rating</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for game in game_model_list %}
+            <tr>
+
+                {% if game.img_id.img_url is not None %}
+                    <td><a href="{% url 'game-article-template' game_id=game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ game.img_id.img_url }}"></a></td>
+                {% else %}
+                    <td><a href="{% url 'game-article-template' game_id=game.game_id%}"><img class="me-1" width="70" height="70" alt="Game Cover" src="../../static/Images/controller-logo.png"></a></td>
+                {% endif %}
+                <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=game.game_id%}" style="text-decoration: none; color: white">{{ game.game_title }}</a></td>
+
+                {% for attr, platform in game.platforms.items %}
+                    {% if "PlayStation 4" in platform %}
+                        <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
+                    {% elif "Xbox One" in platform %}
+                        <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
+                    {% elif "Nintendo Switch" in platform %}
+                        <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
+                    {% elif "PC (Microsoft Windows)" in platform %}
+                        <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
+                    {% endif %}
+                {% endfor %}
+
+                <td>10/10</td> {# We have to implement the rating model so we can add the rating average here #}
+                <td><button class="btn btn-primary" onclick="window.location.href='#'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+            </tr>
+        {% endfor %}
+    {% endif %}
+    </tbody>
+    </table>
+    </div>
+{#                {% for user in object_list %}#}
+{#                    <li style="font-family: sans-serif;">#}
+{#                        {{ user.player_name }}, {{ user.user_name }}#}
+{#                    </li>#}
+{#                {% endfor %}#}
+</div><br>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -3,7 +3,8 @@ from django.shortcuts import render, redirect
 from rest_framework import viewsets
 from django.views.generic import ListView
 from django.db.models import Q
-
+from igdb.wrapper import IGDBWrapper
+from .request import getSummary
 from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, \
 PlayerAccountSerializer,LibraryModelSerializer, LibraryMembershipSerializer
 
@@ -40,26 +41,53 @@ class LibraryMembershipViewSet(viewsets.ModelViewSet):
 
 
 """REDIRECTS"""
-def homepage(request):
-    """
-    Uncomment to test login and logout
-    if request.user.is_authenticated:
-        print("Logged In")
-    else:
-        print("Logged Out")
-    """
-    return render(request,"home/homepage.html")
 
-class SearchResultsView(ListView):
+class HomeGameView(ListView):
     model = Game_Model
-    template_name = 'search_results.html'
+    template_name = '../templates/home/homepage.html'
+
+    def get_list(self):
+        game_model_list = Game_Model.objects
+        return game_model_list
+
+class LibraryGameView(ListView):
+    model = Game_Model
+    template_name = '../templates/home/library.html'
+
+    def get_list(self):
+        game_model_list = Game_Model.objects
+        return game_model_list
+
+class BacklogGameView(ListView):
+    model = Game_Model
+    template_name = '../templates/home/backlog.html'
+
+    def get_list(self):
+        game_model_list = Game_Model.objects
+        return game_model_list
+
+
+class SearchResultsGameView(ListView):
+    model = Game_Model
+    template_name = '../templates/home/search_results.html'
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        object_list = Game_Model.objects.filter(
+        game_model_list = Game_Model.objects.filter(
             Q(game_title__icontains=query)
         )
-        return object_list
+        return game_model_list
+
+class SearchResultsImgView(ListView):
+    model = Image_Model
+    template_name = '../templates/home/search_results.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        image_model_ist = Image_Model.objects.filter(
+            Q(game_title__icontains=query)
+        )
+        return image_model_ist
 
 def registration(request):
     return render(request, 'home/registration.html')
@@ -67,14 +95,12 @@ def registration(request):
 def aboutUs(request):
     return render(request, 'home/about-us.html')
 
-def backlog(request):
-    return render(request, 'home/backlog.html')
+def gameArticleTemplate(request, game_id):
+    wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "r2raogtcmwho8ja4fv6b8si2h7u7ag")
+    gameArticle = Game_Model.objects.get(game_id=game_id)
+    summary = getSummary(game_id,wrapper)
+    return render(request, 'home/game-article-template.html', {'gameArticle' : gameArticle, "gameSummary": summary})
 
-def gameArticleTemplate(request):
-    return render(request, 'home/game-article-template.html')
-
-def library(request):
-    return render(request, 'home/library.html')
 
 def tips(request):
     return render(request, 'home/tips.html')
