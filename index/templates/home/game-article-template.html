@@ -52,7 +52,7 @@
 
             {% for attr, list in gameArticle.genres.items %}
                 <p>
-                {% if list.count > 0 %}
+                {% if list is not None %}
                     {% for genre in list %}
 
                         <p>{{ genre }}</p>
@@ -82,7 +82,8 @@
 
             {% for attr, list in gameArticle.developers.items %}
                 <p>
-                {% if list.count > 0 %}
+
+                {% if list.count is not None %}
                     {% for dev in list %}
 
                         <p>{{ dev }}</p>

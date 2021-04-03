@@ -1,4 +1,5 @@
 import json, os
+from threading import Thread
 from igdb.wrapper import IGDBWrapper
 global wrapper #Global variable to reference wrapper so it can be used across all methods and getters
 
@@ -28,9 +29,10 @@ def getCoverUrl(id):
     covers = json.loads(wrapper.api_request('covers', f'fields url; where id = {id};'))
     for key in covers[0]:
         if key == "url":
-            return "https:" + covers[0][key]
+            return ("https:" + covers[0]['url']).replace('thumb',"1080p")
 
 def getPlatforms(id):
+
     platforms = json.loads(wrapper.api_request('platforms', f'fields name; where id = {id};'))
     for key in platforms[0]:
         if key == "name":
@@ -75,6 +77,7 @@ def getSummary(id, wrapper):
         return "This game has no summary yet"
 
 
+
 """""""""""""""""""""""""""""""""""""""""MAIN METHOD FOR EXTRACTING GAMES"""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -83,7 +86,7 @@ def extractAPIGames(endpoint: str, query: str, fileNumber:int):
     byte_array = wrapper.api_request(endpoint, query) #Byte array that stores the infromation given from the API with a given endpoint & query
     games = json.loads(byte_array) #Convert the byte array into a json-like hashtable for easy extraction and iteration
 
-    print("Started Game Extraction")
+    print(f"Started Game Extraction for file {fileNumber}")
     gamesExtracted = 0
 
     """
@@ -98,6 +101,7 @@ def extractAPIGames(endpoint: str, query: str, fileNumber:int):
     """
     for game in games:
         gamesExtracted += 1
+        print(f"Games: {gamesExtracted} - File: {fileNumber}")
         for key in game:
             if key == "cover":
                 game[key] = getCoverUrl(game[key])
@@ -114,16 +118,22 @@ def extractAPIGames(endpoint: str, query: str, fileNumber:int):
                     game[key][i] = getInvolvedCompanies(game[key][i])
 
     #We parse the hashtable information to a .json file we deliver as output using json.dump()
-    with open(f'../res/data_{fileNumber}.json', 'w') as outfile:
+    with open(f'res/data_{fileNumber}.json', 'w') as outfile:
         json.dump(games, outfile, indent=4)
 
     print(f"Games Extracted: {gamesExtracted}")
-    print("Finished, check your data.json")
+    print(f"Finished, check your data_{fileNumber}.json")
+
 
 #Command to initialize game extraction every time this file is ran
 if __name__ == "__main__":
+
     wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "r2raogtcmwho8ja4fv6b8si2h7u7ag")
-    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=48; limit 100;', 1)
-    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=49; limit 100;', 2)
-    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=130; limit 100;', 3)
-    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=6; limit 100;', 4)
+
+    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=48 & category=0; limit 200;',1)
+    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=49 & category=0; limit 200;', 2)
+    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=130 & category=0; limit 200;',3)
+    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=6 & category=0; limit 200;', 4)
+
+
+
