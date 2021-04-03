@@ -28,12 +28,17 @@
             color: white;
         }
         .genre {
-            font-size: small;
+            font-size: 13px;
             border-radius: 10px;
             background-color: #007bff;
-            border-bottom-color: #007bff;
+            border-color: #007bff;
             text-align: center;
             padding: 2px;
+        }
+        .genre:hover {
+            background-color: black;
+            border-color: #007bff;
+            color: #007bff;
         }
     </style>
 </head>
@@ -93,12 +98,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
                                                                              width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="pb-3">
                                     <div>
@@ -117,12 +122,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
                                  width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="pb-3">
                                     <div>
@@ -143,12 +148,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
                                                                              width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -159,12 +164,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
                                  width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -177,12 +182,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
                                                                              width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -193,12 +198,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
                                  width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -211,12 +216,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
                                                                              width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -227,12 +232,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
                                  width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -245,12 +250,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
                                                                              width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -261,12 +266,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
                                  width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -279,12 +284,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
                                                                              width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -295,12 +300,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
                                  width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -313,12 +318,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
                                                                              width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -329,12 +334,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
                                  width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -347,12 +352,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
                                                                              width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -363,12 +368,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
                                  width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -381,12 +386,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
                                                                              width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -397,12 +402,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
                                  width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -415,12 +420,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"
                                                                              width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Persona 5 Royal</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Persona 5 Royal</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -431,12 +436,12 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-5">
-                            <a href="{% url 'game-article-template' %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
+                            <a href="{% url 'game-article-template' game_id=-1 %}"><img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"
                                  width="100%" height="100%" class="card-img" alt="..."></a>
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <a href="{% url 'game-article-template' %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
+                                <a href="{% url 'game-article-template' game_id=-1 %}"><h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5></a>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>

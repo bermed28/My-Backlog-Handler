@@ -49,13 +49,13 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Backlog</a>
                             <div class="dropdown-menu bg-dark animate__animated animate__zoomIn animate__faster">
-                                <a class="nav-link" href="{% if request.user.is_authenticated %}
+                                <a class="dropdown-item" href="{% if request.user.is_authenticated %}
                                                             {% url 'backlog' %}
                                                         {% else %}
                                                             {% url 'register' %}
                                                         {% endif %}">My Backlog</a>
                                 <div class="dropdown-divider bg-light"></div>
-                                <a class="nav-link" href="{% if request.user.is_authenticated %}
+                                <a class="dropdown-item" href="{% if request.user.is_authenticated %}
                                                             {% url 'tips-tricks' %}
                                                         {% else %}
                                                             {% url 'register' %}
@@ -77,10 +77,10 @@
                             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
                                 <img src="/static/Images/avatar.svg" height="30px" width="30px" class="avatar me-1" alt="Avatar">{%  block content %}{{user}}{% endblock %}<b class="caret"></b></a>
                             <div class="dropdown-menu  bg-dark animate__animated animate__zoomIn animate__faster">
-                                <a href="#" class="dropdown-item"><i class="fas fa-user-circle me-1"></i>Profile</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-heart me-1"></i>Favorites</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-gift"></i> Wishlist</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-1"></i>Settings</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item"><i class="fas fa-user-circle me-1"></i>Profile</a>
+                                <a href="{% url 'favorites' %}" class="dropdown-item"><i class="fas fa-heart me-1"></i>Favorites</a>
+                                <a href="{% url 'wishlist' %}" class="dropdown-item"><i class="fas fa-gift"></i> Wishlist</a>
+                                <a href="{% url 'settings' %}" class="dropdown-item"><i class="fas fa-cog me-1"></i>Settings</a>
                                 <div class="dropdown-divider bg-light"></div>
                                 <a href="{% url 'logout' %}" class="dropdown-item"><i class="fas fa-sign-out-alt me-1"></i>Logout</a>
                             </div>
@@ -92,16 +92,6 @@
     </div>
 </header>
 <!-- End of Header/Navbar -->
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
