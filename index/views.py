@@ -126,9 +126,17 @@ def profile(request):
 def favorites(request):
     return render(request, 'home/favorites.html')
 
-def fourOFour(request):
-    return render(request, 'home/404.html')
+def fourOFour(request, exception):
+    return render(request=request, template_name='home/errorHandling/404.html')
 
+def fiveHundred(request):
+    return render(request=request, template_name='home/errorHandling/500.html')
+
+def fourHundred(request, exception):
+    return render(request=request, template_name='home/errorHandling/400.html')
+
+def fourOThree(request, exception):
+    return render(request=request, template_name='home/errorHandling/403.html')
 
 
 

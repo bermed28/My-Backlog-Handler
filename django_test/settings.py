@@ -26,7 +26,7 @@ SECRET_KEY = '+d@m_8gzm-bu46)srp$xpk8_y&#-x^g!yrqhab(r$n#8h19a0!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-test-inso.herokuapp.com']
+ALLOWED_HOSTS = ['django-test-inso.herokuapp.com', 'mybackloghandler.com', '127.0.0.1:8000']
 
 # Application definition
 
@@ -104,6 +104,7 @@ DATABASES = {
     }
 
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

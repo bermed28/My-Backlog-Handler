@@ -13,7 +13,7 @@ urlpatterns = [
     path('', views.HomeGameView.as_view(), name="homepage"),
     path('about-us/', views.aboutUs, name="about-us"),
     path('backlog/my-backlog/', views.BacklogGameView.as_view(), name="backlog"),
-    path(r'(?P<game_id>\w+)/$', views.gameArticleTemplate, name="game-article-template"),
+    path(r'^(?P<game_id>\w+)/$', views.gameArticleTemplate, name="game-article-template"),
     #url(r'(?P<first_name>\w+)_(?P<last_name>\w+)/$', view_name, name='url_name')
     # {% url 'urlname' user.firstname user.lastname %}
 
@@ -31,5 +31,8 @@ urlpatterns = [
     path('user/wishlist/', views.wishlist, name='wishlist'),
     path('user/settings/', views.settings, name='settings'),
     path('404/', views.fourOFour, name='404'),
+    path('500/', views.fiveHundred, name='500'),
+    path('403/', views.fourOThree, name='403'),
+    path('400/', views.fourHundred, name='400'),
 ]
 
