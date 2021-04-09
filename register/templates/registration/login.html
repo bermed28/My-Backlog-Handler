@@ -39,11 +39,11 @@
     {%  load crispy_forms_tags %}
 
     {% block content %}
-        <form method="POST" class="form-group">
+        <form method="POST" class="form-group" style="font-family: sans-serif">
             {% csrf_token %}
             {{form|crispy}}
-            <p class="pt-1">Don't have an account? Create one <a href='{% url "register" %}'>here</a></p>
-            <div class="container" style="text-align: center;"><button type="submit" class="btn btn-outline-success mybtn">Login</button></div>
+            <p class="pt-1" style="font-family: arcadeclassicregular">Don't have an account? Create one <a href='{% url "register" %}'>here</a></p>
+            <div class="container" style="text-align: center;font-family: arcadeclassicregular"><button type="submit" class="btn btn-outline-success mybtn">Login</button></div>
             <br/>
             <div class="container row pb-3">
                 {#            <div class="col"><a href="{% url "social:begin" "github" %}"> <img src="/static/Images/github.png" width="60" height="60"> <br/>Sign in</a></div>#}
@@ -60,7 +60,7 @@
         </form>
     {% endblock %}
 </div><br>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<div class="container text-center" style="font-family: arcadeclassicregular">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
