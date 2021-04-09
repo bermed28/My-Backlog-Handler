@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.contrib.auth import urls
+from django.conf.urls import handler404, handler500, handler403, handler400
 from django.urls import path, include
 from register import views as v
 
@@ -24,6 +24,9 @@ urlpatterns = [
     path('register/', v.register, name="register"),
     path('social-auth/', include('social_django.urls', namespace='social')),
     path('accounts/', include('django.contrib.auth.urls'))
-    #path(''. include("django.contri.auth.urls")),
-
 ]
+
+handler404 = 'index.views.fourOFour'
+handler500 = 'index.views.fiveHundred'
+handler403 = 'index.views.fourOThree'
+handler400 = 'index.views.fourHundred'

@@ -1,5 +1,9 @@
+import datetime
+
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
+from django.http import HttpResponse
 from django.contrib.auth.forms import AuthenticationForm
 from django.conf import settings
 
@@ -8,6 +12,7 @@ from django.conf import settings
 def register(response):
     if response.user.is_authenticated:
         return redirect("homepage")
+
     else:
         if response.method == "POST":
             form = RegisterForm(response.POST)
@@ -17,4 +22,6 @@ def register(response):
         else:
             form = RegisterForm()
 
-        return render(response, "register/register.html", {"form":form})
+        return render(response, "register/register.html", {"form": form})
+
+

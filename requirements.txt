@@ -3,11 +3,18 @@ dj-database-url==0.5.0
 Django==3.1.7
 django-heroku==0.3.1
 django-postgresql==0.0.3
-gunicorn==20.0.4
+gunicorn==20.1.0
 sqlparse==0.4.1
 whitenoise==5.2.0
-djangorestframework==3.12.2
-django-crispy-forms==1.11.1
-social-auth-app-django==4.0.0
 psycopg2==2.8.6
+djangorestframework==3.12.4
+django-crispy-forms==1.11.2
+social-auth-app-django==4.0.0
+requests==2.25.1
+rawgpy==1.0.3
+igdb-api-v4==0.0.3
+django-session-timeout==0.1.0
+django-extensions==3.1.1
+
+
 

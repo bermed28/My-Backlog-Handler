@@ -7,22 +7,59 @@
     {% else %}
         {% include 'home/navOutTemplate.html' %}
     {% endif %}
+    <style>
+        .socialLinks {
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+        .social {
+            position: relative;
+            display: inline-block;
+            padding: .8em;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            background-color: transparent;
+            outline: none;
+            font-family: inherit;
+            font-size: 13px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .col {
+            align-content: center;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
 </head>
-
 <br>
-<div class="container animate__animated animate__backInDown animate__faster"style="font-family: arcadeclassicregular">
-   {% load crispy_forms_tags %}
+<section class="container site-content animate__animated animate__backInDown animate__faster">
+    <h1>Sign Up</h1>
+</section>
+<div class="container site-content animate__animated animate__backInDown animate__faster" style="font-family: arcadeclassicregular">
+    {% load crispy_forms_tags %}
     {%  block content %}
         <form method="POST" class="form-group">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-success">Register</button>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <p>Already have an account? Log in <a href='{% url "login" %}'>here</a></p>
+            <div class="container" style="text-align: center;"><button type="submit" class="btn btn-outline-success mybtn">Register</button></div>
         </form>
         <br/>
-        <p><a href="{% url "social:begin" "github" %}"> <img src="/static/Images/github.png" width="60" height="60"> <br/>Sign in</a> </p>
-
+        <div class="container row pb-3">
+            {#            <div class="col"><a href="{% url "social:begin" "github" %}"> <img src="/static/Images/github.png" width="60" height="60"> <br/>Sign in</a></div>#}
+            <div class="col"><div class="social"><a class="socialLinks" href="{% url "social:begin" "github" %}">
+                <div class="social" style="background-color: #2e353d; color: white">
+                    <img class="me-2" src="/static/Images/social_auth/github.png" width="22" height="22" alt="GitHub">Sign up</div></a>
+            </div></div>
+            {#            <div class="col"><a href="{% url "social:begin" "google-oauth2" %}"><img src="/static/Images/googlelogo.png" width="110" height="80"> <br/>Sign in</a></div>#}
+            <div class="col"><div class="social"><a class="socialLinks" href="{% url "social:begin" "google-oauth2" %}">
+                <div class="social" style="background-color: white; color: #2e353d">
+                    <img src="/static/Images/social_auth/google.png" width="25" height="24" alt="Google">Sign up</div></a>
+            </div></div>
+        </div>
     {% endblock %}
-</div>
+</div><br>
 <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

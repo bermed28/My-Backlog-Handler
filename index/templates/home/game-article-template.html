@@ -1,83 +1,119 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" charset="UTF-8">
-    <title>My Backlog Handler</title>
-    <link rel="icon" href="/static/Images/controller-logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/home/stylesheet.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    {% if request.user.is_authenticated %}
+        {% include 'home/navTemplate.html' %}
+    {% else %}
+        {% include 'home/navOutTemplate.html' %}
+    {% endif %}
+    <script src="https://kit.fontawesome.com/c6db85c705.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="text-white bg-dark">
-<header>
-    <div id="primary-nav">
-        <div class="container-fluid">
-            <nav class="navbar navbar-dark navbar-expand-xl" style="font-family: 'arcadeclassicregular';">
-                <a class="navbar-brand" href="{% url 'homepage' %}">
-                    <img src="/static/Images/controller-logo.png" width="30" height="30" alt="Logo">
-                    My Backlog Handler
-                </a>
-                <button data-toggle="collapse" data-target="#navbarToggler" type="button"
-                        class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarToggler">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url "homepage" %}">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                               href="#">Games</a>
-                            <div class="dropdown-menu bg-dark">
-                                <a href="#" class="dropdown-item">New Releases</a>
-                                <a href="#" class="dropdown-item">Popular</a>
-                                <a href="#" class="dropdown-item">Upcoming</a>
-                                <a href="#" class="dropdown-item">Recently Added</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'library' %}">Library</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Backlog</a>
-                            <div class="dropdown-menu bg-dark">
-                                <a href="{% url 'backlog' %}" class="dropdown-item">My Backlog</a>
-                                <div class="dropdown-divider bg-light"></div>
-                                <a href="{% url 'tips-tricks' %}" class="dropdown-item">Tips</a>
-                            </div>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about-us' %}">About Us</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search"
-                                       aria-label="Search">
-                                <button class="btn btn-outline-success me-2" type="submit">Search</button>
-                            </form>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn navbar-btn btn-outline-primary me-1"
-                                    onclick="window.location.href='{% url "register" %}'">Sign up</button>
-                            <button class="btn navbar-btn btn-outline-primary me-1"
-                                    onclick='window.location.href="{% url 'login' %}"'>Login</button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+<br>
+<section class="container site-content animate__animated animate__backInDown animate__faster">
+    {#    <h1>Game Title</h1>#}
+    <h1>{{ gameArticle.game_title }}</h1>
+</section>
+<section class="container site-content animate__animated animate__lightSpeedInRight animate__faster">    <br>
+    <div class="row">
+        <div class="container col pb-1" style="margin: auto; text-align: center">
+            <div class="container">
+                <img class="rounded mx-auto d-block" src="{{gameArticle.img_id.img_url}}" alt="Game Cover" width="300" height="420">
+            </div>
+            <div class="container pt-2 form" style="text-align: center">
+                <h3>Edit status:</h3>
+                <div><a href="#">Add to library <i class="far fa-plus-square"></i></a></div>
+                <div><a href="#">Add to backlog <i class="far fa-plus-square"></i></a></div>
+                <label>Your score: </label>
+                <label class="pt-2 pb-2">
+                    <select class="form-control bg-dark" style="color: white">
+                        <option>Select</option>
+                        <option>Apalling (1)</option>
+                        <option>Horrible (2)</option>
+                        <option>Very Bad (3)</option>
+                        <option>Bad (4)</option>
+                        <option>Average (5)</option>
+                        <option>Fine (6)</option>
+                        <option>Good (7)</option>
+                        <option>Very Good (8)</option>
+                        <option>Great (9)</option>
+                        <option>Masterpiece (10)</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="container col pt-1">
+            <h3>Synopsis</h3>
+            <p>{{ gameSummary }}</p>
+            <h3>Genres</h3>
+
+            {% for attr, list in gameArticle.genres.items %}
+                <p>
+                {% if list is not None %}
+                    {% for genre in list %}
+
+                        <p>{{ genre }}</p>
+
+                    {% endfor %}
+                {% else %}
+                        <p>No Genres Available</p>
+                {% endif %}
+                </p>
+            {% endfor %}
+
+            <h3>Platform</h3>
+            {% for attr, platform in gameArticle.platforms.items %}
+                {% if "PlayStation 4" in platform %}
+                    <p><img src="../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"> PlayStation 4</p>
+                {% elif "Xbox One" in platform %}
+                    <p><img src="../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"> Xbox One</p>
+                {% elif "Nintendo Switch" in platform %}
+                    <p><img src="../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"> Nintendo Switch</p>
+                {% elif "PC (Microsoft Windows)" in platform %}
+                    <p><img src="../static/Images/platforms/pc.png" alt="PC" width="30" height="30"> PC</p>
+                {% endif %}
+            {% endfor %}
+
+
+            <h3>Involved Companies</h3>
+
+            {% for attr, list in gameArticle.developers.items %}
+                <p>
+
+                {% if list.count is not None %}
+                    {% for dev in list %}
+
+                        <p>{{ dev }}</p>
+
+                    {% endfor %}
+                {% else %}
+                        <p>No Involved Companies Available</p>
+                {% endif %}
+                </p>
+            {% endfor %}
+
         </div>
     </div>
-</header>
+    {#    <div class="container pt-2 form row" style="margin: auto">#}
+    {#        <h3>Edit status:</h3>#}
+    {#        <div><a href="#">Add to library <i class="far fa-plus-square"></i></a></div>#}
+    {#        <a href="#">Add to library</a>#}
+    {#        <div><a href="#">Add to backlog <i class="far fa-plus-square"></i></a></div>#}
+    {#        <br>#}
+    {#        <label>Your score: </label>#}
+    {#        <label>#}
+    {#            <select class="">#}
+    {#                <option>Small select</option>#}
+    {#                <option>Small select</option>#}
+    {#                <option>Small select</option>#}
+    {#            </select>#}
+    {#        </label>#}
+    {#    </div>#}
+</section>
 <br>
-<div>
-    <section class="container site-content animate__animated animate__backInDown animate__faster">
-        <h1>Coming Soon</h1>
-    </section>
-</div><br>
 <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

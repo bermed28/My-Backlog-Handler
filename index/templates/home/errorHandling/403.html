@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if request.user.is_authenticated %}
+        {% include 'home/navTemplate.html' %}
+    {% else %}
+        {% include 'home/navOutTemplate.html' %}
+    {% endif %}
+    <style>
+        #error {
+            font-size: 144px;
+            text-align: center;
+            vertical-align: middle;
+            font-family: 'arcadeclassicregular', sans-serif;
+
+        }
+        p {
+            text-align: center;
+            vertical-align: middle;
+            font-size: x-large;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+<br>
+<div>
+    <section class="container site-content">
+        <h1>Forbidden</h1>
+    </section>
+    <div class="container site-content animate__animated animate__fadeIn animate__faster pb-2">
+        <div id="error">403 <img height="125" width="125" src="../../../static/Images/warning.png" alt="Warning"></div>
+        <p>Oops! What you wanted to do is forbidden.</p>
+        <p>You may want to turn back and explore elsewhere.</p>
+    </div>
+</div>
+</body>
+</html>

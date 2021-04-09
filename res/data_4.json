@@ -1,0 +1,2683 @@
+[
+    {
+        "id": 68841,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22v1.jpg",
+        "genres": [
+            "Strategy",
+            "Turn-based strategy (TBS)"
+        ],
+        "name": "Captivus",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 33284,
+        "genres": [
+            "Indie"
+        ],
+        "name": "One way to exit",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 74857,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/gvmrqog3hwa0cwnutivk.jpg",
+        "genres": [
+            "Platform",
+            "Puzzle",
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Transcend",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 63721,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co266g.jpg",
+        "genres": [
+            "Simulator",
+            "Sport",
+            "Indie"
+        ],
+        "name": "KENDAMVR - Virtual Reality Kendama",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 35281,
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Aldorlea Games"
+        ],
+        "name": "Valiant: Resurrection",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 52091,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2apc.jpg",
+        "genres": [
+            "Simulator",
+            "Sport",
+            "Indie"
+        ],
+        "name": "Darts VR",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 128861,
+        "genres": [
+            "Visual Novel"
+        ],
+        "involved_companies": [
+            "Iris"
+        ],
+        "name": "Chicchakunai Mon! ~School Bus de Omukae Chu Chu\u2665~",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 127418,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1wl1.jpg",
+        "genres": [
+            "Puzzle",
+            "Strategy"
+        ],
+        "involved_companies": [
+            "Minimol Games"
+        ],
+        "name": "Unlock The King 2",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 86109,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2gxr.jpg",
+        "genres": [
+            "Visual Novel"
+        ],
+        "involved_companies": [
+            "Purple Software",
+            "Denpasoft",
+            "Sekai Project"
+        ],
+        "name": "Chrono Clock",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 27056,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1j1w.jpg",
+        "genres": [
+            "Shooter",
+            "Indie"
+        ],
+        "involved_companies": [
+            "CRIXA LABS"
+        ],
+        "name": "Em-8ER",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 132734,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ohg.jpg",
+        "genres": [
+            "Strategy",
+            "Indie"
+        ],
+        "involved_companies": [
+            "001Studios"
+        ],
+        "name": "Iron Vulture",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 79742,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2cry.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "ARVORE Immersive Experiences, LLC"
+        ],
+        "name": "The Line",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 93800,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1k46.jpg",
+        "genres": [
+            "Simulator",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "DIEDEMOR STUDIO GAMES",
+            "Laush Studio"
+        ],
+        "name": "Temptation",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 105595,
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "WaterMagus"
+        ],
+        "name": "Magic Mechsuit Akane",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 121228,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2g4q.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Hack and slash/Beat 'em up",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Varsav Game Studios"
+        ],
+        "name": "Giants Uprising",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 91555,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ulf.jpg",
+        "involved_companies": [
+            "magnussoft Deutschland GmbH"
+        ],
+        "name": "Spike the Hedgehog",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 130974,
+        "genres": [
+            "Strategy",
+            "Indie"
+        ],
+        "name": "Dodge If you Can!",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 53383,
+        "name": "Mittelerde: Mordors Schatten",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 74958,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co29fp.jpg",
+        "genres": [
+            "Simulator",
+            "Strategy"
+        ],
+        "name": "ALVAROK",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 33160,
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "The Orphan Dreams",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 249,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2j5m.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Strategy",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Legend Entertainment"
+        ],
+        "name": "Superhero League of Hoboken",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 94804,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co28ka.jpg",
+        "genres": [
+            "Simulator",
+            "Strategy",
+            "Indie"
+        ],
+        "involved_companies": [
+            "N-Body Solutions"
+        ],
+        "name": "Space Station Continuum",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 34320,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/plcgxtmzqe0p4x2uyxt4.jpg",
+        "genres": [
+            "Simulator",
+            "Sport",
+            "Indie"
+        ],
+        "name": "Pro Gamer Manager",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 77346,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2267.jpg",
+        "genres": [
+            "Racing",
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Invictus Games Ltd",
+            "Activision Value"
+        ],
+        "name": "Street Legal Racing: Redline",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 111664,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2jnq.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "The Kite",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 120626,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1mog.jpg",
+        "genres": [
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "Big Fish Games",
+            "ERS G-Studio"
+        ],
+        "name": "Dark Tales: Edgar Allan Poe's Murders in the Rue Morgue",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 139253,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2hkf.jpg",
+        "genres": [
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "Porter Zach"
+        ],
+        "name": "Picross for a Cause",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 101773,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1xd7.jpg",
+        "genres": [
+            "Role-playing (RPG)"
+        ],
+        "involved_companies": [
+            "TwoWizards"
+        ],
+        "name": "Idle Wizard",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 141005,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2vhf.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Indie World Order",
+            "Indie World Order",
+            "Indie World Order"
+        ],
+        "name": "IWOCon 2021",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 74145,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2b3o.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "name": "Endless Treasure Hunt",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 3013,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2jkf.jpg",
+        "genres": [
+            "Shooter",
+            "Role-playing (RPG)",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Red 5 Studios"
+        ],
+        "name": "FireFall",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 94567,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ty6.jpg",
+        "genres": [
+            "Simulator",
+            "Sport"
+        ],
+        "involved_companies": [
+            "Planeta DeAgostini",
+            "Gaelco"
+        ],
+        "name": "PC F\u00fatbol 2006",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 90228,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/xffl4h1a0qcccfdwa8v8.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "EightBitSkyline"
+        ],
+        "name": "Skumring",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 35310,
+        "genres": [
+            "Indie"
+        ],
+        "name": "Dwarven Brawl Bros",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 36200,
+        "involved_companies": [
+            "Blot Interactive"
+        ],
+        "name": "planktOs",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 115318,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1jcs.jpg",
+        "genres": [
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "Vishcorp Games"
+        ],
+        "name": "Sacrifice Of The Beloved",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 31903,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2b51.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "Independent"
+        ],
+        "name": "Escape Lizards",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 125036,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1s77.jpg",
+        "genres": [
+            "Point-and-click",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "B\u00fcro f\u00fcr neue Medien Hamburg"
+        ],
+        "name": "Die drei ??? - Das Geheimnis des Magiers",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 128982,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2lx2.jpg",
+        "genres": [
+            "Strategy",
+            "Indie"
+        ],
+        "name": "Pixelfence",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 43060,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1v4m.jpg",
+        "genres": [
+            "Platform",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "[K]ayinworks",
+            "DANGEN Entertainment"
+        ],
+        "name": "Brave Earth: Prologue",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 68855,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1r8i.jpg",
+        "genres": [
+            "Real Time Strategy (RTS)",
+            "Strategy",
+            "Hack and slash/Beat 'em up"
+        ],
+        "involved_companies": [
+            "Tarhead Studio"
+        ],
+        "name": "Blast Out",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 68853,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co26wm.jpg",
+        "genres": [
+            "Strategy",
+            "Indie"
+        ],
+        "involved_companies": [
+            "14313"
+        ],
+        "name": "Gravity Ball",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 55114,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1i88.jpg",
+        "genres": [
+            "Adventure",
+            "Indie",
+            "Visual Novel"
+        ],
+        "involved_companies": [
+            "Moral Anxiety Studio"
+        ],
+        "name": "Tales From Windy Meadow",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 33915,
+        "genres": [
+            "Adventure"
+        ],
+        "name": "Save Halloween: City of Witches",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 76035,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co28ct.jpg",
+        "genres": [
+            "Racing",
+            "Simulator",
+            "Sport",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Plectrum Software"
+        ],
+        "name": "Totally Realistic Sledding VR",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 72885,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1w89.jpg",
+        "genres": [
+            "Strategy"
+        ],
+        "name": "Ultimate Ride: Disney Coaster",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 31455,
+        "genres": [
+            "Adventure"
+        ],
+        "name": "Lop Nor Zombie VR",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 132546,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2cfd.jpg",
+        "genres": [
+            "Strategy",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Yustas Game Studio",
+            "Alawar Entertainment"
+        ],
+        "name": "New Yankee 8: Journey of Odysseus",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 92853,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2v1i.jpg",
+        "genres": [
+            "Racing",
+            "Adventure"
+        ],
+        "name": "Moorhuhn Kart Extra",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 34910,
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "SEEP Universe",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 56660,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co26ua.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Hoo-Boy",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 64363,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ar8.jpg",
+        "genres": [
+            "Shooter",
+            "Simulator",
+            "Sport"
+        ],
+        "involved_companies": [
+            "Game Mechanic Studios",
+            "GameMill Entertainment"
+        ],
+        "name": "Deer Hunter Reloaded",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 105228,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1jvh.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "\u85cd\u8336\u9ad8\u6821 Blue Tea College"
+        ],
+        "name": "\u79cb\u8272\u7684\u8a18\u61b6(\u9ad4\u9a57\u7248) / Fall...in Love",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 36029,
+        "genres": [
+            "Indie"
+        ],
+        "name": "Blasted Fortress",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 82844,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1uxc.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Kagura Games",
+            "Acerola"
+        ],
+        "name": "Treasure Hunter Claire",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 34437,
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Ravenscourt"
+        ],
+        "name": "Undercover Missions: Operation Kursk K-141",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 33803,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/xuzajibmrqxwhkldwxm6.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Strategy",
+            "Adventure"
+        ],
+        "name": "Inside The Code",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 120730,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1whf.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Sigma Team Inc."
+        ],
+        "name": "Alien Shooter 2 - The Legend",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 47162,
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Medieval Story",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 97073,
+        "genres": [
+            "Indie"
+        ],
+        "name": "BATTER BURST",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 68847,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2a8p.jpg",
+        "genres": [
+            "Strategy",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Captain vs Sky Pirates",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 63056,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/lexw3xxx7w9jocpqqbhg.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "name": "Detonate",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 112788,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1mib.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Lunasoft",
+            "MangaGamer"
+        ],
+        "name": "The Spirit Master of Retarnia -Conqueror of the Labyrinth-",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 30716,
+        "genres": [
+            "Racing"
+        ],
+        "name": "RunningJoe",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 130106,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2lw5.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Nyanco Channel",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 57857,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/jqtjd33nuv4evlguc4d4.jpg",
+        "name": "Chain of Command",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 88953,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/cdnaxtcacsaixsjlqenp.jpg",
+        "genres": [
+            "Role-playing (RPG)"
+        ],
+        "name": "Die letzte Schlacht der Elfen",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 26011,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/wuhsl0drh2uaytjy7ysr.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Eradicated",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 92742,
+        "involved_companies": [
+            "Interactive Magic",
+            "Siementech"
+        ],
+        "name": "Helbreath",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 126534,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2hh6.jpg",
+        "genres": [
+            "Simulator",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Khayalan Arts"
+        ],
+        "name": "SAMUDRA",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 128093,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1wey.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Chun Y."
+        ],
+        "name": "Skull's Solitude",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 31001,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1hkw.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Simulator",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Owlet"
+        ],
+        "name": "Feel The Snow",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 100434,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2mtr.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "EVA"
+        ],
+        "name": "AFTER-H",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 35218,
+        "genres": [
+            "Role-playing (RPG)",
+            "Strategy",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Ghost Machine"
+        ],
+        "name": "Orc Assault",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 3046,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/oxeeg8wve9gog5bnndrr.jpg",
+        "genres": [
+            "Shooter",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Wild Games Studio"
+        ],
+        "name": "Day One: Garry's Incident",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 79869,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1zn9.jpg",
+        "name": "White Album 2: Closing Chapter",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 128154,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1xj2.jpg",
+        "genres": [
+            "Platform",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Westerngamer"
+        ],
+        "name": "Caveman The Game",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 33292,
+        "genres": [
+            "Racing",
+            "Indie"
+        ],
+        "name": "Wincars Racer",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 76330,
+        "genres": [
+            "Role-playing (RPG)",
+            "Simulator"
+        ],
+        "name": "RIFF VR",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 30285,
+        "genres": [
+            "Strategy",
+            "Indie"
+        ],
+        "name": "Juniper Theory",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 68104,
+        "involved_companies": [
+            "Forever Entertainment S. A."
+        ],
+        "name": "Seven Boys 2",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 75037,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2am5.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "name": "Critters: Cute Cubs in a Cruel World",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 27942,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22w0.jpg",
+        "genres": [
+            "Indie",
+            "Visual Novel"
+        ],
+        "involved_companies": [
+            "Studio Beast",
+            "Fruitbat Factory"
+        ],
+        "name": "Chuusotsu \u2013 1st Graduation",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 30886,
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Time Of Silence",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 125722,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2i5w.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Strategy",
+            "Tactical",
+            "Card & Board Game"
+        ],
+        "involved_companies": [
+            "Crossingstar Studio",
+            "42 Foundation",
+            "Zodiac Interactive"
+        ],
+        "name": "Shadowplay: Metropolis Foe",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 130975,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2c4u.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Studio Skeleton"
+        ],
+        "name": "The Sentinel",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 89656,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27bp.jpg",
+        "genres": [
+            "Strategy",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Hamsters Gaming"
+        ],
+        "name": "Third Front",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 44146,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co241g.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Pirate Games",
+            "Enjoy Games"
+        ],
+        "name": "Mama Russia Needs You",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 119531,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co26a0.jpg",
+        "genres": [
+            "Shooter",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Roman Pak"
+        ],
+        "name": "WarForwards",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 131701,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co204l.jpg",
+        "genres": [
+            "Shooter",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Crania Games"
+        ],
+        "name": "Beyond Extinct",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 36271,
+        "involved_companies": [
+            "H2 Interactive Co., Ltd."
+        ],
+        "name": "Raiden III: Digital Edition",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 75105,
+        "genres": [
+            "Indie"
+        ],
+        "name": "Writers",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 89335,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/xxcmflnslejo7kzxhdtt.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "R.A.F.A.",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 132623,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2k9t.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Pocket Llama"
+        ],
+        "name": "Toasty",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 105324,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/nqhr2nyozawmayomuom9.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Bad Logic Studios"
+        ],
+        "name": "Fortune & Gloria",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 97568,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co295f.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Epic Devs LLC",
+            "Assemble Entertainment"
+        ],
+        "name": "Epic Car Factory",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 75955,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/fo7m620snqjltjdg2f0a.jpg",
+        "involved_companies": [
+            "G.J?"
+        ],
+        "name": "Akiba Girls",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 100240,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2mtc.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Gai Travel",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 55641,
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Magic Girls",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 128178,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2i06.jpg",
+        "genres": [
+            "Simulator",
+            "Indie"
+        ],
+        "involved_companies": [
+            "The Men Who Wear Many Hats"
+        ],
+        "name": "Max Gentlemen Sexy Business!",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 48010,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1rp9.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "MATRE"
+        ],
+        "name": "Piece of Memory 2: Prologue",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 102152,
+        "involved_companies": [
+            "Y8.com"
+        ],
+        "name": "Freefall Tournament",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 31818,
+        "genres": [
+            "Adventure"
+        ],
+        "name": "Cogs and Cowboys",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 130970,
+        "genres": [
+            "Indie"
+        ],
+        "name": "Fox-Trot Over Run",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 64359,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co218w.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Transolar Games"
+        ],
+        "name": "Hero-U: Rogue to Redemption",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 76300,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co276i.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "SyKoHPaTh"
+        ],
+        "name": "Super Bugman Extreme Ultra",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 116788,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1k57.jpg",
+        "genres": [
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "Global Software Publishing Ltd."
+        ],
+        "name": "Ultimate Solitaire 1000",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 36320,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/fqdqz6pn7vmhsvn00zmo.jpg",
+        "genres": [
+            "Shooter",
+            "Role-playing (RPG)",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Future Games",
+            "Unknown Identity",
+            "THQ Nordic"
+        ],
+        "name": "Mass Effect: Polish Collector's Edition",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 33462,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/tzu9vedsb65tn4hzevlu.jpg",
+        "genres": [
+            "Racing",
+            "Sport",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Missing Link Games"
+        ],
+        "name": "Death Stair",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 134866,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2c6f.jpg",
+        "genres": [
+            "Shooter",
+            "Indie",
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Black Eyed Priest"
+        ],
+        "name": "SHOTGUN",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 74120,
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Nikita \"Ghost_RUS\"",
+            "Ghost_RUS Games"
+        ],
+        "name": "Pie Door Run",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 46456,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/obujzlhwlum3jqycdd11.jpg",
+        "genres": [
+            "Simulator",
+            "Strategy"
+        ],
+        "name": "Emergency 4",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 108817,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1ira.jpg",
+        "genres": [
+            "Hack and slash/Beat 'em up"
+        ],
+        "involved_companies": [
+            "GEKHNO Game Studios"
+        ],
+        "name": "Harlequin's Nightmare",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 68178,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2bgp.jpg",
+        "genres": [
+            "Strategy",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Two thousand and one entertainment studio"
+        ],
+        "name": "GALACTIC FIELD",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 31804,
+        "genres": [
+            "Simulator",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Farm Life: Natures Adventure",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 57217,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1v2k.jpg",
+        "genres": [
+            "Shooter"
+        ],
+        "involved_companies": [
+            "Wiple Games",
+            "Aeria Games"
+        ],
+        "name": "IRONSIGHT",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 102091,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co23ta.jpg",
+        "genres": [
+            "Strategy"
+        ],
+        "involved_companies": [
+            "Waden Kane Game Studios",
+            "Yes Productions"
+        ],
+        "name": "Traffic Cop VR",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 105879,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2977.jpg",
+        "genres": [
+            "Puzzle",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Quiet River"
+        ],
+        "name": "Zup! Zero 2",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 86402,
+        "genres": [
+            "Strategy",
+            "Indie"
+        ],
+        "name": "Fantasy Mosaics 25: Wedding Ceremony",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 5622,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co25mt.jpg",
+        "genres": [
+            "Role-playing (RPG)"
+        ],
+        "involved_companies": [
+            "Infogrames",
+            "Eidos Interactive",
+            "Ion Storm",
+            "Square Enix"
+        ],
+        "name": "Anachronox",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 32589,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/eg6qz6v1lbapoucmhkvc.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "Team17"
+        ],
+        "name": "10 Minute Tower",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 31093,
+        "genres": [
+            "Simulator"
+        ],
+        "name": "Battle Tank Armada",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 87811,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ce8vhyabzvwk39glyuy1.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "ADVECT Productions",
+            "Humble Bundle"
+        ],
+        "name": "Crescent Bay",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 7682,
+        "genres": [
+            "Sport"
+        ],
+        "involved_companies": [
+            "New Star Games Ltd"
+        ],
+        "name": "New Star Soccer",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 134904,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2clc.jpg",
+        "genres": [
+            "Simulator",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Moonryse Studios"
+        ],
+        "name": "Hi-Score Boi",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 93408,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1sem.jpg",
+        "genres": [
+            "Puzzle",
+            "Hack and slash/Beat 'em up"
+        ],
+        "involved_companies": [
+            "Ingames Interactive",
+            "SegaSoft"
+        ],
+        "name": "Flesh Feast",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 129685,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1zzq.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Neoclassic Games"
+        ],
+        "name": "Anime Artist 2: Lovely Danya",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 28074,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co26uu.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Dogolrax",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 76491,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co26ot.jpg",
+        "genres": [
+            "Racing",
+            "Indie"
+        ],
+        "name": "Audio Drive Neon",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 122808,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1slg.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "Spoony Bard Productions"
+        ],
+        "name": "Alfonzo's Arctic Adventure",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 71228,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1y9z.jpg",
+        "genres": [
+            "Shooter"
+        ],
+        "involved_companies": [
+            "Trainwreck Studios"
+        ],
+        "name": "CIA Operative: Solo Missions",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 117639,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co26af.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Lavaboots Studios"
+        ],
+        "name": "Wild West and Wizards",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 127772,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1whr.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "KalaOh Games"
+        ],
+        "name": "Find Me: Horror Game",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 89346,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co23ur.jpg",
+        "genres": [
+            "Simulator",
+            "Strategy"
+        ],
+        "involved_companies": [
+            "Voltage Inc."
+        ],
+        "name": "Wedding VR: Henry",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 70843,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24o7.jpg",
+        "genres": [
+            "Real Time Strategy (RTS)",
+            "Strategy",
+            "Indie"
+        ],
+        "name": "Rusted Warfare",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 91071,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1tun.jpg",
+        "genres": [
+            "Strategy"
+        ],
+        "involved_companies": [
+            "Little World Studio",
+            "Games for All"
+        ],
+        "name": "5-in-1 Pack: Monument Builders - Destination USA",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 52093,
+        "genres": [
+            "Sport"
+        ],
+        "name": "VR Fitness",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 789,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/uv9bx6t5xp732el95cqk.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Empire Interactive",
+            "Rowan Software"
+        ],
+        "name": "MiG Alley",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 104804,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co240a.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "ERS G Studios",
+            "Big Fish Games"
+        ],
+        "name": "Maestro: Music from the Void - Collector's Edition",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 132497,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2i8c.jpg",
+        "genres": [
+            "Point-and-click",
+            "Simulator",
+            "Adventure",
+            "Indie",
+            "Visual Novel"
+        ],
+        "involved_companies": [
+            "Clockwork Bird"
+        ],
+        "name": "Silicon Dreams",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 126788,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1wyf.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Strategy",
+            "Hack and slash/Beat 'em up",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Butter Fly Games"
+        ],
+        "name": "Defend Them !",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 120828,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1n87.jpg",
+        "genres": [
+            "Shooter",
+            "Indie"
+        ],
+        "involved_companies": [
+            "GWE games"
+        ],
+        "name": "NORR part I: Ace Shot",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 125313,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1t3a.jpg",
+        "genres": [
+            "Shooter",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Davilex Games"
+        ],
+        "name": "Invasion Deutschland",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 60476,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2o0i.jpg",
+        "name": "Anekouji Naoko to Gin'iro no Shinigami",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 74202,
+        "genres": [
+            "Role-playing (RPG)"
+        ],
+        "name": "Ninja Goemon and Immortal Jewels",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 74951,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co29as.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Simulator",
+            "Strategy",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Dwarven Valley",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 35080,
+        "genres": [
+            "Racing"
+        ],
+        "name": "Buggy",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 32918,
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Absolutist Ltd."
+        ],
+        "name": "Twisted Worlds",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 31345,
+        "genres": [
+            "Role-playing (RPG)",
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Nova Dimension"
+        ],
+        "name": "VR Journey",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 35918,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1kh2.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "name": "Voxelized",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 32345,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co238q.jpg",
+        "genres": [
+            "Simulator",
+            "Indie"
+        ],
+        "name": "Across The Line",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 79130,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/jiocpm6qnvukqbgktgez.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Survival Studios"
+        ],
+        "name": "Void Excursion",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 128278,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2m04.jpg",
+        "name": "Sliding Puzzle Collection",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 129659,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2lzr.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Strategy",
+            "Adventure"
+        ],
+        "name": "Shine's Adventures 4 (Nightmare)",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 54320,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1kia.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Excalibur Publishing"
+        ],
+        "name": "Recovery Search & Rescue Simulation",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 11088,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ng24wl889cxllbcdswj3.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Indie",
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Sigma Team"
+        ],
+        "name": "Alien Shooter 2: Reloaded",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 75789,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co29fl.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "All That Remains",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 120455,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1pu5.jpg",
+        "genres": [
+            "Simulator",
+            "Strategy",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Oachkatzlschwoaf Interactive"
+        ],
+        "name": "Founders' Fortune",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 34754,
+        "genres": [
+            "Role-playing (RPG)",
+            "Strategy",
+            "Indie"
+        ],
+        "name": "Redemption: Eternal Quest",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 130179,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2lz9.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Samosbor",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 31061,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co223z.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "name": "The Artifact",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 90278,
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Save One More",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 107728,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27na.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "Stellar Oasis"
+        ],
+        "name": "Notified",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 2125,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1vme.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Ascaron Entertainment",
+            "cdv Software Entertainment",
+            "Kalypso Media"
+        ],
+        "name": "DarkStar One",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 62141,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27dy.jpg",
+        "involved_companies": [
+            "Circus",
+            "MangaGamer"
+        ],
+        "name": "Space Live: Advent of the Net Idols",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 112608,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co236f.jpg",
+        "genres": [
+            "Puzzle",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Venineth Team",
+            "Monad Rock"
+        ],
+        "name": "Venineth",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 75383,
+        "genres": [
+            "Simulator",
+            "Strategy",
+            "Adventure"
+        ],
+        "name": "Mystery Stone from Heaven",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 46489,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24vj.jpg",
+        "genres": [
+            "Racing",
+            "Strategy",
+            "Indie"
+        ],
+        "name": "Deadliners",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 94449,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kr4.jpg",
+        "genres": [
+            "Platform"
+        ],
+        "involved_companies": [
+            "Piste Gamez"
+        ],
+        "name": "Pekka Kana 2",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 36080,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/gne1vwitxo4eddfqwg22.jpg",
+        "genres": [
+            "Puzzle",
+            "Indie"
+        ],
+        "involved_companies": [
+            "JMJ Interactive"
+        ],
+        "name": "But to Paint a Universe",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 22441,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1vhu.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Strategy",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "A Land Fit For Heroes",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 67909,
+        "genres": [
+            "Indie"
+        ],
+        "name": "RemOOve",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 63727,
+        "genres": [
+            "Indie"
+        ],
+        "name": "The Armament Project",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 63733,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co29b2.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Simulator",
+            "Sport",
+            "Strategy",
+            "Indie"
+        ],
+        "name": "eSports Life",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 32827,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/k6n0fuj5jvr0go0ocygn.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Vanilla Bagel: The Roguelike",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 35300,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1kc3.jpg",
+        "genres": [
+            "Simulator",
+            "Strategy",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "PlazSoft"
+        ],
+        "name": "Yargis - Space Melee",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 33064,
+        "name": "Nanotris",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 28798,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co29zq.jpg",
+        "genres": [
+            "Simulator",
+            "Sport",
+            "Indie"
+        ],
+        "name": "Bottle Flip Challenge VR",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 96347,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/mfupdaczdzaj7odxgsq9.jpg",
+        "genres": [
+            "Puzzle",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "bit Gimmicks",
+            "Mark Kondor"
+        ],
+        "name": "The Day I Died",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 134733,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2cka.jpg",
+        "genres": [
+            "Indie",
+            "Arcade"
+        ],
+        "involved_companies": [
+            "J Griffin",
+            "farfromsleep"
+        ],
+        "name": "Whirlibird",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 113472,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1iby.jpg",
+        "genres": [
+            "Point-and-click",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "BugFactory"
+        ],
+        "name": "The Tales of Bingwood: Chapter I - To Save a Princess",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 770,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/mb2pjjasunb9dpxtr5ca.jpg",
+        "genres": [
+            "Sport"
+        ],
+        "involved_companies": [
+            "Access Software",
+            "Microsoft"
+        ],
+        "name": "Links 2001",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 31338,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co21cj.jpg",
+        "genres": [
+            "Shooter",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Sometimes You"
+        ],
+        "name": "Merger 3D",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 33088,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/zqkq8bhzpnpy8enoxg6l.jpg",
+        "genres": [
+            "Sport",
+            "Indie"
+        ],
+        "name": "Bowslinger",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 67915,
+        "genres": [
+            "Simulator",
+            "Indie"
+        ],
+        "name": "StepX",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 76323,
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "The adventure of Kroos",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 44234,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ak69ogd4pg9tep3petqd.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "The Nose",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 113738,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1usc.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "name": "9Dragons: Kung Fu Arena",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 34688,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/u220o7tpcwjparbgaren.jpg",
+        "genres": [
+            "Shooter",
+            "Indie"
+        ],
+        "name": "Jeeboman",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 76383,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/c4n9aqzqoegtbobv8nv3.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "Lev Gogol"
+        ],
+        "name": "Sky Road",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 33044,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/dvnjhsbxcjaenn9gpjcs.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "name": "Protonwar",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 1044,
+        "genres": [
+            "Shooter"
+        ],
+        "involved_companies": [
+            "Ritual Entertainment",
+            "Electronic Arts"
+        ],
+        "name": "SiN Episodes",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 107971,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co28rm.jpg",
+        "name": "ABC Paint",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 29430,
+        "genres": [
+            "Sport",
+            "Adventure"
+        ],
+        "name": "Princess Kidnapper 2 - VR",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 23180,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24q7.jpg",
+        "genres": [
+            "Simulator",
+            "Strategy",
+            "Indie"
+        ],
+        "involved_companies": [
+            "tinyBuild",
+            "Pinokl Games"
+        ],
+        "name": "Party Hard Tycoon",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 97974,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27bi.jpg",
+        "genres": [
+            "Platform",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Josh Penn-Pierson"
+        ],
+        "name": "The True Slime King",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 75165,
+        "name": "Sky Hunter",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 27682,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2bn5.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Quixel"
+        ],
+        "name": "Homebound",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 685,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/v3ehcd0gh3addczs0qkb.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "MicroProse"
+        ],
+        "name": "European Air War",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    },
+    {
+        "id": 29490,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ala.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Cosmic Awakening VR",
+        "platforms": [
+            "PC (Microsoft Windows)"
+        ]
+    }
+]

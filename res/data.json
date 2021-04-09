@@ -1,0 +1,160 @@
+[
+    {
+        "id": 82427,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/ryns5tdtdcamyfkrvr3s.jpg",
+        "name": "Q",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82457,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/hcdzjr4b4hjfih4rs7zm.jpg",
+        "name": "Crazy Sports Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82416,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/co27vw.jpg",
+        "name": "Sniper Ghost Warrior 3: Season Pass Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82445,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/ogpvlcut7udngpkopw6j.jpg",
+        "genres": [
+            "Role-playing (RPG)"
+        ],
+        "name": "Marvel Puzzle Quest: Dark Reign",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82454,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/czdb8kxrhj4axbvviae7.jpg",
+        "name": "Instant Indie Collection: Vol. 5",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82446,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/sqd19pvyegr1itjxwjz0.jpg",
+        "name": "FIFA 16: Deluxe Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82452,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/midp57t5imvga76ee4zf.jpg",
+        "name": "Light & Dark Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83760,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/co27xb.jpg",
+        "name": "Pinball FX3 - Zen Originals Season 2 Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82411,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/z2j7jxvzi6zquksaowqy.jpg",
+        "name": "Team17 Indie Collection",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 139970,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/co2keq.jpg",
+        "genres": [
+            "Simulator",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Squad",
+            "BlitWorks"
+        ],
+        "name": "Kerbal Space Program: Enhanced Edition Complete",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82423,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/fi4t8y6unuzjk3r3rcf5.jpg",
+        "name": "Resident Evil: Deluxe Origins Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 135606,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/co2c9p.jpg",
+        "genres": [
+            "Hack and slash/Beat 'em up"
+        ],
+        "involved_companies": [
+            "Super Villain Games"
+        ],
+        "name": "Doug Hates His Job",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 132610,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/co2kg8.jpg",
+        "genres": [
+            "Puzzle",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Artifex Mundi",
+            "Brave Giant"
+        ],
+        "name": "Family Mysteries 2: Echoes of Tomorrow",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140966,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/co2kgq.jpg",
+        "genres": [
+            "Puzzle",
+            "Role-playing (RPG)",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Kemco",
+            "Hit-Point Co., Ltd."
+        ],
+        "name": "Crystal Ortha",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140967,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_thumb/co2kgr.jpg",
+        "involved_companies": [
+            "Victory Road",
+            "Azur Interactive Games Limited"
+        ],
+        "name": "AXES",
+        "platforms": [
+            "Xbox One"
+        ]
+    }
+]

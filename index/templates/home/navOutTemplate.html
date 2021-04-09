@@ -27,27 +27,38 @@
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{% url "homepage" %}">Home</a>
+                            <a class="nav-link" href="{% url "homepage" %}">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                href="#">Games</a>
                             <div class="dropdown-menu bg-dark animate__animated animate__zoomIn animate__faster">
-                                <a href="#" class="dropdown-item">New Releases</a>
-                                <a href="#" class="dropdown-item">Popular</a>
-                                <a href="#" class="dropdown-item">Upcoming</a>
-                                <a href="#" class="dropdown-item">Recently Added</a>
+                                <a href="{% url 'new-releases' %}" class="dropdown-item">New Releases</a>
+                                <a href="{% url 'popGames' %}" class="dropdown-item">Popular</a>
+                                <a href="{% url 'upGames' %}" class="dropdown-item">Upcoming</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'library' %}">Library</a>
+                            <a class="nav-link" href="{% if request.user.is_authenticated %}
+                                                            {% url 'library' %}
+                                                        {% else %}
+                                                            {% url 'register' %}
+                                                        {% endif %}">Library</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Backlog</a>
                             <div class="dropdown-menu bg-dark animate__animated animate__zoomIn animate__faster">
-                                <a href="{% url 'backlog' %}" class="dropdown-item">My Backlog</a>
+                                <a class="dropdown-item" href="{% if request.user.is_authenticated %}
+                                                            {% url 'backlog' %}
+                                                        {% else %}
+                                                            {% url 'register' %}
+                                                        {% endif %}">My Backlog</a>
                                 <div class="dropdown-divider bg-light"></div>
-                                <a href="{% url 'tips-tricks' %}" class="dropdown-item">Tips</a>
+                                <a class="dropdown-item" href="{% if request.user.is_authenticated %}
+                                                            {% url 'tips-tricks' %}
+                                                        {% else %}
+                                                            {% url 'register' %}
+                                                        {% endif %}">Tips</a>
                             </div>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'about-us' %}">About Us</a>
@@ -55,17 +66,17 @@
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search"
-                                       aria-label="Search">
+                            <form class="d-flex" action="{% url 'search_results' %}" method="get">
+                                <input name="q" class="form-control me-2" type="search" placeholder="Search Any Game"
+                                     aria-label="Search">
                                 <button class="btn btn-outline-success me-2" type="submit">Search</button>
-                            </form>
+                           </form>
                         </li>
                         <li class="nav-item">
                             <button class="btn navbar-btn btn-outline-primary me-1"
                                     onclick="window.location.href='{% url "register" %}'">Sign up</button>
                             <button class="btn navbar-btn btn-outline-primary me-1"
-                                    onclick='window.location.href="{% url 'login' %}"'>Login</button>
+                                    onclick='window.location.href="{% url 'login' %}"'>Log in</button>
                         </li>
                     </ul>
                 </div>
@@ -74,3 +85,6 @@
     </div>
 </header>
 <!-- End of Header/Navbar -->
+</body>
+
+</html>

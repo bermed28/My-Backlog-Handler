@@ -1,0 +1,2278 @@
+[
+    {
+        "id": 82427,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ryns5tdtdcamyfkrvr3s.jpg",
+        "name": "Q",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82457,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/hcdzjr4b4hjfih4rs7zm.jpg",
+        "name": "Crazy Sports Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82416,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27vw.jpg",
+        "name": "Sniper Ghost Warrior 3: Season Pass Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82445,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ogpvlcut7udngpkopw6j.jpg",
+        "genres": [
+            "Role-playing (RPG)"
+        ],
+        "name": "Marvel Puzzle Quest: Dark Reign",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82446,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/sqd19pvyegr1itjxwjz0.jpg",
+        "name": "FIFA 16: Deluxe Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82452,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/midp57t5imvga76ee4zf.jpg",
+        "name": "Light & Dark Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83760,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27xb.jpg",
+        "name": "Pinball FX3 - Zen Originals Season 2 Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82411,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/z2j7jxvzi6zquksaowqy.jpg",
+        "name": "Team17 Indie Collection",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82423,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/fi4t8y6unuzjk3r3rcf5.jpg",
+        "name": "Resident Evil: Deluxe Origins Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 135606,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2c9p.jpg",
+        "genres": [
+            "Hack and slash/Beat 'em up"
+        ],
+        "involved_companies": [
+            "Super Villain Games"
+        ],
+        "name": "Doug Hates His Job",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 132610,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kg8.jpg",
+        "genres": [
+            "Puzzle",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Artifex Mundi",
+            "Brave Giant"
+        ],
+        "name": "Family Mysteries 2: Echoes of Tomorrow",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140966,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kgq.jpg",
+        "genres": [
+            "Puzzle",
+            "Role-playing (RPG)",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Kemco",
+            "Hit-Point Co., Ltd."
+        ],
+        "name": "Crystal Ortha",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140967,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kgr.jpg",
+        "involved_companies": [
+            "Victory Road",
+            "Azur Interactive Games Limited"
+        ],
+        "name": "AXES",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82544,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ibyqm18eitmz6bvrapel.jpg",
+        "name": "GunWorld: Xbox One Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82404,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/atklypht7biu2ooxbcr6.jpg",
+        "name": "Voice Commander, a Microsoft Garage project",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83758,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22zm.jpg",
+        "name": "Battlefield Anniversary Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82409,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ohlljxojvxflyj2u4gik.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "name": "The Pure Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 58225,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/g7p78s43vbncb31p64jk.jpg",
+        "genres": [
+            "Puzzle"
+        ],
+        "name": "Kyub",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82408,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/jowzkhkmztj990mgunek.jpg",
+        "name": "The Telltale Undead Survival Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 51614,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/w9dq1fswguo1fuleuyxf.jpg",
+        "name": "Action News Heroes",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 106168,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ist.jpg",
+        "genres": [
+            "Shooter",
+            "Music",
+            "Indie",
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Virtual Air Guitar Company"
+        ],
+        "name": "Air Guitar Warrior: Gamepad Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82379,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co23qb.jpg",
+        "involved_companies": [
+            "Tikipod"
+        ],
+        "name": "AQUA KITTY UDX: Xbox One Ultra Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82418,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1yst.jpg",
+        "name": "Skylanders: SuperChargers - Portal Owner's Pack",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 19917,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1i1o.jpg",
+        "genres": [
+            "Platform",
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "Through Games",
+            "Microsoft"
+        ],
+        "name": "Fru",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 138922,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2gkz.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Ultimate Games S.A."
+        ],
+        "name": "Car Mechanic Simulator Classic",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82415,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/sfrzyg9bbxocyz7w2xpl.jpg",
+        "name": "Speedboat Challenge",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82402,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/sjmhn7ptpbwz1t7v3clu.jpg",
+        "involved_companies": [
+            "NeoCore Games"
+        ],
+        "name": "World of Van Helsing: Deathtrap",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 26922,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24um.jpg",
+        "genres": [
+            "Shooter",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Merge Games",
+            "Sigtrap Games"
+        ],
+        "name": "Sublevel Zero: Redux",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 20017,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/m5xtnb8kgn7tpprrnlve.jpg",
+        "genres": [
+            "Sport",
+            "Arcade"
+        ],
+        "name": "Shred It!",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82539,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22zn.jpg",
+        "name": "Kinect Bundle: Boom Ball 2 + Squid Hero",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82428,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/p6ccr18v7lpmxujw8d5h.jpg",
+        "name": "Pure Chess Grandmaster Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83770,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27u2.jpg",
+        "name": "WRC Collection FIA World Rally Championship",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 20229,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1riq.jpg",
+        "genres": [
+            "Point-and-click",
+            "Shooter",
+            "Racing",
+            "Adventure",
+            "Arcade"
+        ],
+        "name": "Zombie Driver: Ultimate Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 78258,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2r82.jpg",
+        "genres": [
+            "Hack and slash/Beat 'em up"
+        ],
+        "name": "Saban's Mighty Morphin Power Rangers: Mega Battle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82420,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27wc.jpg",
+        "name": "ROMANCE OF THE THREE KINGDOMS XIII: Fame and Strategy Expansion Pack Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 101181,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2973.jpg",
+        "genres": [
+            "Shooter",
+            "Strategy",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Nano Games sp. z o.o."
+        ],
+        "name": "ZAMB! Redux",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 41612,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1nbu.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "name": "Assassin's Creed: Syndicate - Big Ben Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 21319,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/id4nspxk22vlsv4ciadb.jpg",
+        "name": "Bike Mayhem 2",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 116180,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2gl0.jpg",
+        "genres": [
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Alexandr Bondarenko",
+            "Xitilon"
+        ],
+        "name": "The Explorer Of Night",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82385,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ze8huqkmh8g3jchqk83l.jpg",
+        "name": "DMC4SE Demon Hunter Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 142633,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2okm.jpg",
+        "genres": [
+            "Platform",
+            "Indie"
+        ],
+        "involved_companies": [
+            "D.P.L.D.S"
+        ],
+        "name": "Sphere Game",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 84727,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27yq.jpg",
+        "name": "Mass Effect: Andromeda \u2013 Standard Recruit Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 107165,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2gl5.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Outfit7 Limited"
+        ],
+        "name": "Talking Tom Candy Run",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 117537,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24gh.jpg",
+        "genres": [
+            "Sport"
+        ],
+        "involved_companies": [
+            "The Fox Software"
+        ],
+        "name": "Active Soccer 2019",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83747,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22j9.jpg",
+        "name": "10tons Action Puzzle Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83738,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27zy.jpg",
+        "name": "Ironcast Complete Collection",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 115022,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1j4o.jpg",
+        "genres": [
+            "Sport"
+        ],
+        "involved_companies": [
+            "Sanuk Games",
+            "Bigben Interactive"
+        ],
+        "name": "Pro Fishing Simulator - Predator Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83754,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co237y.jpg",
+        "name": "Dungeon Defenders II: Bag Booster Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82433,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/kzj9uk54zwjwq1yiyncz.jpg",
+        "name": "Rugby Challenge 3: Jonah Lomu Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 57887,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co23op.jpg",
+        "genres": [
+            "Racing"
+        ],
+        "name": "ATV Renegades",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83755,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co23ny.jpg",
+        "name": "Artifex Mundi Adventure Collection",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 132657,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co23jh.jpg",
+        "genres": [
+            "Hack and slash/Beat 'em up"
+        ],
+        "involved_companies": [
+            "2BAD GAMES"
+        ],
+        "name": "BRUTAL RAGE",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82410,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co23cz.jpg",
+        "name": "The Jackbox Party Trilogy",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 57303,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22ue.jpg",
+        "genres": [
+            "Music",
+            "Sport"
+        ],
+        "involved_companies": [
+            "Virtual Air Guitar Company"
+        ],
+        "name": "Beatsplosion! for Kinect",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 138917,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2gke.jpg",
+        "genres": [
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "Lovixsama",
+            "Xitilon"
+        ],
+        "name": "ReactorX",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82540,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1w9p.jpg",
+        "genres": [
+            "Music"
+        ],
+        "involved_companies": [
+            "Land Ho!",
+            "Ubisoft"
+        ],
+        "name": "Just Dance 2016 & Just Dance Disney Party 2",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 117968,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24gg.jpg",
+        "genres": [
+            "Puzzle",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "JanduSoft S.L.",
+            "Undercoders"
+        ],
+        "name": "SlabWell",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 138918,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2gkg.jpg",
+        "genres": [
+            "Hack and slash/Beat 'em up"
+        ],
+        "involved_companies": [
+            "Teyon",
+            "Tomasz Dziobek \"Tomi Games\""
+        ],
+        "name": "CUBERS: ARENA",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83765,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27xj.jpg",
+        "name": "Path of Exile: War for the Atlas Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 125017,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24gk.jpg",
+        "genres": [
+            "Music"
+        ],
+        "involved_companies": [
+            "Deep Silver",
+            "Voxler"
+        ],
+        "name": "Let's Sing Country",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 19593,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/lnmxcenbyzht47yiztuq.jpg",
+        "genres": [
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Coconut Island Studio"
+        ],
+        "name": "\u51b3\u6218\u55b5\u661f (Naughty Kitties)",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82380,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/bzhmdkanbbasjenlp14u.jpg",
+        "name": "Artifex Mundi Essential Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83764,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/t1gjbzmk304w2vm7bgl7.jpg",
+        "name": "Minecraft with Explorers Pack",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 52871,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/g4axqiwwiafdodslnnxs.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "name": "Dead Rising 4: Deluxe Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 19172,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1ifc.jpg",
+        "genres": [
+            "Sport"
+        ],
+        "involved_companies": [
+            "Microsoft Studios",
+            "Sumo Digital"
+        ],
+        "name": "Xbox Fitness",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 134369,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co28jf.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Serenity Forge",
+            "Dim Bulb Games"
+        ],
+        "name": "Where the Water Tastes Like Wine: Xbox Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 114766,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1v46.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Paradox Interactive",
+            "Tantalus Media"
+        ],
+        "name": "Cities: Skylines \u2013 Mayor's Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83766,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27vv.jpg",
+        "name": "SMITE: X Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83777,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27w7.jpg",
+        "name": "Rugby League Live 4: World Cup Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 20312,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22tw.jpg",
+        "genres": [
+            "Sport"
+        ],
+        "name": "Shape Up",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83741,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2815.jpg",
+        "name": "Front Line Pack",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 21323,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/rpauvzkoyxxixhyqxk9t.jpg",
+        "genres": [
+            "Sport"
+        ],
+        "name": "Active Soccer 2 DX",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 78334,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/w6stlfqdswlqyzahipyh.jpg",
+        "genres": [
+            "Quiz/Trivia"
+        ],
+        "name": "Hasbro Family Fun Pack",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82403,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/tahbepvtdxd1nejy6fhj.jpg",
+        "name": "World II:Hunting Boss",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 24374,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/tcet1l1jlxd48zniqewd.jpg",
+        "name": "Tropico 5: Penultimate Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82451,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/fcphdaacsyclyvhdoxtn.jpg",
+        "name": "LOOT Ultimate Games Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82383,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co280o.jpg",
+        "name": "Emerald Glazed Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 53663,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/thss99jfv7ov4b2jlpa5.jpg",
+        "name": "STAR WARS Battlefront: Ultimate Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 56781,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2is6.jpg",
+        "genres": [
+            "Puzzle",
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Virtual Air Guitar Company"
+        ],
+        "name": "Boom Ball 2 for Kinect",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82413,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27v9.jpg",
+        "name": "Super Dungeon Bros MEGA Bundle Pack",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 20056,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/x9nns9okax1q5twczk1f.jpg",
+        "name": "Sixty Second Shooter Prime",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82430,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/zfo7comyeyfmdzetjelc.jpg",
+        "name": "Prison Architect: Xbox One Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82458,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/mvzlk28zxgqui9kdub2z.jpg",
+        "name": "Chariot Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82442,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ez9awbknog3tlmccachj.jpg",
+        "name": "OlliOlli2: XL Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82412,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/vqrul6qmiipllm5mgvtc.jpg",
+        "name": "The BunnyLord Pro Hater Pack",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83775,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co23c7.jpg",
+        "name": "The Escapists 2 Special Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82538,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/rodtzmpaivguwrgpzwm3.jpg",
+        "name": "Kinect Mega Bundle: 4 in 1",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83745,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24z9.jpg",
+        "name": "Digerati Couch Co-Op Bundle Vol.1",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83761,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/tlgqljf0k3zerc5vxly1.jpg",
+        "name": "Outbreak Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82537,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2isp.jpg",
+        "genres": [
+            "Fighting",
+            "Platform",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Virtual Air Guitar Company"
+        ],
+        "name": "Kung-Fu for Kinect",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 74156,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/enjcwwawa74ahneixmi7.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Tactical"
+        ],
+        "involved_companies": [
+            "Experience Inc."
+        ],
+        "name": "Entaku no Seito 2",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 139829,
+        "name": "Liftoff: Drone Racing - Deluxe Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 61509,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/is824pgovfvmjlgkgh9g.jpg",
+        "genres": [
+            "Music"
+        ],
+        "name": "Spectra: 8bit Racing",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 113440,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1i8x.jpg",
+        "genres": [
+            "Shooter",
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Dynamic Voltage Games",
+            "Enjoy These Pixels"
+        ],
+        "name": "Final Star",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 19848,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/cafw3jrot6dkz4zzxtv1.jpg",
+        "genres": [
+            "Shooter"
+        ],
+        "name": "Raiden V",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 117777,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24g8.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Holmade Games"
+        ],
+        "name": "Purple Chicken Spaceman",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140938,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kdx.jpg",
+        "involved_companies": [
+            "ShadowLair Games"
+        ],
+        "name": "FuzzBall",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 20951,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22uk.jpg",
+        "genres": [
+            "Racing",
+            "Role-playing (RPG)",
+            "Simulator",
+            "Strategy",
+            "Adventure",
+            "Indie"
+        ],
+        "name": "Slice Zombies for Kinect",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 116374,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co248z.jpg",
+        "genres": [
+            "Racing"
+        ],
+        "involved_companies": [
+            "PikPok",
+            "Alternative Software Ltd."
+        ],
+        "name": "Phar Lap - Horse Racing Challenge",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 102424,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/anzd6qgrg8herbpr6qkj.jpg",
+        "genres": [
+            "Racing",
+            "Simulator",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "WS net"
+        ],
+        "name": "Mining Rail",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140947,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kee.jpg",
+        "genres": [
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "Artifex Mundi",
+            "Sunward Games"
+        ],
+        "name": "The Secret Order: Return to the Buried Kingdom",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140946,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ked.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Expansive Worlds"
+        ],
+        "name": "theHunter: Call of the Wild - 2021 Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140951,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kep.jpg",
+        "genres": [
+            "Racing"
+        ],
+        "involved_companies": [
+            "Prison Games"
+        ],
+        "name": "Perfect Traffic Simulator",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 76735,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ken.jpg",
+        "genres": [
+            "Racing",
+            "Simulator"
+        ],
+        "involved_companies": [
+            "The Drone Racing League"
+        ],
+        "name": "The Drone Racing League Simulator",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 133167,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ker.jpg",
+        "genres": [
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "Sometimes You"
+        ],
+        "name": "Active Neurons 2",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140949,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kem.jpg",
+        "genres": [
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "Daniel Jan\u00e1k"
+        ],
+        "name": "Tech Glitch",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 118576,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2494.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Johnny Ostad"
+        ],
+        "name": "Vosaria: Lair of the Forgotten",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 134013,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co26mb.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Ultimate Games",
+            "Bit Golem"
+        ],
+        "name": "Robot Squad Simulator X",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 57975,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/l70mbhh66gcktiffzsfh.jpg",
+        "genres": [
+            "Turn-based strategy (TBS)"
+        ],
+        "name": "Lies of Astaroth",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 20954,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22uf.jpg",
+        "genres": [
+            "Puzzle",
+            "Racing",
+            "Indie",
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Virtual Air Guitar Company"
+        ],
+        "name": "Squid Hero for Kinect",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 28264,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24la.jpg",
+        "genres": [
+            "Strategy"
+        ],
+        "name": "Valhalla Hills: Definitive Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 112652,
+        "genres": [
+            "Shooter"
+        ],
+        "involved_companies": [
+            "Rotten Yard Studios"
+        ],
+        "name": "Genesis",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 125663,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kge.jpg",
+        "involved_companies": [
+            "Ultimate Games",
+            "MadGamesmith"
+        ],
+        "name": "Bouncy Bob 2",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 28079,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1zuu.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Corecell Technology",
+            "PQube"
+        ],
+        "name": "AeternoBlade II",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 20947,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22uj.jpg",
+        "involved_companies": [
+            "Halfbrick Studios"
+        ],
+        "name": "Fruit Ninja Kinect 2",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 53506,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2aft.jpg",
+        "genres": [
+            "Shooter"
+        ],
+        "name": "Resident Evil: Revelations 2 Deluxe Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82453,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ostb2knkknpwhvuqskai.jpg",
+        "name": "Kinect Triple Bundle: Beats & Booms & Squids",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 47484,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/y9lsh9byfaizapepoz7u.jpg",
+        "genres": [
+            "Racing",
+            "Simulator",
+            "Sport"
+        ],
+        "name": "Project CARS: Game of the Year Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 55544,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co232v.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Rortos srl"
+        ],
+        "name": "Blue Angels Aerobatic Flight Simulator",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 111818,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1hfy.jpg",
+        "involved_companies": [
+            "Process Games"
+        ],
+        "name": "Agents vs Villain",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 90057,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/lbxamioepk1vzqdt1ezo.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Dovetail Games"
+        ],
+        "name": "Train Sim World: Founders Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 119068,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2497.jpg",
+        "genres": [
+            "Point-and-click",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Daedalic Entertainment"
+        ],
+        "name": "Deponia Collection",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83739,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co280n.jpg",
+        "name": "Insects: An Xbox One X Enhanced Experience",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 11651,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1sdo.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "Nevernaut Games"
+        ],
+        "name": "SlashDash",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82546,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27xx.jpg",
+        "name": "NBA LIVE 18: The One Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 112435,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1hp4.jpg",
+        "genres": [
+            "Shooter",
+            "Puzzle",
+            "Indie"
+        ],
+        "name": "NeuroBloxs",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 132947,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kfb.jpg",
+        "genres": [
+            "Puzzle",
+            "Card & Board Game"
+        ],
+        "involved_companies": [
+            "grin robot",
+            "Xitilon"
+        ],
+        "name": "Smart Moves",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 123137,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kfg.jpg",
+        "involved_companies": [
+            "Argus Games",
+            "Argus Games"
+        ],
+        "name": "Techwars Global Conflict",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140956,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kfe.jpg",
+        "genres": [
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "7 Raven Studios",
+            "Totalconsole"
+        ],
+        "name": "Rusty Spout Rescue Adventure",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 140957,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kff.jpg",
+        "genres": [
+            "Simulator",
+            "Sport"
+        ],
+        "involved_companies": [
+            "Axis Games"
+        ],
+        "name": "Axis Football 2020",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 21315,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/mmqr6zummwkerkvxlk1h.jpg",
+        "name": "Super Party Sports: Football",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82542,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/pwfuwxegniyn3pvtm708.jpg",
+        "name": "Instant Indie Collection: Vol. 3",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82545,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/g2hcrdnksnsrjr7njmbh.jpg",
+        "genres": [
+            "Arcade"
+        ],
+        "name": "First-person bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 135607,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2c9q.jpg",
+        "genres": [
+            "Simulator"
+        ],
+        "involved_companies": [
+            "Ultimate Games",
+            "Noble Muffins"
+        ],
+        "name": "Demolish & Build",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83506,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/p7nivhkk3hbehjwwminl.jpg",
+        "name": "Battlefield Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82426,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/h5y6fi7lzzuzjhh301bg.jpg",
+        "name": "Q*bert REBOOTED: The XBOX One @!#?@! Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 20305,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2iha.jpg",
+        "genres": [
+            "Puzzle",
+            "Sport",
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Virtual Air Guitar Company"
+        ],
+        "name": "Boom Ball for Kinect",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83746,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22ja.jpg",
+        "name": "10tons Cyberpunk Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 135598,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2c8u.jpg",
+        "genres": [
+            "Platform",
+            "Puzzle"
+        ],
+        "involved_companies": [
+            "Noobles Studio"
+        ],
+        "name": "The Taller I Grow",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 136149,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2mnt.jpg",
+        "genres": [
+            "Platform",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Moon Studios",
+            "Xbox Game Studios"
+        ],
+        "name": "Ori and the Will of the Wisps: Collector's Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83762,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27xz.jpg",
+        "name": "NBA 2K18: The Prelude",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 9888,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1wlw.jpg",
+        "genres": [
+            "Platform",
+            "Sport",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Other Ocean Interactive"
+        ],
+        "name": "#IDARB",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 141173,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2kw4.jpg",
+        "genres": [
+            "Platform"
+        ],
+        "involved_companies": [
+            "TWGMedia"
+        ],
+        "name": "Altitudes",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 139893,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2orp.jpg",
+        "name": "Wasteland 3: Day One Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82384,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2514.jpg",
+        "name": "Doodle God: Ultimate Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82436,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/fevl7wjxv1hmqjf5yzz6.jpg",
+        "name": "PopCap Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 141647,
+        "name": "Fallout 76: Steel Dawn - Deluxe Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 117927,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2498.jpg",
+        "genres": [
+            "Shooter"
+        ],
+        "involved_companies": [
+            "Cotton Games",
+            "E-Home Entertianment Development"
+        ],
+        "name": "Alien Cruise",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 5624,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ptuixqkjbfwd5ipsvkpz.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Strategy"
+        ],
+        "involved_companies": [
+            "Lionhead Studios",
+            "Microsoft Studios"
+        ],
+        "name": "Fable Legends",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83767,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27x7.jpg",
+        "name": "Poker Starter Pack",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 78061,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24ii.jpg",
+        "name": "Future War: Reborn",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 107722,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co26mc.jpg",
+        "genres": [
+            "Indie"
+        ],
+        "involved_companies": [
+            "4D Creativity Limited"
+        ],
+        "name": "Fight the Horror",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 109436,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24g6.jpg",
+        "genres": [
+            "Sport"
+        ],
+        "involved_companies": [
+            "FarSight Studios"
+        ],
+        "name": "Party Arcade",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 110582,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/xh2jizahhddc6ekoeagv.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Nilo Studios"
+        ],
+        "name": "Asemblance Collection",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 136055,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2oqq.jpg",
+        "name": "DiRT Rally 2.0: Game of The Year Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83776,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27vf.jpg",
+        "name": "Steep: Winter Games Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 103035,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27oa.jpg",
+        "genres": [
+            "Puzzle",
+            "Adventure",
+            "Indie"
+        ],
+        "involved_companies": [
+            "Frima Studio",
+            "Ravenscourt"
+        ],
+        "name": "Illusion: A Tale of the Mind",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 41622,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/lqvtllp7wbkphoqo5aj4.jpg",
+        "genres": [
+            "Racing"
+        ],
+        "name": "The Crew: Ultimate Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82375,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2isq.jpg",
+        "genres": [
+            "Shooter",
+            "Music",
+            "Indie",
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Virtual Air Guitar Company"
+        ],
+        "name": "Air Guitar Warrior for Kinect",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 75412,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1rm1.jpg",
+        "genres": [
+            "Hack and slash/Beat 'em up",
+            "Adventure"
+        ],
+        "name": "Project Code: SHIFT",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 4842,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co22rt.jpg",
+        "genres": [
+            "Sport"
+        ],
+        "involved_companies": [
+            "Rare",
+            "Microsoft Studios"
+        ],
+        "name": "Kinect Sports Rivals",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 138921,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2gky.jpg",
+        "genres": [
+            "Platform"
+        ],
+        "involved_companies": [
+            "Bipolar Dawn",
+            "Ratalaika Games"
+        ],
+        "name": "RogueCube",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83757,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2isa.jpg",
+        "genres": [
+            "Puzzle",
+            "Sport",
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Virtual Air Guitar Company"
+        ],
+        "name": "Boom Ball 3 for Kinect",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 138927,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2glg.jpg",
+        "genres": [
+            "Shooter"
+        ],
+        "involved_companies": [
+            "EntwicklerX"
+        ],
+        "name": "MonsterBlast",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 4787,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co228w.jpg",
+        "genres": [
+            "Fighting",
+            "Sport"
+        ],
+        "involved_companies": [
+            "Ubisoft Entertainment",
+            "Daoka"
+        ],
+        "name": "Fighter Within",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 117530,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24g5.jpg",
+        "genres": [
+            "Adventure"
+        ],
+        "involved_companies": [
+            "ONEVISION GAMES"
+        ],
+        "name": "ASCENDANCE - First Horizon",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83743,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ljnk6uhcbwixekwklfcs.jpg",
+        "name": "Forza Horizon 2: 10th Anniversary Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 41609,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/zuhdagohkj600ssot1xb.jpg",
+        "genres": [
+            "Racing"
+        ],
+        "name": "Forza Horizon 3: Ultimate Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 41642,
+        "name": "Little Nightmares: Six Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 41627,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/tqvqymvthktubjxf5dxo.jpg",
+        "genres": [
+            "Shooter"
+        ],
+        "name": "Gears of War 4: Ultimate Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 41624,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/gpxwgmkum82qqh1k6jzo.jpg",
+        "genres": [
+            "Shooter",
+            "Platform",
+            "Adventure"
+        ],
+        "name": "Recore: Collector's Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 138926,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2glf.jpg",
+        "genres": [
+            "Arcade"
+        ],
+        "involved_companies": [
+            "Greyhead Studio",
+            "Zimogor"
+        ],
+        "name": "Exp Parasite",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 41615,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/enyalyxygyeprwslpaxf.jpg",
+        "genres": [
+            "Shooter",
+            "Adventure"
+        ],
+        "name": "Call of Duty: Black Ops III - Hardened Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 41618,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/orep4mwwe5xzjoghmdsv.jpg",
+        "name": "Mirror's Edge Catalyst - Collector's Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 53402,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/nibivgp7t4042yzavcm3.jpg",
+        "genres": [
+            "Sport"
+        ],
+        "name": "NBA 2K16 - Michael Jordan Special Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 8558,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2q6p.jpg",
+        "genres": [
+            "Racing",
+            "Simulator",
+            "Sport"
+        ],
+        "involved_companies": [
+            "Turn 10 Studios",
+            "Microsoft Studios"
+        ],
+        "name": "Forza Motorsport 6",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82541,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/ghkq0ghav3oaslx5jwvu.jpg",
+        "genres": [
+            "Role-playing (RPG)"
+        ],
+        "name": "Joe Dever's Lone Wolf: Console Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 91214,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/etmnygx111edx2fvk1a9.jpg",
+        "name": "Kattastick",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82447,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/u2sifzrx1ypbp9rsac5j.jpg",
+        "name": "Call of Duty: Infinite Warfare - Launch Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 51611,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/y930vcft134vepuh9fke.jpg",
+        "name": "Steel Rain X",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82547,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/iotnjduuqe2dktqibthm.jpg",
+        "name": "Commander Cherry for Kinect",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82548,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/oumjcdqdkwapfovmndyv.jpg",
+        "genres": [
+            "Fighting"
+        ],
+        "name": "DEAD OR ALIVE 5 Last Round: Core Fighters",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 19901,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1ws9.jpg",
+        "genres": [
+            "Music"
+        ],
+        "involved_companies": [
+            "Harmonix Music Systems",
+            "Microsoft Studios"
+        ],
+        "name": "Dance Central Spotlight",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82461,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/kqqk9h3gwdb1hmsnfonn.jpg",
+        "name": "10tons Adventure Puzzles Bundle",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 104447,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co24g0.jpg",
+        "genres": [
+            "Racing",
+            "Sport",
+            "Indie"
+        ],
+        "involved_companies": [
+            "ASBO Interactive"
+        ],
+        "name": "Shred! 2 - Freeride Mountainbiking",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 133621,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2gkt.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Adventure"
+        ],
+        "involved_companies": [
+            "Exe-Create Inc.",
+            "Kemco"
+        ],
+        "name": "Liege Dragon",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 141330,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2l94.jpg",
+        "genres": [
+            "Puzzle",
+            "Strategy",
+            "Quiz/Trivia"
+        ],
+        "involved_companies": [
+            "MILECANSOFT"
+        ],
+        "name": "Hangman Adventure",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82444,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co27ym.jpg",
+        "name": "Mayan Death Robots: Arena",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82425,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/e2o1833qrbopucqly0dx.jpg",
+        "name": "RABBIDS INVASION - GOLD EDITION",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 83810,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2qin.jpg",
+        "genres": [
+            "Role-playing (RPG)",
+            "Indie"
+        ],
+        "involved_companies": [
+            "codestalkers"
+        ],
+        "name": "Korgan",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 4757,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1t3g.jpg",
+        "genres": [
+            "Shooter"
+        ],
+        "involved_companies": [
+            "Microsoft Studios",
+            "Grounding Inc"
+        ],
+        "name": "Crimson Dragon",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82422,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1mdh.jpg",
+        "name": "Ryse: Legendary Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 82378,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/y6g8siyxkopc3gutvo66.jpg",
+        "genres": [
+            "Arcade"
+        ],
+        "name": "ARCADE GAME SERIES 3-in-1 Pack",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 2131,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2q6o.jpg",
+        "genres": [
+            "Racing",
+            "Simulator",
+            "Sport"
+        ],
+        "involved_companies": [
+            "Turn 10 Studios",
+            "Microsoft Studios"
+        ],
+        "name": "Forza Motorsport 5",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 75870,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co238e.jpg",
+        "genres": [
+            "Simulator",
+            "Strategy"
+        ],
+        "name": "Cities: Skylines - Premium Edition",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 57820,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/fcnxwlellssmfimzxysi.jpg",
+        "genres": [
+            "Racing"
+        ],
+        "name": "Ben-Hur",
+        "platforms": [
+            "Xbox One"
+        ]
+    },
+    {
+        "id": 6803,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co1xhg.jpg",
+        "genres": [
+            "Shooter"
+        ],
+        "involved_companies": [
+            "343 Industries",
+            "Microsoft Studios"
+        ],
+        "name": "Halo 5: Guardians",
+        "platforms": [
+            "Xbox One"
+        ]
+    }
+]
