@@ -1,7 +1,10 @@
+from django.contrib import messages
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 # Create your views here.
+from django.urls import reverse_lazy
 from rest_framework import viewsets
-from django.views.generic import ListView
+from django.views.generic import ListView, RedirectView
 from django.db.models import Q
 from igdb.wrapper import IGDBWrapper
 from .request import getSummary
@@ -51,6 +54,7 @@ class HomeGameView(ListView):
         return game_model_list
 
 class LibraryGameView(ListView):
+    paginate_by = 15
     model = Game_Model
     template_name = '../templates/home/library.html'
 
@@ -59,6 +63,7 @@ class LibraryGameView(ListView):
         return game_model_list
 
 class BacklogGameView(ListView):
+    paginate_by = 15
     model = Game_Model
     template_name = '../templates/home/backlog.html'
 
@@ -68,6 +73,7 @@ class BacklogGameView(ListView):
 
 
 class SearchResultsGameView(ListView):
+    paginate_by = 15
     model = Game_Model
     template_name = '../templates/home/search_results.html'
 
@@ -78,7 +84,13 @@ class SearchResultsGameView(ListView):
         )
         return game_model_list
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q')
+        return context
+
 class SearchResultsImgView(ListView):
+    paginate_by = 15
     model = Image_Model
     template_name = '../templates/home/search_results.html'
 
@@ -88,6 +100,11 @@ class SearchResultsImgView(ListView):
             Q(game_title__icontains=query)
         )
         return image_model_ist
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q')
+        return context
 
 def registration(request):
     return render(request, 'home/registration.html')

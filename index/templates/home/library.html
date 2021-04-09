@@ -94,6 +94,26 @@
             <p style="font-family: 'arcadeclassicregular', sans-serif">You don't have any games in your library!</p>
         {% endif %}
     </div>
+
+    {% if is_paginated %}
+        <div class="pagination" style="font-family: 'arcadeclassicregular', sans-serif; width: 50%; margin: 0 auto;">
+            <span class="page-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}&q={{ query }}">
+                    <button class="btn btn-primary" onclick="window.location.href='#'"><i class="far calendarnav-next"></i> < </button>
+                    </a>
+                {% endif %}
+                <span class="page-current" style="font-size: 30px; width: 50%; margin: 0 auto;">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}&q={{ query }}" style="padding-right: 10px">
+                    <button class="btn btn-primary" onclick="window.location.href='#'"><i class="far calendarnav-next"></i> > </button>
+                    </a>
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
 </div><br>
 <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
