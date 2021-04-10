@@ -103,3 +103,10 @@ div.carousel-caption > p {
 .rankNum {
     font-family: 'arcadeclassicregular';
 }
+.pagination {
+    font-family: 'arcadeclassicregular', sans-serif;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+
+}

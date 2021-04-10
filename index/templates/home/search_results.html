@@ -78,33 +78,27 @@
     </table>
 
     </div>
-    {% if is_paginated %}
-        <div class="pagination" style="font-family: 'arcadeclassicregular', sans-serif; width: 50%; margin: 0 auto;">
+        {% if is_paginated %}
+            <div class="pagination pb-2">
             <span class="page-links">
                 {% if page_obj.has_previous %}
                     <a href="?page={{ page_obj.previous_page_number }}&q={{ query }}">
-                    <button class="btn btn-primary" onclick="window.location.href='#'"><i class="far calendarnav-next"></i> < </button>
+                    <button class="btn mybtn btn-outline-primary me-1" onclick="window.location.href='#'"><i class="fas fa-arrow-left"></i></button>
                     </a>
                 {% endif %}
-                <span class="page-current" style="font-size: 30px; width: 50%; margin: 0 auto;">
+                <span class="page-current" style="font-size: 30px; width: 50%; margin: 0 auto; vertical-align: bottom">
                     Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
                 </span>
                 {% if page_obj.has_next %}
                     <a href="?page={{ page_obj.next_page_number }}&q={{ query }}" style="padding-right: 10px">
-                    <button class="btn btn-primary" onclick="window.location.href='#'"><i class="far calendarnav-next"></i> > </button>
+                    <button class="btn mybtn btn-outline-primary" onclick="window.location.href='#'"><i class="fas fa-arrow-right"></i></button>
                     </a>
                 {% endif %}
             </span>
-        </div>
-    {% endif %}
-{#                {% for user in object_list %}#}
-{#                    <li style="font-family: sans-serif;">#}
-{#                        {{ user.player_name }}, {{ user.user_name }}#}
-{#                    </li>#}
-{#                  {% endfor %}#}
-
+            </div>
+        {% endif %}
 </div><br>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div><br>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

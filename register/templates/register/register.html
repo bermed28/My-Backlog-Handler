@@ -30,19 +30,28 @@
             vertical-align: middle;
             text-align: center;
         }
+        .form-group {
+            font-size: small;
+        }
+        li {
+            font-size: medium;
+        }
+        #hint_id_password2, #hint_id_username {
+            font-size: xx-small;
+        }
     </style>
 </head>
 <br>
 <section class="container site-content animate__animated animate__backInDown animate__faster">
     <h1>Sign Up</h1>
 </section>
-<div class="container site-content animate__animated animate__backInDown animate__faster" style="font-family: arcadeclassicregular">
+<div class="container site-content animate__animated animate__backInDown animate__faster">
     {% load crispy_forms_tags %}
     {%  block content %}
-        <form method="POST" class="form-group" style="font-family: sans-serif">
+        <form method="POST" class="form-group pt-2" style="font-family: 'pressStart2P', sans-serif;">
             {% csrf_token %}
             {{ form|crispy }}
-            <p style="font-family: arcadeclassicregular">Already have an account? Log in <a href='{% url "login" %}'>here</a></p>
+            <p style="font-family: arcadeclassicregular; font-size: medium">Already have an account? Log in <a href='{% url "login" %}'>here</a></p>
             <div class="container" style="text-align: center; font-family: arcadeclassicregular"><button type="submit" class="btn btn-outline-success mybtn">Register</button></div>
         </form>
         <br/>
@@ -60,7 +69,7 @@
         </div>
     {% endblock %}
 </div><br>
-<div class="container text-center" style="font-family: arcadeclassicregular">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
