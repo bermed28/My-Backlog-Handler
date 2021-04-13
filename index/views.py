@@ -91,30 +91,29 @@ def LibraryInsertion(request, game_id):
  # ////////////////////////////////////////////////////////////////////////////////////
 # Most Modify
 # /////////////////////////////////////////////////////////////////////////
+class LibraryGameView(ListView):
+    model = Library_Model
+    template_name = '../templates/home/library.html'
+    def get_queryset(self):
+        # query = self.request.GET.get('q')
+
+        library_game_list = Library_Model.objects.filter(
+            owner_id=self.request.user.id
+        )
+
+        return library_game_list[0].games.all()
+
+
+
+
 # class LibraryGameView(ListView):
-#     model = Library_Model
+#     model = Game_Model
 #     template_name = '../templates/home/library.html'
 #
-#     def get_queryset(self):
-#         # query = self.request.GET.get('q')
-#         game_model_list = Library_Model.objects.filter(
-#             owner_id=1
-#         )
-#
-#         print(game_model_list[0].games.all())
+#     def get_list(self):
+#         game_model_list = Game_Model.objects
+#         print(game_model_list)
 #         return game_model_list
-
-
-
-
-class LibraryGameView(ListView):
-    model = Game_Model
-    template_name = '../templates/home/library.html'
-
-    def get_list(self):
-        game_model_list = Game_Model.objects
-        print(game_model_list)
-        return game_model_list
 # //////////////////////////////////////////////////////////////////////////////////
 class BacklogGameView(ListView):
     model = Game_Model
