@@ -7,6 +7,8 @@ from igdb.wrapper import IGDBWrapper
 from .request import getSummary
 from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, \
 PlayerAccountSerializer,LibraryModelSerializer, LibraryMembershipSerializer
+from .forms import LibraryAddForm
+
 
 from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, Library_Membership
 
@@ -49,6 +51,61 @@ class HomeGameView(ListView):
     def get_list(self):
         game_model_list = Game_Model.objects
         return game_model_list
+# //////////////////////////////////////////////////////////////////////
+
+def LibraryInsertion(request, game_id):
+    form = LibraryAddForm(request.POST or None)
+    gameArticle = Game_Model.objects.get(game_id=game_id)
+    if request.method == "POST":
+        print("user = ",  request.user)
+        if form.is_valid():
+            player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
+
+            membership = Library_Membership(
+            game = gameArticle,
+            library = player_library,
+            last_played = form.cleaned_data['last_played'],
+            is_finished =form.cleaned_data['is_finished'],
+            )
+            membership.save()
+
+            print("game_id", game_id)
+            print("last_played = ",form.cleaned_data['last_played'])
+            print("is_finished = ", form.cleaned_data['is_finished'])
+            form = LibraryAddForm()
+        else:
+            print(form.errors)
+    print(Library_Model.objects.all())
+
+    # form = LibraryAddForm(request.POST or None)
+    # gameArticle = Game_Model.objects.get(game_id=game_id)
+    context = {
+        "game_form":form,
+        "gameArticle":gameArticle
+    }
+
+    return render(request, 'home/library-add.html', context)
+
+
+
+ # ////////////////////////////////////////////////////////////////////////////////////
+# Most Modify
+# /////////////////////////////////////////////////////////////////////////
+# class LibraryGameView(ListView):
+#     model = Library_Model
+#     template_name = '../templates/home/library.html'
+#
+#     def get_queryset(self):
+#         # query = self.request.GET.get('q')
+#         game_model_list = Library_Model.objects.filter(
+#             owner_id=1
+#         )
+#
+#         print(game_model_list[0].games.all())
+#         return game_model_list
+
+
+
 
 class LibraryGameView(ListView):
     model = Game_Model
@@ -56,8 +113,9 @@ class LibraryGameView(ListView):
 
     def get_list(self):
         game_model_list = Game_Model.objects
+        print(game_model_list)
         return game_model_list
-
+# //////////////////////////////////////////////////////////////////////////////////
 class BacklogGameView(ListView):
     model = Game_Model
     template_name = '../templates/home/backlog.html'

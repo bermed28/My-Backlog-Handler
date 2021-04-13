@@ -25,7 +25,7 @@
             </div>
             <div class="container pt-2 form" style="text-align: center">
                 <h3>Edit status:</h3>
-                <div><a href="#">Add to library <i class="far fa-plus-square"></i></a></div>
+                <div><a href="{% url 'library-add' game_id=gameArticle.game_id%}"> Add to library <i class="far fa-plus-square"></i></a></div>
                 <div><a href="#">Add to backlog <i class="far fa-plus-square"></i></a></div>
                 <label>Your score: </label>
                 <label class="pt-2 pb-2">
