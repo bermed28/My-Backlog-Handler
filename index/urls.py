@@ -18,6 +18,7 @@ urlpatterns = [
     # {% url 'urlname' user.firstname user.lastname %}
 
     path('library/', views.LibraryGameView.as_view(), name="library"),
+    path( r'library/add/^(?P<game_id>\w+)/$', views.LibraryInsertion, name="library-add"),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
 

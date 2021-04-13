@@ -70,7 +70,7 @@
                 {% endfor %}
 
                 <td>10/10</td> {# We have to implement the rating model so we can add the rating average here #}
-                <td><button class="btn btn-primary" onclick="window.location.href='#'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                <td><button class="btn btn-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
             </tr>
         {% endfor %}
     {% endif %}

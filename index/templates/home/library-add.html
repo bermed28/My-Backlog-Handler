@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% if request.user.is_authenticated %}
+        {% include 'home/navTemplate.html' %}
+    {% else %}
+        {% include 'home/navOutTemplate.html' %}
+    {% endif %}
+    <script src="https://kit.fontawesome.com/c6db85c705.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="text-white bg-dark">
+<p>{{ gameArticle.game_title }}</p>
+<form method = "POST">{% csrf_token %}
+    {{ game_form.as_p }}
+
+    <input type = "submit" value = 'Add to Library'/>
+
+</form>
+
+</body>
+
+</html>
