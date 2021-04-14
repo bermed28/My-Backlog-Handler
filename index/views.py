@@ -95,17 +95,22 @@ def LibraryInsertion(request, game_id):
 # Most Modify
 # /////////////////////////////////////////////////////////////////////////
 class LibraryGameView(ListView):
-    model = Library_Model
+    model = Library_Membership
     paginate_by = 15
     template_name = '../templates/home/library.html'
     def get_queryset(self):
         # query = self.request.GET.get('q')
 
-        library_game_list = Library_Model.objects.filter(
+        player_library = Library_Model.objects.filter(
             owner_id=self.request.user.id
         )
 
-        return library_game_list[0].games.all()
+        # lib = library_game_list[0].games.all()
+        # print(lib)
+        library_games = Library_Membership.objects.filter(library=player_library[0])
+        print(library_games)
+
+        return library_games
 
 
 
