@@ -11,7 +11,9 @@ from .request import getSummary
 from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, \
 PlayerAccountSerializer,LibraryModelSerializer, LibraryMembershipSerializer
 from .forms import LibraryAddForm
-
+from django.views import View
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, Library_Membership
 
@@ -56,11 +58,36 @@ class HomeGameView(ListView):
         return game_model_list
 # //////////////////////////////////////////////////////////////////////
 
-def LibraryInsertion(request, game_id):
-    form = LibraryAddForm(request.POST or None)
-    gameArticle = Game_Model.objects.get(game_id=game_id)
-    if request.method == "POST":
-        print("user = ",  request.user)
+"""
+Checks if game is player's library and if it is it return False else return True
+"""
+def checkLibraryForGame(user_id, game_id):
+    player_library = Library_Model.objects.filter(
+        owner_id=user_id
+    )
+    game = player_library[0].games.filter(game_id=game_id)
+    game_available = True if game.count() == 0 else False
+    return game_available
+
+
+class LibraryInsertion(View):
+
+    def get(self, request, game_id, **kwargs):
+        form = LibraryAddForm()
+        gameArticle = Game_Model.objects.get(game_id=game_id)
+        game_available = checkLibraryForGame(self.request.user.id, game_id)
+
+        context = {
+            "game_form": form,
+            "gameArticle": gameArticle,
+            "game_available": game_available
+        }
+
+        return render(request, 'home/library-add.html', context)
+
+    def post(self, request, game_id, **kwargs):
+        form = LibraryAddForm(request.POST or None)
+        gameArticle = Game_Model.objects.get(game_id=game_id)
         if form.is_valid():
             player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
 
@@ -78,16 +105,42 @@ def LibraryInsertion(request, game_id):
             form = LibraryAddForm()
         else:
             print(form.errors)
-    print(Library_Model.objects.all())
+        return HttpResponseRedirect(reverse("library"))
 
-    # form = LibraryAddForm(request.POST or None)
-    # gameArticle = Game_Model.objects.get(game_id=game_id)
-    context = {
-        "game_form":form,
-        "gameArticle":gameArticle
-    }
 
-    return render(request, 'home/library-add.html', context)
+# def LibraryInsertion(request, game_id):
+#     form = LibraryAddForm(request.POST or None)
+#     gameArticle = Game_Model.objects.get(game_id=game_id)
+#     if request.method == "POST":
+#         print("user = ",  request.user)
+#         if form.is_valid():
+#             player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
+#
+#             membership = Library_Membership(
+#             game = gameArticle,
+#             library = player_library,
+#             last_played = form.cleaned_data['last_played'],
+#             is_finished =form.cleaned_data['is_finished'],
+#             )
+#             membership.save()
+#
+#             print("game_id", game_id)
+#             print("last_played = ",form.cleaned_data['last_played'])
+#             print("is_finished = ", form.cleaned_data['is_finished'])
+#             form = LibraryAddForm()
+#         else:
+#             print(form.errors)
+#         return redirect(request.path)
+#     print(Library_Model.objects.all())
+#
+#     # form = LibraryAddForm(request.POST or None)
+#     # gameArticle = Game_Model.objects.get(game_id=game_id)
+#     context = {
+#         "game_form":form,
+#         "gameArticle":gameArticle
+#     }
+#
+#     return render(request, 'home/library-add.html', context)
 
 
 

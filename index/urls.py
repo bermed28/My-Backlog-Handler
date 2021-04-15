@@ -1,12 +1,13 @@
 from django.urls import include, path
 from rest_framework import routers
 from . import views
+from .views import LibraryInsertion
 
 
 from register import views as v
 router = routers.DefaultRouter()
 router.register(r'users', views.PlayerAccountViewSet)
-
+# app_name = 'index'
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
@@ -18,7 +19,7 @@ urlpatterns = [
     # {% url 'urlname' user.firstname user.lastname %}
 
     path('library/', views.LibraryGameView.as_view(), name="library"),
-    path( r'library/add/^(?P<game_id>\w+)/$', views.LibraryInsertion, name="library-add"),
+    path( r'library/add/^(?P<game_id>\w+)/$', LibraryInsertion.as_view(), name="library-add"),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
 
