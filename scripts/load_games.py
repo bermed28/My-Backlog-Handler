@@ -8,8 +8,8 @@ from index.models import Game_Model, Image_Model
 def run():
     # Game_Model.objects.all().delete()
     # Image_Model.objects.all().delete()
-    fileNumber = 1
-    while fileNumber <= 4:
+    fileNumber = 7
+    while fileNumber <= 7:
         with open(f'res/data_{fileNumber}.json', "r") as f:
             data = json.load(f)
 
