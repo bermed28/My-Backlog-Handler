@@ -14,8 +14,10 @@ from .forms import LibraryAddForm
 from django.views import View
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-
+import datetime
+from datetime import date, timedelta
 from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, Library_Membership
+from django.db.models import Q
 
 """VIEWSETS"""
 class PlayerAccountViewSet(viewsets.ModelViewSet):
@@ -143,10 +145,6 @@ class LibraryInsertion(View):
 #     return render(request, 'home/library-add.html', context)
 
 
-
- # ////////////////////////////////////////////////////////////////////////////////////
-# Most Modify
-# /////////////////////////////////////////////////////////////////////////
 class LibraryGameView(ListView):
     model = Library_Membership
     paginate_by = 15
@@ -158,33 +156,28 @@ class LibraryGameView(ListView):
             owner_id=self.request.user.id
         )
 
-        # lib = library_game_list[0].games.all()
-        # print(lib)
         library_games = Library_Membership.objects.filter(library=player_library[0])
         print(library_games)
 
         return library_games
 
 
-
-
-# class LibraryGameView(ListView):
-#     model = Game_Model
-#     template_name = '../templates/home/library.html'
-#
-#     def get_list(self):
-#         game_model_list = Game_Model.objects
-#         print(game_model_list)
-#         return game_model_list
-# //////////////////////////////////////////////////////////////////////////////////
 class BacklogGameView(ListView):
     paginate_by = 15
-    model = Game_Model
+    model = Library_Membership
     template_name = '../templates/home/backlog.html'
 
-    def get_list(self):
-        game_model_list = Game_Model.objects
-        return game_model_list
+    def get_queryset(self):
+        player_library = Library_Model.objects.filter(
+            owner_id=self.request.user.id
+        )
+
+        startdate = date.today()
+        enddate = startdate + timedelta(days=-60)
+        # Sample.objects.filter(date__range=[startdate, enddate])
+        backlog = Library_Membership.objects.filter(library=player_library[0]).filter(last_played__lt=enddate)
+        print(backlog)
+        return backlog
 
 
 class SearchResultsGameView(ListView):

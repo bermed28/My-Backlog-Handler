@@ -39,7 +39,7 @@
         <h1>Backlog</h1>
     </section>
     <div class="container site-content animate__animated animate__lightSpeedInRight animate__faster table-responsive">
-        {% if game_model_list.count > 0 %}
+        {% if object_list.count > 0 %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
                 <tr>
@@ -48,19 +48,20 @@
                     <th>Platform</th>
                     <th>Score</th>
                     <th>Backlog Status</th>
+                    <th>Last Played</th>
                 </tr>
                 </thead>
                 <tbody>
-                {% for game in game_model_list %}
+                {% for Entry in object_list %}
                     <tr>
-                        {% if game.img_id.img_url is not None %}
-                            <td><a href="{% url 'game-article-template' game_id=game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ game.img_id.img_url }}"></a></td>
+                        {% if Entry.game.img_id.img_url is not None %}
+                            <td><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ Entry.game.img_id.img_url }}"></a></td>
                         {% else %}
-                            <td><a href="{% url 'game-article-template' game_id=game.game_id%}"><img class="me-1" width="70" height="70" alt="Game Cover" src="../../static/Images/controller-logo.png"></a></td>
+                            <td><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}"><img class="me-1" width="70" height="70" alt="Game Cover" src="../../static/Images/controller-logo.png"></a></td>
                         {% endif %}
-                        <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=game.game_id%}" style="text-decoration: none; color: white">{{ game.game_title }}</a></td>
+                        <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}" style="text-decoration: none; color: white">{{ Entry.game.game_title }}</a></td>
 
-                        {% for attr, platform in game.platforms.items %}
+                        {% for attr, platform in Entry.game.platforms.items %}
                             {% if "PlayStation 4" in platform %}
                                 <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
                             {% elif "Xbox One" in platform %}
@@ -90,7 +91,8 @@
                                 </select>
                             </label>
                         </td>
-                        <td>Plan to get</td>
+                        <td>In Backlog</td>
+                        <td>{{ Entry.last_played }}</td
                     </tr>
                 {% endfor %}
                 </tbody>
