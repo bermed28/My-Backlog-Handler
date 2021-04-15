@@ -33,7 +33,8 @@
         </div>
     </section>
     <div class="container site-content table-responsive">
-        {% if game_model_list.count > 0 %}
+
+        {% if game_model_list is not None %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
                 <tr>
@@ -45,6 +46,7 @@
                 </tr>
                 </thead>
                 <tbody>
+
                 {% for game in game_model_list %}
                     <tr>
                         {% if game.img_id.img_url is not None %}
@@ -91,7 +93,7 @@
                 </tbody>
             </table>
         {% else %}
-            <p style="font-family: 'arcadeclassicregular', sans-serif">You don't have any games in your library!</p>
+            <p style="font-family: 'arcadeclassicregular', sans-serif">Come back later to see if any games were added!</p>
         {% endif %}
 
         {% if is_paginated %}

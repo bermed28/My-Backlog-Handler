@@ -70,23 +70,25 @@
             {% endfor %}
 
             <h3>Platform</h3>
-            {% for attr, platform in gameArticle.platforms.items %}
-                {% for p in platform %}
-                    {% if "PlayStation 4" in p%}
-                        <p><img src="../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"> PlayStation 4</p>
-                    {% elif "PlayStation 5" in p%}
-                        <p><img src="../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"> PlayStation 5</p>
-                    {% elif "Xbox One" in p %}
-                        <p><img src="../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"> Xbox One</p>
-                    {% elif "Xbox Series X" in p %}
-                        <p><img src="../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"> Xbox Series X</p>
-                    {% elif "Nintendo Switch" in p %}
-                        <p><img src="../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"> Nintendo Switch</p>
-                    {% elif "PC (Microsoft Windows)" in p %}
-                        <p><img src="../static/Images/platforms/pc.png" alt="PC" width="30" height="30"> PC</p>
-                    {% endif %}
+
+                {% for attr, platform in gameArticle.platforms.items %}
+                    {% for p in platform %}
+                        {% if "PlayStation 4" in p%}
+                            <p><img src="../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"> PlayStation 4</p>
+                        {% elif "PlayStation 5" in p%}
+                            <p><img src="../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"> PlayStation 5</p>
+                        {% elif "Xbox One" in p %}
+                            <p><img src="../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"> Xbox One</p>
+                        {% elif "Xbox Series X" in p %}
+                            <p><img src="../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"> Xbox Series X</p>
+                        {% elif "Nintendo Switch" in p %}
+                            <p><img src="../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"> Nintendo Switch</p>
+                        {% elif "PC (Microsoft Windows)" in p %}
+                            <p><img src="../static/Images/platforms/pc.png" alt="PC" width="30" height="30"> PC</p>
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
-            {% endfor %}
+
 
 
             <h3>Involved Companies</h3>

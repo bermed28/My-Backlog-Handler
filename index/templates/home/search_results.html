@@ -66,11 +66,17 @@
                         <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
                     {% elif "PC (Microsoft Windows)" in platform %}
                         <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
+                    {% else %}
+                        <td/>No Platform</td>
                     {% endif %}
                 {% endfor %}
 
                 <td>10/10</td> {# We have to implement the rating model so we can add the rating average here #}
-                <td><button class="btn btn-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                {% if request.user.is_authenticated %}
+                    <td><button class="btn btn-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                {% else %}
+                    <td><button class="btn btn-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                {% endif %}
             </tr>
         {% endfor %}
     {% endif %}

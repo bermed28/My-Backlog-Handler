@@ -23,7 +23,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
 
     path('backlog/tips-tricks/', views.tips, name="tips-tricks"),
-    path('games/', views.gamesSection, name="games"),
+    path('games/', views.GamesView.as_view(), name="games"),
     path('games/new-releases/', views.newReleases, name="new-releases"),
     path('games/popular/', views.popGames, name="popGames"),
     path('games/upcoming/', views.upGames, name="upGames"),

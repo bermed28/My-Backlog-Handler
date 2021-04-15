@@ -60,15 +60,19 @@
                         <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=game.game_id%}" style="text-decoration: none; color: white">{{ game.game_title }}</a></td>
 
                         {% for attr, platform in game.platforms.items %}
-                            {% if "PlayStation 4" in platform %}
-                                <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
-                            {% elif "Xbox One" in platform %}
-                                <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
-                            {% elif "Nintendo Switch" in platform %}
-                                <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
-                            {% elif "PC (Microsoft Windows)" in platform %}
-                                <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
-                            {% endif %}
+                            {% for p in platform %}
+                                {% if "PlayStation 4" in p or "PlayStation 5" in p %}
+                                    <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
+                                {% elif "Xbox One" in p or "Xbox Series X" in p%}
+                                    <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
+                                {% elif "Nintendo Switch" in p %}
+                                    <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
+                                {% elif "PC (Microsoft Windows)" in p %}
+                                    <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
+                                {% else %}
+                                    <td>No Platform</td>
+                                {% endif %}
+                            {% endfor %}
                         {% endfor %}
 
                         <td>
