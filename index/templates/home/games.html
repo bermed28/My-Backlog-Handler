@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     {% if request.user.is_authenticated %}
@@ -25,20 +25,14 @@
     </style>
 </head>
 <body>
-{#    <br>#}
-{#    <div>#}
-{#        <section class="container site-content animate__animated animate__backInDown animate__faster">#}
-{#            <h1>Coming Soon</h1>#}
-{#        </section>#}
-{#    </div><br>#}
-{#    <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>#}
-{#    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"#}
 <br>
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
-        <h1>Backlog</h1>
+        <div class="row">
+            <h1>Games</h1>
+        </div>
     </section>
-    <div class="container site-content animate__animated animate__lightSpeedInRight animate__faster table-responsive">
+    <div class="container site-content table-responsive">
         {% if game_model_list.count > 0 %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
@@ -47,7 +41,7 @@
                     <th colspan="2" class="nametag">Name</th>
                     <th>Platform</th>
                     <th>Score</th>
-                    <th>Backlog Status</th>
+                    <th>Status</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -90,14 +84,16 @@
                                 </select>
                             </label>
                         </td>
+
                         <td>Plan to get</td>
                     </tr>
                 {% endfor %}
                 </tbody>
             </table>
         {% else %}
-            <p style="font-family: 'arcadeclassicregular', sans-serif">You don't have any games in your backlog!</p>
+            <p style="font-family: 'arcadeclassicregular', sans-serif">You don't have any games in your library!</p>
         {% endif %}
+
         {% if is_paginated %}
             <div class="pagination pb-2">
             <span class="page-links">
@@ -132,4 +128,3 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 </body>
-</html>

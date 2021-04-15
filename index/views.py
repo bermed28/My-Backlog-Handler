@@ -179,6 +179,9 @@ def gameArticleTemplate(request, game_id):
 def tips(request):
     return render(request, 'home/tips.html')
 
+def gamesSection(request):
+    return render(request, 'home/games.html')
+
 def newReleases(request):
     return render(request, 'home/new-releases.html')
 
@@ -211,6 +214,9 @@ def fourHundred(request, exception):
 
 def fourOThree(request, exception):
     return render(request=request, template_name='home/errorHandling/403.html')
+
+def blankQuery(request):
+    return render(request=request, template_name='home/errorHandling/blankQuery.html')
 
 
 

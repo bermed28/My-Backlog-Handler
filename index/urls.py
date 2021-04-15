@@ -23,6 +23,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
 
     path('backlog/tips-tricks/', views.tips, name="tips-tricks"),
+    path('games/', views.gamesSection, name="games"),
     path('games/new-releases/', views.newReleases, name="new-releases"),
     path('games/popular/', views.popGames, name="popGames"),
     path('games/upcoming/', views.upGames, name="upGames"),
@@ -35,5 +36,6 @@ urlpatterns = [
     path('500/', views.fiveHundred, name='500'),
     path('403/', views.fourOThree, name='403'),
     path('400/', views.fourHundred, name='400'),
+    path('blankQuery/', views.blankQuery, name='blankQuery'),
 ]
 

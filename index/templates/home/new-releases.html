@@ -41,6 +41,15 @@
             color: #007bff;
         }
     </style>
+    <script>
+        var test = "<i class='far fa-check-square'></i> In Library";
+        var test2 = "background-color: gray; outline-color: gray; color: white";
+        var test4 = "<button class='btn btn-primary' onclick='this.html = test3'><i class='far fa-plus-square'></i> Add to Library</button>";
+        var test3 = "<button class='btn in-btn' style='background-color: gray; outline-color: gray; color: white' onclick='this.html = test4'><i class='far fa-check-square'></i> In Library</button>";
+        function addToLibrary () {
+            this.innerHTML = test;
+        }
+    </script>
 </head>
 <body>
 <br>
@@ -49,50 +58,6 @@
         <h1>New Releases</h1>
     </section>
     <div class="container site-content animate__animated animate__fadeIn animate__faster">
-        {#        <div class="card-group pt-2">#}
-        {#            <div class="card mb-3" style="max-width: 540px;">#}
-        {#                <div class="row no-gutters">#}
-        {#                    <div class="col-md-5">#}
-        {#                        <img src="https://static.wikia.nocookie.net/megamitensei/images/6/6c/P5R_Key_Art.jpg/revision/latest/scale-to-width-down/340?cb=20190519020504"#}
-        {#                             width="100%" height="100%" class="card-img" alt="...">#}
-        {#                    </div>#}
-        {#                    <div class="col-md-7">#}
-        {#                        <div class="card-body">#}
-        {#                            <h5 class="card-title">Persona 5 Royal</h5>#}
-        {#                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>#}
-        {#                        </div>#}
-        {#                    </div>#}
-        {#                </div>#}
-        {#            </div>#}
-        {#            <div class="card mb-3" style="max-width: 540px;">#}
-        {#                <div class="row no-gutters">#}
-        {#                    <div class="col-md-5">#}
-        {#                        <img src="https://external-preview.redd.it/2QqVCOrlzpEGLBqZswP9p8LvzmyQePqTRGn9fPXD9aI.jpg?auto=webp&s=a64ad1eca60a76182b7a124bf05fd598a8108b98"#}
-        {#                             width="100%" height="100%" class="card-img" alt="...">#}
-        {#                    </div>#}
-        {#                    <div class="col-md-7">#}
-        {#                        <div class="card-body">#}
-        {#                            <h5 class="card-title">Xenoblade Chronicles: Definitive Edition</h5>#}
-        {#                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>#}
-        {#                        </div>#}
-        {#                    </div>#}
-        {#                </div>#}
-        {#            </div>#}
-        {#            <div class="card mb-3" style="max-width: 540px;">#}
-        {#                <div class="row no-gutters">#}
-        {#                    <div class="col-md-5">#}
-        {#                        <img src="https://cdn2.unrealengine.com/egs-kenabridgeofspirits-emberlab-s6-1200x1600-182980594.jpg"#}
-        {#                             width="100%" height="100%" class="card-img" alt="...">#}
-        {#                    </div>#}
-        {#                    <div class="col-md-7">#}
-        {#                        <div class="card-body">#}
-        {#                            <h5 class="card-title">Kena: Bridge of Spirits</h5>#}
-        {#                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>#}
-        {#                        </div>#}
-        {#                    </div>#}
-        {#                </div>#}
-        {#            </div>#}
-        {#        </div>#}
         <div class="row pt-3">
             <div class="col-sm-6">
                 <div class="card mb-3" style="max-width: 540px;">
@@ -112,7 +77,7 @@
                                         <span class="genre"><a href="#" title="Turn-Based">Turn-Based</a></span>
                                     </div>
                                 </div>
-                                <button class="btn" style="background-color: gray; outline-color: gray; color: white" onclick="window.location.href='#'"><i class="far fa-check-square"></i> In Library</button>
+                                <button class="btn in-btn" style="background-color: gray; outline-color: gray; color: white" onclick="window.location.href='#'"><i class="far fa-check-square"></i> In Library</button>
                             </div>
                         </div>
                     </div>
@@ -136,7 +101,12 @@
                                         <span class="genre"><a href="#" title="Fantasy">Fantasy</a></span>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary" onclick="window.location.href='#'"><i class="far fa-plus-square"></i> Add to Library</button>
+{#                                {% if request.user.is_authenticated %}#}
+{#                                    <button class="btn btn-primary" onclick="this.innerHTML = test; this.style = test2;"><i class="far fa-plus-square"></i> Add to Library</button>#}
+{#                                    {% else %}#}
+{#                                    <button class="btn in-btn" style="background-color: gray; outline-color: gray; color: white" onclick="window.location.href='#'"><i class="far fa-check-square"></i> In Library</button>#}
+{#                                {% endif %}#}
+                                <button class="btn btn-primary" onclick="this.innerHTML = test; this.style = test2;"><i class="far fa-plus-square"></i> Add to Library</button>
                             </div>
                         </div>
                     </div>
@@ -465,7 +435,7 @@
         {#        </div>#}
     </div>
 </div><br>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div><br>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

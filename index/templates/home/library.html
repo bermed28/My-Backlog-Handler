@@ -28,7 +28,14 @@
 <br>
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
-        <h1>Library</h1>
+        <div class="row">
+            <h1>Library</h1>
+            <button class="btn btn-outline-primary me-1" style="border-radius: 15px; font-family: 'arcadeclassicregular' , sans-serif;"
+                    onclick='window.location.href="{% url 'new-releases' %}"'><i class='far fa-plus-square'></i> Add more games</button>
+        </div>
+{#        <h1>Library</h1>#}
+{#        <button class="btn btn-outline-primary me-1"#}
+{#                                    onclick='window.location.href="{% url 'new-releases' %}"'><i class='far fa-plus-square'></i> Add more games</button>#}
     </section>
     <div class="container site-content table-responsive">
         {% if game_model_list.count > 0 %}

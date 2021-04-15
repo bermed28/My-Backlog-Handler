@@ -2,108 +2,211 @@
 <html>
 
 <head>
-     {% if request.user.is_authenticated %}
+    {% if request.user.is_authenticated %}
         {% include 'home/navTemplate.html' %}
     {% else %}
         {% include 'home/navOutTemplate.html' %}
     {% endif %}
-
 </head>
-
 <br>
-<section class="container animate__animated animate__backInDown animate__faster">
-    <section class="site-content pb-1">
-        <div class="container">
-            <h2>About us:</h2>
-            <p style="padding-left: 2em;">As a group of gamers ourselves, we are not immune to the woes and
-                struggles that come with (either accidentally or willingly) amassing a gaming backlog of
-                games. We at StackOverflowers Studios &copy; created
-                <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong>
-                in order to help fellow gamers tackle this
-                problem by and guide them in the process that is growing their collections, as well as tracking
-                their progress in each game they have in their collection so everyone can have a complete gaming
-                experience!
-            </p>
-        </div>
-
-        <div class="container">
-            <h2>Meet the Team!:</h2>
-            <p style="padding-left: 2em;"> Take a look at the developers who made <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>
-            <details style="padding-left: 2em;">
-                <summary>Fernando J. Bermúdez Medina</summary>
-                <div class="dev pt-2 pb-1">
-                    <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/fernando.png">
+<section class="container site-content animate__animated animate__backInDown animate__faster">
+    <h1>About us</h1>
+</section>
+<div class="container site-content animate__animated animate__fadeIn animate__faster">
+    <div class="container pb-3">
+        <div class="container-fluid">
+            <div class="container">
+                <h2 style="text-align: center">Welcome to My Backlog Handler!</h2>
+                <div class="container">
+                    <img class="rounded mx-auto d-block pb-2" width="300px" height="300px" id="logo" src="../../static/Images/devTeam/StackOverflowersLogoR.png" alt="Group Logo">
+                    <p class="col" style="padding-left: 2em;">As a group of gamers ourselves, we are not immune to the woes and
+                        struggles that come with (either accidentally or willingly) amassing a gaming backlog of
+                        games. We at StackOverflowers Studios &copy; created
+                        <span style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</span>
+                        in order to help fellow gamers tackle this
+                        problem by and guide them in the process that is growing their collections, as well as tracking
+                        their progress in each game they have in their collection so everyone can have a complete gaming
+                        experience!
+                    </p>
                 </div>
+                {#                <p style="padding-left: 2em;">As a group of gamers ourselves, we are not immune to the woes and#}
+                {#                    struggles that come with (either accidentally or willingly) amassing a gaming backlog of#}
+                {#                    games. We at StackOverflowers Studios &copy; created#}
+                {#                    <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong>#}
+                {#                    in order to help fellow gamers tackle this#}
+                {#                    problem by and guide them in the process that is growing their collections, as well as tracking#}
+                {#                    their progress in each game they have in their collection so everyone can have a complete gaming#}
+                {#                    experience!#}
+                {#                </p>#}
+            </div>
 
-                <p style="padding-left: 1em;">Fernando is the team's lead back end developer. He's in charge of
-                    maintaining and working on the database system used in the website, as well as keep other backend
-                    developers on track. A 3rd year Software Engineering undergraduate student at the University of Puerto Rico -
-                    Mayagüez Campus, as well as an incoming Software Development Engineer Intern at Amazon this summer, Fernando is always
-                    eager to learn new things and be ready to face new challenges!</p>
+            <div class="container">
+                <h2>Meet the Team:</h2>
+                <p style="padding-left: 2em;"> Take a look at the developers who made <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>
+                <details style="padding-left: 2em;">
+                    <summary>Fernando J. Bermúdez Medina</summary>
+                    <div class="dev pt-2 pb-1">
+                        <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/fernando.png">
+                    </div>
 
-            </details>
+                    <p style="padding-left: 1em;">Fernando is the team's lead back end developer. He's in charge of
+                        maintaining and working on the database system used in the website, as well as keep other backend
+                        developers on track. A 3rd year Software Engineering undergraduate student at the University of Puerto Rico -
+                        Mayagüez Campus, as well as an incoming Software Development Engineer Intern at Amazon this summer, Fernando is always
+                        eager to learn new things and be ready to face new challenges!</p>
 
-            <details style="padding-left: 2em;">
-                <summary>Christopher Castillo Carrero</summary>
-                <div class="dev pt-2 pb-1">
-                    <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/chris.png">
-                </div>
+                </details>
 
-                <p style="padding-left: 1em;">Christopher is the team's lead front end developer. He's in charge of
-                    maintaining and working on the design, feel and overall look of the website users will see, as well as keep other
-                    front end developers on track. A 3rd year Computer Science & Engineering undergraduate student at the University of Puerto Rico -
-                    Mayagüez Campus, Christopher is the pioneer that made <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>
+                <details style="padding-left: 2em;">
+                    <summary>Christopher Castillo Carrero</summary>
+                    <div class="dev pt-2 pb-1">
+                        <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/chris.png">
+                    </div>
 
-            </details>
+                    <p style="padding-left: 1em;">Christopher is the team's lead front end developer. He's in charge of
+                        maintaining and working on the design, feel and overall look of the website users will see, as well as keep other
+                        front end developers on track. A 3rd year Computer Science & Engineering undergraduate student at the University of Puerto Rico -
+                        Mayagüez Campus, Christopher is the pioneer that made <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>
 
-            <details style="padding-left: 2em;">
-                <summary>Kevin J. Lugo Rosado</summary>
-                <div class="dev pt-2 pb-1">
-                    <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/lugo.png">
-                </div>
+                </details>
+
+                <details style="padding-left: 2em;">
+                    <summary>Kevin J. Lugo Rosado</summary>
+                    <div class="dev pt-2 pb-1">
+                        <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/lugo.png">
+                    </div>
 
                     <p style="padding-left: 2em;">Kevin is the team's lead full stack developer. He is a hybrid member
-                    of both front end & back end teams, given that he has worked before on both sides
-                    of web development throughout his career as a software engineer. A 4th year Computer Science & Engineering
-                    undergraduate student at the University of Puerto Rico - Mayagüez Campus, as well as an incoming
-                    Software Engineering Intern this summer at companies like Amazon & Microsoft, Kevin is always
-                    eager to showcase his talents and bring a big impact to wherever he works!</p>
+                        of both front end & back end teams, given that he has worked before on both sides
+                        of web development throughout his career as a software engineer. A 4th year Computer Science & Engineering
+                        undergraduate student at the University of Puerto Rico - Mayagüez Campus, as well as an incoming
+                        Software Engineering Intern this summer at companies like Amazon & Microsoft, Kevin is always
+                        eager to showcase his talents and bring a big impact to wherever he works!</p>
 
-            </details>
+                </details>
 
-            <details style="padding-left: 2em;">
-                <summary>Ángel K. Vázquez Sánchez</summary>
-                <div class="dev pt-2 pb-1">
-                    <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/angel.png">
-                </div>
+                <details style="padding-left: 2em;">
+                    <summary>Ángel K. Vázquez Sánchez</summary>
+                    <div class="dev pt-2 pb-1">
+                        <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/angel.png">
+                    </div>
 
 
                     <p style="padding-left: 2em;">Angel is the team's associate full stack developer. He's in charge of
-                    helping Kevin keep both teams on pace, as well as helping out the lead developers tinker and come up with new features
-                    for both the database, frameworks and API's from the back end, as well as the overall design of the front end.
-                    A 3rd year Computer Science & Engineering undergraduate student at the University of Puerto Rico - Mayagüez Campus,
-                    as well as a Systems Informations Undergrad COOP at AMGEN, Angel is the teams' "Swiss Army Knife" that the team needs
-                    to make <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>
-            </details>
+                        helping Kevin keep both teams on pace, as well as helping out the lead developers tinker and come up with new features
+                        for both the database, frameworks and API's from the back end, as well as the overall design of the front end.
+                        A 3rd year Computer Science & Engineering undergraduate student at the University of Puerto Rico - Mayagüez Campus,
+                        as well as a Systems Informations Undergrad COOP at AMGEN, Angel is the teams' "Swiss Army Knife" that the team needs
+                        to make <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>
+                </details>
 
-            <details style="padding-left: 2em;">
-                <summary>Gabriel Y. Díaz Morro</summary>
-                <div class="dev pt-2 pb-1">
-                    <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/gabriel.png">
-                </div>
+                <details style="padding-left: 2em;">
+                    <summary>Gabriel Y. Díaz Morro</summary>
+                    <div class="dev pt-2 pb-1">
+                        <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/gabriel.png">
+                    </div>
 
-                <p style="padding-left: 1em;">Gabriel is the team's associate back end developer. He's in charge of
-                    maintaining and working on the database system used in the website alongside Fernando.
-                    A 3rd year Software Engineering undergraduate student at the University of Puerto Rico - Mayagüez Campus,
-                    as well as an incoming Software Engineering Intern this summer at Microsoft, Gabriel is always
-                    willing to help his teammates, as well as bring some fun to the development process!</p>
-            </details>
-
-
+                    <p style="padding-left: 1em;">Gabriel is the team's associate back end developer. He's in charge of
+                        maintaining and working on the database system used in the website alongside Fernando.
+                        A 3rd year Software Engineering undergraduate student at the University of Puerto Rico - Mayagüez Campus,
+                        as well as an incoming Software Engineering Intern this summer at Microsoft, Gabriel is always
+                        willing to help his teammates, as well as bring some fun to the development process!</p>
+                </details>
+            </div>
+            {#    </section>#}
         </div>
-    </section>
-</section><br>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+        {#        <div class="container animate__animated animate__backInDown animate__faster">#}
+        {#            <section class="site-content pb-1">#}
+        {#                <div class="container">#}
+        {#                    <h2>About us:</h2>#}
+        {#                    <p style="padding-left: 2em;">As a group of gamers ourselves, we are not immune to the woes and#}
+        {#                        struggles that come with (either accidentally or willingly) amassing a gaming backlog of#}
+        {#                        games. We at StackOverflowers Studios &copy; created#}
+        {#                        <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong>#}
+        {#                        in order to help fellow gamers tackle this#}
+        {#                        problem by and guide them in the process that is growing their collections, as well as tracking#}
+        {#                        their progress in each game they have in their collection so everyone can have a complete gaming#}
+        {#                        experience!#}
+        {#                    </p>#}
+        {#                </div>#}
+        {##}
+        {#                <div class="container">#}
+        {#                    <h2>Meet the Team!:</h2>#}
+        {#                    <p style="padding-left: 2em;"> Take a look at the developers who made <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>#}
+        {#                    <details style="padding-left: 2em;">#}
+        {#                        <summary>Fernando J. Bermúdez Medina</summary>#}
+        {#                        <div class="dev pt-2 pb-1">#}
+        {#                            <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/fernando.png">#}
+        {#                        </div>#}
+        {##}
+        {#                        <p style="padding-left: 1em;">Fernando is the team's lead back end developer. He's in charge of#}
+        {#                            maintaining and working on the database system used in the website, as well as keep other backend#}
+        {#                            developers on track. A 3rd year Software Engineering undergraduate student at the University of Puerto Rico -#}
+        {#                            Mayagüez Campus, as well as an incoming Software Development Engineer Intern at Amazon this summer, Fernando is always#}
+        {#                            eager to learn new things and be ready to face new challenges!</p>#}
+        {##}
+        {#                    </details>#}
+        {##}
+        {#                    <details style="padding-left: 2em;">#}
+        {#                        <summary>Christopher Castillo Carrero</summary>#}
+        {#                        <div class="dev pt-2 pb-1">#}
+        {#                            <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/chris.png">#}
+        {#                        </div>#}
+        {##}
+        {#                        <p style="padding-left: 1em;">Christopher is the team's lead front end developer. He's in charge of#}
+        {#                            maintaining and working on the design, feel and overall look of the website users will see, as well as keep other#}
+        {#                            front end developers on track. A 3rd year Computer Science & Engineering undergraduate student at the University of Puerto Rico -#}
+        {#                            Mayagüez Campus, Christopher is the pioneer that made <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>#}
+        {##}
+        {#                    </details>#}
+        {##}
+        {#                    <details style="padding-left: 2em;">#}
+        {#                        <summary>Kevin J. Lugo Rosado</summary>#}
+        {#                        <div class="dev pt-2 pb-1">#}
+        {#                            <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/lugo.png">#}
+        {#                        </div>#}
+        {##}
+        {#                        <p style="padding-left: 2em;">Kevin is the team's lead full stack developer. He is a hybrid member#}
+        {#                            of both front end & back end teams, given that he has worked before on both sides#}
+        {#                            of web development throughout his career as a software engineer. A 4th year Computer Science & Engineering#}
+        {#                            undergraduate student at the University of Puerto Rico - Mayagüez Campus, as well as an incoming#}
+        {#                            Software Engineering Intern this summer at companies like Amazon & Microsoft, Kevin is always#}
+        {#                            eager to showcase his talents and bring a big impact to wherever he works!</p>#}
+        {##}
+        {#                    </details>#}
+        {##}
+        {#                    <details style="padding-left: 2em;">#}
+        {#                        <summary>Ángel K. Vázquez Sánchez</summary>#}
+        {#                        <div class="dev pt-2 pb-1">#}
+        {#                            <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/angel.png">#}
+        {#                        </div>#}
+        {##}
+        {##}
+        {#                        <p style="padding-left: 2em;">Angel is the team's associate full stack developer. He's in charge of#}
+        {#                            helping Kevin keep both teams on pace, as well as helping out the lead developers tinker and come up with new features#}
+        {#                            for both the database, frameworks and API's from the back end, as well as the overall design of the front end.#}
+        {#                            A 3rd year Computer Science & Engineering undergraduate student at the University of Puerto Rico - Mayagüez Campus,#}
+        {#                            as well as a Systems Informations Undergrad COOP at AMGEN, Angel is the teams' "Swiss Army Knife" that the team needs#}
+        {#                            to make <strong style = "font-family:arcadeclassicregular;">My Backlog Handler&trade;</strong> come to life!</p>#}
+        {#                    </details>#}
+        {##}
+        {#                    <details style="padding-left: 2em;">#}
+        {#                        <summary>Gabriel Y. Díaz Morro</summary>#}
+        {#                        <div class="dev pt-2 pb-1">#}
+        {#                            <img class="rounded mx-auto d-block" width="300px" height="300px" src="/static/Images/devTeam/gabriel.png">#}
+        {#                        </div>#}
+        {##}
+        {#                        <p style="padding-left: 1em;">Gabriel is the team's associate back end developer. He's in charge of#}
+        {#                            maintaining and working on the database system used in the website alongside Fernando.#}
+        {#                            A 3rd year Software Engineering undergraduate student at the University of Puerto Rico - Mayagüez Campus,#}
+        {#                            as well as an incoming Software Engineering Intern this summer at Microsoft, Gabriel is always#}
+        {#                            willing to help his teammates, as well as bring some fun to the development process!</p>#}
+        {#                    </details>#}
+        {#                </div>#}
+        {#            </section>#}
+    </div>
+</div><br>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div><br>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
