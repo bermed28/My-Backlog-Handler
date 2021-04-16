@@ -1,6 +1,6 @@
 <hr>
 <h1>Welcome to My Backlog Handler&trade; from StackOverflowers Studios&copy;</h1>
-
+<img src="index/static/Images/devTeam/StackOverflowersLogoR.png" alias-"Logo" width="250" height="250" style="display: block; margin-left: auto; margin-right: auto;">
 <details>
   <summary>Activating Virtual Enviroments</summary>
 
