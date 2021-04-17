@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     {% if request.user.is_authenticated %}
@@ -25,21 +25,16 @@
     </style>
 </head>
 <body>
-{#    <br>#}
-{#    <div>#}
-{#        <section class="container site-content animate__animated animate__backInDown animate__faster">#}
-{#            <h1>Coming Soon</h1>#}
-{#        </section>#}
-{#    </div><br>#}
-{#    <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>#}
-{#    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"#}
 <br>
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
-        <h1>Backlog</h1>
+        <div class="row">
+            <h1>Games</h1>
+        </div>
     </section>
-    <div class="container site-content animate__animated animate__lightSpeedInRight animate__faster table-responsive">
-        {% if object_list.count > 0 %}
+    <div class="container site-content table-responsive">
+
+        {% if game_model_list is not None %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
                 <tr>
@@ -47,21 +42,21 @@
                     <th colspan="2" class="nametag">Name</th>
                     <th>Platform</th>
                     <th>Score</th>
-                    <th>Backlog Status</th>
-                    <th>Last Played</th>
+                    <th>Status</th>
                 </tr>
                 </thead>
                 <tbody>
-                {% for Entry in object_list %}
-                    <tr>
-                        {% if Entry.game.img_id.img_url is not None %}
-                            <td><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ Entry.game.img_id.img_url }}"></a></td>
-                        {% else %}
-                            <td><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}"><img class="me-1" width="70" height="70" alt="Game Cover" src="../../static/Images/controller-logo.png"></a></td>
-                        {% endif %}
-                        <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}" style="text-decoration: none; color: white">{{ Entry.game.game_title }}</a></td>
 
-                        {% for attr, platform in Entry.game.platforms.items %}
+                {% for game in game_model_list %}
+                    <tr>
+                        {% if game.img_id.img_url is not None %}
+                            <td><a href="{% url 'game-article-template' game_id=game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ game.img_id.img_url }}"></a></td>
+                        {% else %}
+                            <td><a href="{% url 'game-article-template' game_id=game.game_id%}"><img class="me-1" width="70" height="70" alt="Game Cover" src="../../static/Images/controller-logo.png"></a></td>
+                        {% endif %}
+                        <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=game.game_id%}" style="text-decoration: none; color: white">{{ game.game_title }}</a></td>
+
+                        {% for attr, platform in game.platforms.items %}
                             {% if "PlayStation 4" in platform %}
                                 <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
                             {% elif "Xbox One" in platform %}
@@ -70,8 +65,6 @@
                                 <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
                             {% elif "PC (Microsoft Windows)" in platform %}
                                 <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
-                            {% else %}
-                                <td>No Platform</td>
                             {% endif %}
                         {% endfor %}
 
@@ -93,15 +86,16 @@
                                 </select>
                             </label>
                         </td>
-                        <td>In Backlog</td>
-                        <td>{{ Entry.last_played }}</td
+
+                        <td>Plan to get</td>
                     </tr>
                 {% endfor %}
                 </tbody>
             </table>
         {% else %}
-            <p style="font-family: 'arcadeclassicregular', sans-serif">You don't have any games in your backlog!</p>
+            <p style="font-family: 'arcadeclassicregular', sans-serif">Come back later to see if any games were added!</p>
         {% endif %}
+
         {% if is_paginated %}
             <div class="pagination pb-2">
             <span class="page-links">
@@ -136,4 +130,3 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 </body>
-</html>

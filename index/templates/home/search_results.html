@@ -58,19 +58,25 @@
                 <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=game.game_id%}" style="text-decoration: none; color: white">{{ game.game_title }}</a></td>
 
                 {% for attr, platform in game.platforms.items %}
-                    {% if "PlayStation 4" in platform %}
+                    {% if "PlayStation 4" in platform or "PlayStation 5" in platform%}
                         <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
-                    {% elif "Xbox One" in platform %}
+                    {% elif "Xbox One" in platform or "Xbox Series X" in platform %}
                         <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
                     {% elif "Nintendo Switch" in platform %}
                         <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
                     {% elif "PC (Microsoft Windows)" in platform %}
                         <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
+                    {% else %}
+                        <td/>No Platform</td>
                     {% endif %}
                 {% endfor %}
 
                 <td>10/10</td> {# We have to implement the rating model so we can add the rating average here #}
-                <td><button class="btn btn-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                {% if request.user.is_authenticated %}
+                    <td><button class="btn btn-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                {% else %}
+                    <td><button class="btn btn-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                {% endif %}
             </tr>
         {% endfor %}
     {% endif %}

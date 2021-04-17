@@ -144,7 +144,6 @@ class LibraryInsertion(View):
 #
 #     return render(request, 'home/library-add.html', context)
 
-
 class LibraryGameView(ListView):
     model = Library_Membership
     paginate_by = 15
@@ -160,6 +159,7 @@ class LibraryGameView(ListView):
         print(library_games)
 
         return library_games
+
 
 
 class BacklogGameView(ListView):
@@ -178,6 +178,11 @@ class BacklogGameView(ListView):
         backlog = Library_Membership.objects.filter(library=player_library[0]).filter(last_played__lt=enddate)
         print(backlog)
         return backlog
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q')
+        return context
 
 
 class SearchResultsGameView(ListView):
@@ -214,6 +219,20 @@ class SearchResultsImgView(ListView):
         context['query'] = self.request.GET.get('q')
         return context
 
+class GamesView(ListView):
+    paginate_by = 15
+    model = Game_Model
+    template_name = '../templates/home/games.html'
+
+    def get_list(self):
+        game_model_list = Game_Model.objects
+        return game_model_list
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q')
+        return context
+
 def registration(request):
     return render(request, 'home/registration.html')
 
@@ -229,6 +248,9 @@ def gameArticleTemplate(request, game_id):
 
 def tips(request):
     return render(request, 'home/tips.html')
+
+def gamesSection(request):
+    return render(request, 'home/games.html')
 
 def newReleases(request):
     return render(request, 'home/new-releases.html')
@@ -263,7 +285,42 @@ def fourHundred(request, exception):
 def fourOThree(request, exception):
     return render(request=request, template_name='home/errorHandling/403.html')
 
+def blankQuery(request):
+    return render(request=request, template_name='home/errorHandling/blankQuery.html')
 
+def LibraryInsertion(request, game_id):
+    form = LibraryAddForm(request.POST or None)
+    gameArticle = Game_Model.objects.get(game_id=game_id)
+    if request.method == "POST":
+        print("user = ",  request.user)
+        if form.is_valid():
+            player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
+
+            membership = Library_Membership(
+            game = gameArticle,
+            library = player_library,
+            last_played = form.cleaned_data['last_played'],
+            is_finished =form.cleaned_data['is_finished'],
+            )
+            membership.save()
+
+            print("game_id", game_id)
+            print("last_played = ",form.cleaned_data['last_played'])
+            print("is_finished = ", form.cleaned_data['is_finished'])
+            form = LibraryAddForm()
+        else:
+            print(form.errors)
+    print(Library_Model.objects.all())
+
+
+    # form = LibraryAddForm(request.POST or None)
+    # gameArticle = Game_Model.objects.get(game_id=game_id)
+    context = {
+        "game_form":form,
+        "gameArticle":gameArticle
+    }
+
+    return render(request, 'home/library-add.html', context)
 
 
 
