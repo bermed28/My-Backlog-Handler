@@ -288,39 +288,6 @@ def fourOThree(request, exception):
 def blankQuery(request):
     return render(request=request, template_name='home/errorHandling/blankQuery.html')
 
-def LibraryInsertion(request, game_id):
-    form = LibraryAddForm(request.POST or None)
-    gameArticle = Game_Model.objects.get(game_id=game_id)
-    if request.method == "POST":
-        print("user = ",  request.user)
-        if form.is_valid():
-            player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
-
-            membership = Library_Membership(
-            game = gameArticle,
-            library = player_library,
-            last_played = form.cleaned_data['last_played'],
-            is_finished =form.cleaned_data['is_finished'],
-            )
-            membership.save()
-
-            print("game_id", game_id)
-            print("last_played = ",form.cleaned_data['last_played'])
-            print("is_finished = ", form.cleaned_data['is_finished'])
-            form = LibraryAddForm()
-        else:
-            print(form.errors)
-    print(Library_Model.objects.all())
-
-
-    # form = LibraryAddForm(request.POST or None)
-    # gameArticle = Game_Model.objects.get(game_id=game_id)
-    context = {
-        "game_form":form,
-        "gameArticle":gameArticle
-    }
-
-    return render(request, 'home/library-add.html', context)
 
 
 
