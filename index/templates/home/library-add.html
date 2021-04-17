@@ -10,13 +10,16 @@
     {% endif %}
     <script src="https://kit.fontawesome.com/c6db85c705.js" crossorigin="anonymous"></script>
 </head>
+    {% if game_available %}
+        <body class="text-white bg-dark">
+        <p>{{ gameArticle.game_title }}</p>
+        <form method = "POST">{% csrf_token %}
+        {{ game_form.as_p }}
 
-<body class="text-white bg-dark">
-<p>{{ gameArticle.game_title }}</p>
-<form method = "POST">{% csrf_token %}
-    {{ game_form.as_p }}
-
-    <input type = "submit" value = 'Add to Library'/>
+        <input type = "submit" value = 'Add to Library'/>
+    {% else %}
+         <p> Game is already in Library</p>
+    {% endif %}
 
 </form>
 
