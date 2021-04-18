@@ -31,7 +31,7 @@
         <div class="row">
             <h1>Library</h1>
             <button class="btn btn-outline-primary me-1" style="border-radius: 15px; font-family: 'arcadeclassicregular' , sans-serif;"
-                    onclick='window.location.href="{% url 'new-releases' %}"'><i class='far fa-plus-square'></i> Add more games</button>
+                    onclick='window.location.href="{% url 'games' %}"'><i class='far fa-plus-square'></i> Add more games</button>
         </div>
 {#        <h1>Library</h1>#}
 {#        <button class="btn btn-outline-primary me-1"#}
@@ -64,7 +64,11 @@
                         {% for attr, platform in Entry.game.platforms.items %}
                             {% if "PlayStation 4" in platform %}
                                 <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
-                            {% elif "Xbox One" in platform %}
+                            {% elif "PlayStation 5" in platform %}
+                                <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
+                            {% elif "Xbox One" or "Xbox Series X" in platform %}
+                                <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
+                            {% elif "Xbox Series X" in platform %}
                                 <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
                             {% elif "Nintendo Switch" in platform %}
                                 <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
