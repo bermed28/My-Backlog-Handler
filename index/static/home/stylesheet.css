@@ -5,13 +5,19 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'pressStart2P';
+    src: url('PressStart2P-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     background-size: 250px;
     background-image: url("controller-vector.png");
     background-repeat: inherit;
 }
 h1, h2, h3, h4, h5, h6, li, fieldset {
-    font-family: 'arcadeclassicregular';
+    font-family: 'arcadeclassicregular' , 'sans-serif';
 }
 .dropdown-menu a {
     background-color: #212529;
@@ -96,4 +102,11 @@ div.carousel-caption > p {
 }
 .rankNum {
     font-family: 'arcadeclassicregular';
+}
+.pagination {
+    font-family: 'arcadeclassicregular', sans-serif;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+
 }

@@ -28,17 +28,13 @@
 <br>
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
-        <div class="row">
-            <h1>Library</h1>
-            <button class="btn btn-outline-primary me-1" style="border-radius: 15px; font-family: 'arcadeclassicregular' , sans-serif;"
-                    onclick='window.location.href="{% url 'games' %}"'><i class='far fa-plus-square'></i> Add more games</button>
+        <div>
+            <h1>Games</h1>
         </div>
-{#        <h1>Library</h1>#}
-{#        <button class="btn btn-outline-primary me-1"#}
-{#                                    onclick='window.location.href="{% url 'new-releases' %}"'><i class='far fa-plus-square'></i> Add more games</button>#}
     </section>
     <div class="container site-content table-responsive">
-        {% if object_list.count > 0 %}
+
+        {% if game_model_list is not None %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
                 <tr>
@@ -47,35 +43,28 @@
                     <th>Platform</th>
                     <th>Score</th>
                     <th>Status</th>
-                    <th>Last Played</th>
                 </tr>
                 </thead>
                 <tbody>
-                {% for Entry in object_list %}
-{#                    <p>{{ Entry.game.img_id.img_url }}</p>#}
-                    <tr>
-                        {% if Entry.game.img_id.img_url is not None %}
-                            <td><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ Entry.game.img_id.img_url }}"></a></td>
-                        {% else %}
-                            <td><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}"><img class="me-1" width="70" height="70" alt="Game Cover" src="../../static/Images/controller-logo.png"></a></td>
-                        {% endif %}
-                        <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}" style="text-decoration: none; color: white">{{ Entry.game.game_title }}</a></td>
 
-                        {% for attr, platform in Entry.game.platforms.items %}
+                {% for game in game_model_list %}
+                    <tr>
+                        {% if game.img_id.img_url is not None %}
+                            <td><a href="{% url 'game-article-template' game_id=game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ game.img_id.img_url }}"></a></td>
+                        {% else %}
+                            <td><a href="{% url 'game-article-template' game_id=game.game_id%}"><img class="me-1" width="70" height="70" alt="Game Cover" src="../../static/Images/controller-logo.png"></a></td>
+                        {% endif %}
+                        <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=game.game_id%}" style="text-decoration: none; color: white">{{ game.game_title }}</a></td>
+
+                        {% for attr, platform in game.platforms.items %}
                             {% if "PlayStation 4" in platform %}
                                 <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
-                            {% elif "PlayStation 5" in platform %}
-                                <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
-                            {% elif "Xbox One" or "Xbox Series X" in platform %}
-                                <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
-                            {% elif "Xbox Series X" in platform %}
+                            {% elif "Xbox One" in platform %}
                                 <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
                             {% elif "Nintendo Switch" in platform %}
                                 <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
                             {% elif "PC (Microsoft Windows)" in platform %}
                                 <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
-                            {% else %}
-                                 <td>No Platform</td>
                             {% endif %}
                         {% endfor %}
 
@@ -99,13 +88,12 @@
                         </td>
 
                         <td>Plan to get</td>
-                        <td>{{ Entry.last_played }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>
             </table>
         {% else %}
-            <p style="font-family: 'arcadeclassicregular', sans-serif">You don't have any games in your library!</p>
+            <p style="font-family: 'arcadeclassicregular', sans-serif">Come back later to see if any games were added!</p>
         {% endif %}
 
         {% if is_paginated %}

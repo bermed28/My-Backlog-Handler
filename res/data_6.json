@@ -1,0 +1,61 @@
+[
+    {
+        "id": 142607,
+        "name": "NHL 21: Rewind Bundle",
+        "platforms": [
+            "Xbox Series X"
+        ]
+    },
+    {
+        "id": 141542,
+        "genres": [
+            "Adventure"
+        ],
+        "name": "Ark II",
+        "platforms": [
+            "Xbox Series X"
+        ]
+    },
+    {
+        "id": 142821,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ut8.jpg",
+        "involved_companies": [
+            "SNK"
+        ],
+        "name": "SAMURAI SHODOWN Enhanced",
+        "platforms": [
+            "Xbox Series X"
+        ]
+    },
+    {
+        "id": 136084,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2ef7.jpg",
+        "genres": [
+            "Sport"
+        ],
+        "involved_companies": [
+            "I-Illusions",
+            "Let It Roll",
+            "FoamPunch"
+        ],
+        "name": "Shredders",
+        "platforms": [
+            "Xbox Series X"
+        ]
+    },
+    {
+        "id": 141537,
+        "cover": "https://images.igdb.com/igdb/image/upload/t_1080p/co2mgu.jpg",
+        "genres": [
+            "Shooter"
+        ],
+        "involved_companies": [
+            "Xbox Game Studios",
+            "The Initiative"
+        ],
+        "name": "Perfect Dark",
+        "platforms": [
+            "Xbox Series X"
+        ]
+    }
+]

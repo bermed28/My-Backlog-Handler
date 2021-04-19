@@ -8,38 +8,30 @@
         {% include 'home/navOutTemplate.html' %}
     {% endif %}
     <script src="https://kit.fontawesome.com/c6db85c705.js" crossorigin="anonymous"></script>
-<style>
-    table {
-        border-collapse: separate;
-        border-spacing: 0 15px;
-    }
-    th,td {
-        width: 150px;
-        text-align: center;
-        vertical-align: middle;
-        padding: 5px;
-    }
-    .nametag {
-        text-align: left;
-    }
-</style>
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+        th,td {
+            width: 150px;
+            text-align: center;
+            vertical-align: middle;
+            padding: 5px;
+        }
+        .nametag {
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-{#    <br>#}
-{#    <div>#}
-{#        <section class="container site-content animate__animated animate__backInDown animate__faster">#}
-{#            <h1>Coming Soon</h1>#}
-{#        </section>#}
-{#    </div><br>#}
-{#    <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>#}
-{#    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"#}
 <br>
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
         <h1>Backlog</h1>
     </section>
-        <div class="container site-content animate__animated animate__lightSpeedInRight animate__faster table-responsive">
-        {% if game_model_list.count > 0 %}
+    <div class="container site-content animate__animated animate__lightSpeedInRight animate__faster table-responsive">
+        {% if object_list.count > 0 %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
                 <tr>
@@ -48,67 +40,94 @@
                     <th>Platform</th>
                     <th>Score</th>
                     <th>Backlog Status</th>
+                    <th>Last Played</th>
                 </tr>
                 </thead>
                 <tbody>
-                    {% for game in game_model_list %}
-                        <tr>
-                            {% if game.img_id.img_url is not None %}
-                                <td><a href="{% url 'game-article-template' game_id=game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ game.img_id.img_url }}"></a></td>
+                {% for Entry in object_list %}
+                    <tr>
+                        {% if Entry.game.img_id.img_url is not None %}
+                            <td><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ Entry.game.img_id.img_url }}"></a></td>
+                        {% else %}
+                            <td><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}"><img class="me-1" width="70" height="70" alt="Game Cover" src="../../static/Images/controller-logo.png"></a></td>
+                        {% endif %}
+                        <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}" style="text-decoration: none; color: white">{{ Entry.game.game_title }}</a></td>
+
+                        {% for attr, platform in Entry.game.platforms.items %}
+                            {% if "PlayStation 4" in platform %}
+                                <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
+                            {% elif "PlayStation 5" in platform %}
+                                <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
+                            {% elif "Xbox One" or "Xbox Series X" in platform %}
+                                <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
+                            {% elif "Xbox Series X" in platform %}
+                                <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
+                            {% elif "Nintendo Switch" in platform %}
+                                <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
+                            {% elif "PC (Microsoft Windows)" in platform %}
+                                <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
                             {% else %}
-                                <td><a href="{% url 'game-article-template' game_id=game.game_id%}"><img class="me-1" width="70" height="70" alt="Game Cover" src="../../static/Images/controller-logo.png"></a></td>
+                                 <td>No Platform</td>
                             {% endif %}
-                            <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=game.game_id%}" style="text-decoration: none; color: white">{{ game.game_title }}</a></td>
+                        {% endfor %}
 
-                            {% for attr, platform in game.platforms.items %}
-                                {% if "PlayStation 4" in platform %}
-                                    <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
-                                {% elif "Xbox One" in platform %}
-                                    <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
-                                {% elif "Nintendo Switch" in platform %}
-                                    <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
-                                {% elif "PC (Microsoft Windows)" in platform %}
-                                    <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
-                                {% endif %}
-                            {% endfor %}
-
-                            <td>
-                                <label class="pt-2 pb-2">
-                                    <select class="form-control bg-dark" style="color: white">
-                                        <option>--</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
-                                        <option>8</option>
-                                        <option>9</option>
-                                        <option>10</option>
-                                        <option>N/A</option>
-                                    </select>
-                                </label>
-                            </td>
-                            <td>Plan to get</td>
-                        </tr>
-                    {% endfor %}
+                        <td>
+                            <label class="pt-2 pb-2">
+                                <select class="form-control bg-dark" style="color: white">
+                                    <option>--</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>N/A</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td>In Backlog</td>
+                        <td>{{ Entry.last_played }}</td
+                    </tr>
+                {% endfor %}
                 </tbody>
             </table>
         {% else %}
             <p style="font-family: 'arcadeclassicregular', sans-serif">You don't have any games in your backlog!</p>
         {% endif %}
+        {% if is_paginated %}
+            <div class="pagination pb-2">
+            <span class="page-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}&q={{ query }}">
+                    <button class="btn mybtn btn-outline-primary me-1" onclick="window.location.href='#'"><i class="fas fa-arrow-left"></i></button>
+                    </a>
+                {% endif %}
+                <span class="page-current" style="font-size: 30px; width: 50%; margin: 0 auto; vertical-align: bottom">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}&q={{ query }}" style="padding-right: 10px">
+                    <button class="btn mybtn btn-outline-primary" onclick="window.location.href='#'"><i class="fas fa-arrow-right"></i></button>
+                    </a>
+                {% endif %}
+            </span>
+            </div>
+        {% endif %}
     </div>
 </div><br>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div><br>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>

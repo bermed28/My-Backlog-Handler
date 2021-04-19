@@ -58,32 +58,53 @@
                 <td colspan="2" class="nametag"><a href="{% url 'game-article-template' game_id=game.game_id%}" style="text-decoration: none; color: white">{{ game.game_title }}</a></td>
 
                 {% for attr, platform in game.platforms.items %}
-                    {% if "PlayStation 4" in platform %}
+                    {% if "PlayStation 4" in platform or "PlayStation 5" in platform%}
                         <td><img src="../../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"></td>
-                    {% elif "Xbox One" in platform %}
+                    {% elif "Xbox One" in platform or "Xbox Series X" in platform %}
                         <td><img src="../../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"></td>
                     {% elif "Nintendo Switch" in platform %}
                         <td><img src="../../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"></td>
                     {% elif "PC (Microsoft Windows)" in platform %}
                         <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
+                    {% else %}
+                        <td/>No Platform</td>
                     {% endif %}
                 {% endfor %}
 
                 <td>10/10</td> {# We have to implement the rating model so we can add the rating average here #}
-                <td><button class="btn btn-primary" onclick="window.location.href='#'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                {% if request.user.is_authenticated %}
+                    <td><button class="btn btn-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                {% else %}
+                    <td><button class="btn btn-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                {% endif %}
             </tr>
         {% endfor %}
     {% endif %}
     </tbody>
     </table>
+
     </div>
-{#                {% for user in object_list %}#}
-{#                    <li style="font-family: sans-serif;">#}
-{#                        {{ user.player_name }}, {{ user.user_name }}#}
-{#                    </li>#}
-{#                {% endfor %}#}
+        {% if is_paginated %}
+            <div class="pagination pb-2">
+            <span class="page-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}&q={{ query }}">
+                    <button class="btn mybtn btn-outline-primary me-1" onclick="window.location.href='#'"><i class="fas fa-arrow-left"></i></button>
+                    </a>
+                {% endif %}
+                <span class="page-current" style="font-size: 30px; width: 50%; margin: 0 auto; vertical-align: bottom">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}&q={{ query }}" style="padding-right: 10px">
+                    <button class="btn mybtn btn-outline-primary" onclick="window.location.href='#'"><i class="fas fa-arrow-right"></i></button>
+                    </a>
+                {% endif %}
+            </span>
+            </div>
+        {% endif %}
 </div><br>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div><br>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

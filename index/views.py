@@ -1,14 +1,23 @@
+from django.contrib import messages
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 # Create your views here.
+from django.urls import reverse_lazy
 from rest_framework import viewsets
-from django.views.generic import ListView
+from django.views.generic import ListView, RedirectView
 from django.db.models import Q
 from igdb.wrapper import IGDBWrapper
 from .request import getSummary
 from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, \
 PlayerAccountSerializer,LibraryModelSerializer, LibraryMembershipSerializer
-
+from .forms import LibraryAddForm
+from django.views import View
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+import datetime
+from datetime import date, timedelta
 from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, Library_Membership
+from django.db.models import Q
 
 """VIEWSETS"""
 class PlayerAccountViewSet(viewsets.ModelViewSet):
@@ -49,25 +58,135 @@ class HomeGameView(ListView):
     def get_list(self):
         game_model_list = Game_Model.objects
         return game_model_list
+# //////////////////////////////////////////////////////////////////////
+
+"""
+Checks if game is player's library and if it is it return False else return True
+"""
+def checkLibraryForGame(user_id, game_id):
+    player_library = Library_Model.objects.filter(
+        owner_id=user_id
+    )
+    game = player_library[0].games.filter(game_id=game_id)
+    game_available = True if game.count() == 0 else False
+    return game_available
+
+
+class LibraryInsertion(View):
+
+    def get(self, request, game_id, **kwargs):
+        form = LibraryAddForm()
+        gameArticle = Game_Model.objects.get(game_id=game_id)
+        game_available = checkLibraryForGame(self.request.user.id, game_id)
+
+        context = {
+            "game_form": form,
+            "gameArticle": gameArticle,
+            "game_available": game_available
+        }
+
+        return render(request, 'home/library-add.html', context)
+
+    def post(self, request, game_id, **kwargs):
+        form = LibraryAddForm(request.POST or None)
+        gameArticle = Game_Model.objects.get(game_id=game_id)
+        if form.is_valid():
+            player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
+
+            membership = Library_Membership(
+            game = gameArticle,
+            library = player_library,
+            last_played = form.cleaned_data['last_played'],
+            is_finished =form.cleaned_data['is_finished'],
+            )
+            membership.save()
+
+            print("game_id", game_id)
+            print("last_played = ",form.cleaned_data['last_played'])
+            print("is_finished = ", form.cleaned_data['is_finished'])
+            form = LibraryAddForm()
+        else:
+            print(form.errors)
+        return HttpResponseRedirect(reverse("library"))
+
+
+# def LibraryInsertion(request, game_id):
+#     form = LibraryAddForm(request.POST or None)
+#     gameArticle = Game_Model.objects.get(game_id=game_id)
+#     if request.method == "POST":
+#         print("user = ",  request.user)
+#         if form.is_valid():
+#             player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
+#
+#             membership = Library_Membership(
+#             game = gameArticle,
+#             library = player_library,
+#             last_played = form.cleaned_data['last_played'],
+#             is_finished =form.cleaned_data['is_finished'],
+#             )
+#             membership.save()
+#
+#             print("game_id", game_id)
+#             print("last_played = ",form.cleaned_data['last_played'])
+#             print("is_finished = ", form.cleaned_data['is_finished'])
+#             form = LibraryAddForm()
+#         else:
+#             print(form.errors)
+#         return redirect(request.path)
+#     print(Library_Model.objects.all())
+#
+#     # form = LibraryAddForm(request.POST or None)
+#     # gameArticle = Game_Model.objects.get(game_id=game_id)
+#     context = {
+#         "game_form":form,
+#         "gameArticle":gameArticle
+#     }
+#
+#     return render(request, 'home/library-add.html', context)
 
 class LibraryGameView(ListView):
-    model = Game_Model
+    model = Library_Membership
+    paginate_by = 15
     template_name = '../templates/home/library.html'
+    def get_queryset(self):
+        # query = self.request.GET.get('q')
 
-    def get_list(self):
-        game_model_list = Game_Model.objects
-        return game_model_list
+        player_library = Library_Model.objects.filter(
+            owner_id=self.request.user.id
+        )
+
+        library_games = Library_Membership.objects.filter(library=player_library[0])
+        print(library_games)
+
+        return library_games
+
+
 
 class BacklogGameView(ListView):
-    model = Game_Model
+    paginate_by = 15
+    model = Library_Membership
     template_name = '../templates/home/backlog.html'
 
-    def get_list(self):
-        game_model_list = Game_Model.objects
-        return game_model_list
+    def get_queryset(self):
+        player_library = Library_Model.objects.filter(
+            owner_id=self.request.user.id
+        )
+
+        startdate = date.today()
+        enddate = startdate + timedelta(days=-60)
+        # Sample.objects.filter(date__range=[startdate, enddate])
+        backlog = Library_Membership.objects.filter(library=player_library[0]).filter(last_played__lt=enddate)
+        print(backlog)
+        return backlog
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q')
+        return context
 
 
 class SearchResultsGameView(ListView):
+    paginate_by = 15
     model = Game_Model
     template_name = '../templates/home/search_results.html'
 
@@ -78,7 +197,13 @@ class SearchResultsGameView(ListView):
         )
         return game_model_list
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q')
+        return context
+
 class SearchResultsImgView(ListView):
+    paginate_by = 15
     model = Image_Model
     template_name = '../templates/home/search_results.html'
 
@@ -88,6 +213,25 @@ class SearchResultsImgView(ListView):
             Q(game_title__icontains=query)
         )
         return image_model_ist
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q')
+        return context
+
+class GamesView(ListView):
+    paginate_by = 15
+    model = Game_Model
+    template_name = '../templates/home/games.html'
+
+    def get_list(self):
+        game_model_list = Game_Model.objects
+        return game_model_list
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q')
+        return context
 
 def registration(request):
     return render(request, 'home/registration.html')
@@ -104,6 +248,9 @@ def gameArticleTemplate(request, game_id):
 
 def tips(request):
     return render(request, 'home/tips.html')
+
+def gamesSection(request):
+    return render(request, 'home/games.html')
 
 def newReleases(request):
     return render(request, 'home/new-releases.html')
@@ -138,6 +285,8 @@ def fourHundred(request, exception):
 def fourOThree(request, exception):
     return render(request=request, template_name='home/errorHandling/403.html')
 
+def blankQuery(request):
+    return render(request=request, template_name='home/errorHandling/blankQuery.html')
 
 
 
