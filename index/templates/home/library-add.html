@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     {% if request.user.is_authenticated %}
@@ -9,20 +9,42 @@
         {% include 'home/navOutTemplate.html' %}
     {% endif %}
     <script src="https://kit.fontawesome.com/c6db85c705.js" crossorigin="anonymous"></script>
+    <style>
+        div {
+            text-align: center;
+        }
+    </style>
 </head>
+<body>
+<br>
+<section class="container site-content animate__animated animate__backInDown animate__faster">
+    <h1>{{ gameArticle.game_title }}</h1>
+</section>
+<div class="container site-content animate__animated animate__fadeIn animate__faster table-responsive pb-2">
     {% if game_available %}
-        <body class="text-white bg-dark">
-        <p>{{ gameArticle.game_title }}</p>
+        <br>
+        <div class="text-white">
+        <img class="rounded mx-auto d-block" height="350" width="250" src="{{ gameArticle.img_id.img_url }}" alt="Game Image">
         <form method = "POST">{% csrf_token %}
         {{ game_form.as_p }}
-
-        <input type = "submit" value = 'Add to Library'/>
+        <button class="btn mybtn btn-outline-success" type="submit" value='Add to Library'>Add to Library</button>
     {% else %}
-         <p> Game is already in Library</p>
+        <br><p style="font-size: xx-large">This game is already in your Library.</p>
     {% endif %}
-
-</form>
-
+    </form>
+    </div>
+</div><br>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div><br>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -14,15 +14,13 @@
 <body class="text-white bg-dark">
 <br>
 <section class="container site-content animate__animated animate__backInDown animate__faster">
-    {#    <h1>Game Title</h1>#}
     <h1>{{ gameArticle.game_title }}</h1>
 </section>
-<section class="container site-content animate__animated animate__lightSpeedInRight animate__faster">    <br>
+<section class="container site-content animate__animated animate__fadeIn animate__faster">    <br>
     <div class="row">
         <div class="container col pb-1" style="margin: auto; text-align: center">
             <div class="container">
                 {% if gameArticle.img_id.img_url is not None %}
-
                     <img class="rounded mx-auto d-block" src="{{gameArticle.img_id.img_url}}" alt="Game Cover" width="300" height="420">
                 {% else %}
                     <img class="rounded mx-auto d-block" src="../static/Images/controller-logo.png" alt="Game Cover" width="300" height="300">
@@ -30,24 +28,37 @@
             </div>
             <div class="container pt-2 form" style="text-align: center">
                 <h3>Edit status:</h3>
-                <div><a href="{% url 'library-add' game_id=gameArticle.game_id%}"> Add to library <i class="far fa-plus-square"></i></a></div>
-                <div><a href="#">Add to backlog <i class="far fa-plus-square"></i></a></div>
-                <label>Your score: </label>
-                <label class="pt-2 pb-2">
-                    <select class="form-control bg-dark" style="color: white">
-                        <option>Select</option>
-                        <option>Apalling (1)</option>
-                        <option>Horrible (2)</option>
-                        <option>Very Bad (3)</option>
-                        <option>Bad (4)</option>
-                        <option>Average (5)</option>
-                        <option>Fine (6)</option>
-                        <option>Good (7)</option>
-                        <option>Very Good (8)</option>
-                        <option>Great (9)</option>
-                        <option>Masterpiece (10)</option>
-                    </select>
-                </label>
+                <div class="container">
+{#                    {% if game_available %}#}
+                    <button class="btn navbar-btn mybtn btn-outline-primary"
+                            onclick='window.location.href="{% url 'library-add' game_id=gameArticle.game_id%}"'>
+                        <i class="far fa-plus-square"></i> Add to Library</button>
+{#                    {% else %}#}
+{#                        <button class="btn navbar-btn mybtn btn-outline-primary"#}
+{#                            onclick="window.location.href='#'">#}
+{#                        <i class="far fa-check-square"></i> Already in library</button>#}
+{#                    {% endif %}#}
+                </div>
+                {#                <div><a href="{% url 'library-add' game_id=gameArticle.game_id%}"> Add to library <i class="far fa-plus-square"></i></a></div>#}
+                {#                <div><a href="{% url 'library-add' game_id=gameArticle.game_id%}">Add to backlog <i class="far fa-plus-square"></i></a></div>#}
+                <div class="container">
+                    <label>Your score: </label>
+                    <label class="pt-2 pb-2">
+                        <select class="form-control bg-dark" style="color: white">
+                            <option>Select</option>
+                            <option>Apalling (1)</option>
+                            <option>Horrible (2)</option>
+                            <option>Very Bad (3)</option>
+                            <option>Bad (4)</option>
+                            <option>Average (5)</option>
+                            <option>Fine (6)</option>
+                            <option>Good (7)</option>
+                            <option>Very Good (8)</option>
+                            <option>Great (9)</option>
+                            <option>Masterpiece (10)</option>
+                        </select>
+                    </label>
+                </div>
             </div>
         </div>
         <div class="container col pt-1">
@@ -57,37 +68,37 @@
 
             {% for attr, list in gameArticle.genres.items %}
                 <p>
-                {% if list is not None %}
-                    {% for genre in list %}
+                    {% if list is not None %}
+                        {% for genre in list %}
 
-                        <p>{{ genre }}</p>
+                            <p>{{ genre }}</p>
 
-                    {% endfor %}
-                {% else %}
+                        {% endfor %}
+                    {% else %}
                         <p>No Genres Available</p>
-                {% endif %}
+                    {% endif %}
                 </p>
             {% endfor %}
 
             <h3>Platform</h3>
 
-                {% for attr, platform in gameArticle.platforms.items %}
-                    {% for p in platform %}
-                        {% if "PlayStation 4" in p%}
-                            <p><img src="../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"> PlayStation 4</p>
-                        {% elif "PlayStation 5" in p%}
-                            <p><img src="../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"> PlayStation 5</p>
-                        {% elif "Xbox One" in p %}
-                            <p><img src="../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"> Xbox One</p>
-                        {% elif "Xbox Series X" in p %}
-                            <p><img src="../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"> Xbox Series X</p>
-                        {% elif "Nintendo Switch" in p %}
-                            <p><img src="../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"> Nintendo Switch</p>
-                        {% elif "PC (Microsoft Windows)" in p %}
-                            <p><img src="../static/Images/platforms/pc.png" alt="PC" width="30" height="30"> PC</p>
-                        {% endif %}
-                    {% endfor %}
+            {% for attr, platform in gameArticle.platforms.items %}
+                {% for p in platform %}
+                    {% if "PlayStation 4" in p%}
+                        <p><img src="../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"> PlayStation 4</p>
+                    {% elif "PlayStation 5" in p%}
+                        <p><img src="../static/Images/platforms/playstation.png" alt="PS" width="35" height="30"> PlayStation 5</p>
+                    {% elif "Xbox One" in p %}
+                        <p><img src="../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"> Xbox One</p>
+                    {% elif "Xbox Series X" in p %}
+                        <p><img src="../static/Images/platforms/xbox.png" alt="XBOX" width="30" height="30"> Xbox Series X</p>
+                    {% elif "Nintendo Switch" in p %}
+                        <p><img src="../static/Images/platforms/switch.png" alt="SWITCH" width="30" height="30"> Nintendo Switch</p>
+                    {% elif "PC (Microsoft Windows)" in p %}
+                        <p><img src="../static/Images/platforms/pc.png" alt="PC" width="30" height="30"> PC</p>
+                    {% endif %}
                 {% endfor %}
+            {% endfor %}
 
 
 
@@ -96,15 +107,15 @@
             {% for attr, list in gameArticle.developers.items %}
                 <p>
 
-                {% if list.count is not None %}
-                    {% for dev in list %}
+                    {% if list.count is not None %}
+                        {% for dev in list %}
 
-                        <p>{{ dev }}</p>
+                            <p>{{ dev }}</p>
 
-                    {% endfor %}
-                {% else %}
+                        {% endfor %}
+                    {% else %}
                         <p>No Involved Companies Available</p>
-                {% endif %}
+                    {% endif %}
                 </p>
             {% endfor %}
 
