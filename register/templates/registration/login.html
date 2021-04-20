@@ -29,21 +29,24 @@
             vertical-align: middle;
             text-align: center;
         }
+        .form-group {
+            font-size: small;
+        }
     </style>
 </head>
 <br>
 <section class="container site-content animate__animated animate__backInDown animate__faster">
     <h1>Log In</h1>
 </section>
-<div class="container site-content animate__animated animate__backInDown animate__faster" style="font-family: arcadeclassicregular">
+<div class="container site-content animate__animated animate__backInDown animate__faster">
     {%  load crispy_forms_tags %}
 
     {% block content %}
-        <form method="POST" class="form-group">
+        <form method="POST" class="form-group pt-2" style="font-family: 'pressStart2P', sans-serif;">
             {% csrf_token %}
             {{form|crispy}}
-            <p class="pt-1">Don't have an account? Create one <a href='{% url "register" %}'>here</a></p>
-            <div class="container" style="text-align: center;"><button type="submit" class="btn btn-outline-success mybtn">Login</button></div>
+            <p class="pt-1" style="font-family: arcadeclassicregular; font-size: medium">Don't have an account? Create one <a href='{% url "register" %}'>here</a></p>
+            <div class="container" style="text-align: center;font-family: arcadeclassicregular"><button type="submit" class="btn btn-outline-success mybtn">Login</button></div>
             <br/>
             <div class="container row pb-3">
                 {#            <div class="col"><a href="{% url "social:begin" "github" %}"> <img src="/static/Images/github.png" width="60" height="60"> <br/>Sign in</a></div>#}

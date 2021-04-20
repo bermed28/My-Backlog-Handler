@@ -36,6 +36,8 @@ def getPlatforms(id):
     platforms = json.loads(wrapper.api_request('platforms', f'fields name; where id = {id};'))
     for key in platforms[0]:
         if key == "name":
+            if platforms[0][key] == "Xbox Series":
+                return platforms[0][key] + " X"
             return platforms[0][key]
 
 
@@ -118,7 +120,7 @@ def extractAPIGames(endpoint: str, query: str, fileNumber:int):
                     game[key][i] = getInvolvedCompanies(game[key][i])
 
     #We parse the hashtable information to a .json file we deliver as output using json.dump()
-    with open(f'res/data_{fileNumber}.json', 'w') as outfile:
+    with open(f'../res/data_{fileNumber}.json', 'w') as outfile:
         json.dump(games, outfile, indent=4)
 
     print(f"Games Extracted: {gamesExtracted}")
@@ -130,10 +132,12 @@ if __name__ == "__main__":
 
     wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "r2raogtcmwho8ja4fv6b8si2h7u7ag")
 
-    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=48 & category=0; limit 200;',1)
-    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=49 & category=0; limit 200;', 2)
-    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=130 & category=0; limit 200;',3)
-    extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=6 & category=0; limit 200;', 4)
+    # extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=48 & category=0; limit 200;',1) #PS4
+    # extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=49 & category=0; limit 200;', 2) #XB1
+    # extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=130 & category=0; limit 200;',3) #Switch
+    # extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=6 & category=0; limit 200;', 4) #PC
+    # extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=167; limit 200;', 5) #PS5
+    # extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=169; limit 200;',6) #XB Series X
 
 
 
