@@ -29,19 +29,30 @@
                 <div><a href="#">Add to backlog <i class="far fa-plus-square"></i></a></div>
                 <label>Your score: </label>
                 <label class="pt-2 pb-2">
-                    <select class="form-control bg-dark" style="color: white">
-                        <option>Select</option>
-                        <option>Apalling (1)</option>
-                        <option>Horrible (2)</option>
-                        <option>Very Bad (3)</option>
-                        <option>Bad (4)</option>
-                        <option>Average (5)</option>
-                        <option>Fine (6)</option>
-                        <option>Good (7)</option>
-                        <option>Very Good (8)</option>
-                        <option>Great (9)</option>
-                        <option>Masterpiece (10)</option>
-                    </select>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <select name="overall_rating" class="form-control bg-dark" style="color: white">
+                            <option>Select</option>
+                            <option>Appalling (1)</option>
+                            <option>Horrible (2)</option>
+                            <option>Very Bad (3)</option>
+                            <option>Bad (4)</option>
+                            <option>Average (5)</option>
+                            <option>Fine (6)</option>
+                            <option>Good (7)</option>
+                            <option>Very Good (8)</option>
+                            <option>Great (9)</option>
+                            <option>Masterpiece (10)</option>
+                        </select>
+                        <input type="submit" value="Rate"/>
+                        {% if messages %}
+                        {% for result in messages %}
+                            <b style="color: white;">{{ result }}</b>
+                        {% endfor %}
+                        {% endif %}
+                    </form>
+                </label>
+                </label>
                 </label>
             </div>
         </div>
