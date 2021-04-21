@@ -100,6 +100,10 @@
 
                         <td>Plan to get</td>
                         <td>{{ Entry.last_played }}</td>
+                        <td>
+                            <button class="btn navbar-btn mybtn btn-outline-primary"
+                            onclick='window.location.href="{% url 'library-delete' game_id=Entry.game.game_id%}"'> <i class="far fa-plus-square"></i> Remove</button>
+                        </td>
                     </tr>
                 {% endfor %}
                 </tbody>

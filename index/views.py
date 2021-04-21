@@ -63,13 +63,18 @@ class HomeGameView(ListView):
 """
 Checks if game is player's library and if it is it return False else return True
 """
-def checkLibraryForGame(user_id, game_id):
-    player_library = Library_Model.objects.filter(
-        owner_id=user_id
-    )
-    game = player_library[0].games.filter(game_id=game_id)
-    game_available = True if game.count() == 0 else False
-    return game_available
+
+class LibraryDelete(View):
+    def get(self, request, game_id, **kwargs):
+        player_library = Library_Model.objects.filter(
+            owner_id=self.request.user.id
+        )
+        print(player_library)
+        game = Library_Membership.objects.filter(library=player_library[0], game=game_id)
+        print(game)
+        game.delete()
+        return HttpResponseRedirect(reverse("library"))
+
 
 
 class LibraryInsertion(View):
@@ -108,6 +113,14 @@ class LibraryInsertion(View):
         else:
             print(form.errors)
         return HttpResponseRedirect(reverse("library"))
+
+def checkLibraryForGame(user_id, game_id):
+    player_library = Library_Model.objects.filter(
+        owner_id=user_id
+    )
+    game = player_library[0].games.filter(game_id=game_id)
+    game_available = True if game.count() == 0 else False
+    return game_available
 
 
 # def LibraryInsertion(request, game_id):
