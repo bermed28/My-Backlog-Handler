@@ -154,9 +154,16 @@ class LibraryGameView(ListView):
         player_library = Library_Model.objects.filter(
             owner_id=self.request.user.id
         )
+        if player_library.exists():
+            library_games = Library_Membership.objects.filter(library=player_library[0])
+            print(library_games)
+        else:
+            new_Library = Library_Model(owner_id=self.request.user)
+            new_Library.save()
+            library_games = Library_Membership.objects.filter(library=new_Library)
+            return []
 
-        library_games = Library_Membership.objects.filter(library=player_library[0])
-        print(library_games)
+
 
         return library_games
 
@@ -171,12 +178,18 @@ class BacklogGameView(ListView):
         player_library = Library_Model.objects.filter(
             owner_id=self.request.user.id
         )
+        if player_library.exists():
+            startdate = date.today()
+            enddate = startdate + timedelta(days=-60)
+            # Sample.objects.filter(date__range=[startdate, enddate])
+            backlog = Library_Membership.objects.filter(library=player_library[0]).filter(last_played__lt=enddate)
+            print(backlog)
+        else:
+            new_Library = Library_Model(owner_id=self.request.user)
+            new_Library.save()
+            library_games = Library_Membership.objects.filter(library=new_Library)
+            return []
 
-        startdate = date.today()
-        enddate = startdate + timedelta(days=-60)
-        # Sample.objects.filter(date__range=[startdate, enddate])
-        backlog = Library_Membership.objects.filter(library=player_library[0]).filter(last_played__lt=enddate)
-        print(backlog)
         return backlog
 
     def get_context_data(self, **kwargs):
