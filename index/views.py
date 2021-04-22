@@ -396,7 +396,9 @@ def change_password(request):
     })
 
 def deleteUser(request):
-    if (request.GET.get('delete')):
+    if request.GET.get('delete'):
         queryDo(f'DELETE FROM public.auth_user WHERE id={request.user.id}')
-        print(2)
+        print("User deleted")
+        return redirect('homepage')
+
     return render(request, 'home/deleteAccount.html')
