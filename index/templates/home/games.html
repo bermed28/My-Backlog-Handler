@@ -88,6 +88,12 @@
                         </td>
 
                         <td>Plan to get</td>
+
+                        {% if request.user.is_authenticated and game%}
+                            <td><button class="btn btn-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                        {% else %}
+                            <td><button class="btn btn-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                        {% endif %}
                     </tr>
                 {% endfor %}
                 </tbody>
