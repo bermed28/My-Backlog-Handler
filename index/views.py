@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from rest_framework import viewsets
 from django.views.generic import ListView, RedirectView
 from django.db.models import Q
+from register.views import register
 from django.contrib import messages
 from igdb.wrapper import IGDBWrapper
 from .request import getSummary
@@ -17,7 +18,7 @@ from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Gen
 
 from .forms import LibraryAddForm
 from django.views import View
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 import datetime
 from datetime import date, timedelta
@@ -298,8 +299,9 @@ def gameArticleTemplate(request, game_id):
     wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "r2raogtcmwho8ja4fv6b8si2h7u7ag")
     gameArticle = Game_Model.objects.get(game_id=game_id)
     summary = getSummary(game_id, wrapper)
-    if request.user.is_authenticated:
-        if request.method == 'POST' and request.POST.get('overall_rating'):
+
+    if request.method == 'POST' and request.POST.get('overall_rating'):
+        if request.user.is_authenticated:
             saveRating = Ratings_Model(user_id_id=request.user.id, game_id=game_id,
                                        overall_rating=request.POST.get('overall_rating'))
             saveRating.save()
@@ -307,12 +309,12 @@ def gameArticleTemplate(request, game_id):
             return render(request, 'home/game-article-template.html',
                           {'gameArticle': gameArticle, "gameSummary": summary})
         else:
-            return render(request, 'home/game-article-template.html',
-                          {'gameArticle': gameArticle, "gameSummary": summary})
+            return HttpResponseRedirect(reverse("login"))
     else:
-        messages.error(request, 'Log In To Have Access To Our Rating System')
         return render(request, 'home/game-article-template.html',
                       {'gameArticle': gameArticle, "gameSummary": summary})
+
+
 
 
 def tips(request):
