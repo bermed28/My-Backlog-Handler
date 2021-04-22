@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% if request.user.is_authenticated %}
+        {% include 'home/navTemplate.html' %}
+    {% else %}
+        {% include 'home/navOutTemplate.html' %}
+    {% endif %}
+</head>
+<body>
+<br>
+<div>
+    <section class="container site-content animate__animated animate__backInDown animate__faster">
+        <h1>Delete Account</h1>
+    </section>
+    <p>Are you sure you want to delete your account?</p>
+    {#                    <p>You will lose absolutely everything with no way of recovering it. Are you certain this#}
+    {#                    is what you want?</p>#}
+
+    <form action="#" method="get">
+        <input type="submit" class="btn" value="Click" name="delete">
+    </form>
+
+
+</div><br>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

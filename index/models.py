@@ -15,6 +15,8 @@ class PlayerAccount(models.Model):
         return self.user_name
 
 
+
+
 class Genre_Model(models.Model):
     genre_id = models.IntegerField(primary_key=True)
     genre_name = models.CharField(max_length=128)

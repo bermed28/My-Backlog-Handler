@@ -26,6 +26,13 @@ from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Gen
     Library_Membership
 from django.db.models import Q
 
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.forms import PasswordChangeForm
+from django.shortcuts import render, redirect
+
+from db_connection_tester import queryDo
+
 """VIEWSETS"""
 
 
@@ -371,3 +378,25 @@ def fourOThree(request, exception):
 
 def blankQuery(request):
     return render(request=request, template_name='home/errorHandling/blankQuery.html')
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('settings')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+        return render(request, 'home/settings.html', {
+        'form': form
+    })
+
+def deleteUser(request):
+    if (request.GET.get('delete')):
+        queryDo(f'DELETE FROM public.auth_user WHERE id={request.user.id}')
+        print(2)
+    return render(request, 'home/deleteAccount.html')
