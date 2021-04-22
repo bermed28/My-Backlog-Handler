@@ -6,7 +6,7 @@ django-postgresql==0.0.3
 gunicorn==20.1.0
 sqlparse==0.4.1
 whitenoise==5.2.0
-psycopg2==2.8.6
+psycopg2-binary==2.8.6
 djangorestframework==3.12.4
 django-crispy-forms==1.11.2
 social-auth-app-django==4.0.0
