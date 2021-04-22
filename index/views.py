@@ -10,22 +10,20 @@ from django.contrib import messages
 from igdb.wrapper import IGDBWrapper
 from .request import getSummary
 from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, \
-
-    PlayerAccountSerializer, LibraryModelSerializer, LibraryMembershipSerializer, RatingModelSerializer
+    LibraryModelSerializer, LibraryMembershipSerializer, RatingModelSerializer, PlayerAccountSerializer
 
 from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, \
     Library_Membership, Ratings_Model
 
-PlayerAccountSerializer,LibraryModelSerializer, LibraryMembershipSerializer
 from .forms import LibraryAddForm
 from django.views import View
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 import datetime
 from datetime import date, timedelta
-from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, Library_Membership
+from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, \
+    Library_Membership
 from django.db.models import Q
-
 
 """VIEWSETS"""
 
@@ -80,11 +78,15 @@ class HomeGameView(ListView):
     def get_list(self):
         game_model_list = Game_Model.objects
         return game_model_list
+
+
 # //////////////////////////////////////////////////////////////////////
 
 """
 Checks if game is player's library and if it is it return False else return True
 """
+
+
 def checkLibraryForGame(user_id, game_id):
     player_library = Library_Model.objects.filter(
         owner_id=user_id
@@ -116,15 +118,15 @@ class LibraryInsertion(View):
             player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
 
             membership = Library_Membership(
-            game = gameArticle,
-            library = player_library,
-            last_played = form.cleaned_data['last_played'],
-            is_finished =form.cleaned_data['is_finished'],
+                game=gameArticle,
+                library=player_library,
+                last_played=form.cleaned_data['last_played'],
+                is_finished=form.cleaned_data['is_finished'],
             )
             membership.save()
 
             print("game_id", game_id)
-            print("last_played = ",form.cleaned_data['last_played'])
+            print("last_played = ", form.cleaned_data['last_played'])
             print("is_finished = ", form.cleaned_data['is_finished'])
             form = LibraryAddForm()
         else:
@@ -171,6 +173,7 @@ class LibraryGameView(ListView):
     model = Library_Membership
     paginate_by = 15
     template_name = '../templates/home/library.html'
+
     def get_queryset(self):
         # query = self.request.GET.get('q')
 
@@ -182,8 +185,6 @@ class LibraryGameView(ListView):
         print(library_games)
 
         return library_games
-
-
 
 
 class BacklogGameView(ListView):
@@ -221,8 +222,6 @@ class SearchResultsGameView(ListView):
         )
         return game_model_list
 
-
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['query'] = self.request.GET.get('q')
@@ -241,12 +240,11 @@ class SearchResultsImgView(ListView):
         )
         return image_model_ist
 
-
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['query'] = self.request.GET.get('q')
         return context
+
 
 class GamesView(ListView):
     paginate_by = 15
@@ -346,6 +344,3 @@ def fourOThree(request, exception):
 
 def blankQuery(request):
     return render(request=request, template_name='home/errorHandling/blankQuery.html')
-
-
-
