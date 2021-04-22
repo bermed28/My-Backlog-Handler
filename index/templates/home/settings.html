@@ -7,6 +7,12 @@
     {% else %}
         {% include 'home/navOutTemplate.html' %}
     {% endif %}
+
+    <script>
+        $('#warning1').change(function () {
+        $('#btncheck').prop("disabled", !this.checked);
+        }).change()
+    </script>
 </head>
 <body>
 <br>
@@ -14,8 +20,66 @@
     <section class="container site-content animate__animated animate__backInDown animate__faster">
         <h1>Settings</h1>
     </section>
+    <div class="container site-content animate__animated animate__fadeIn animate__faster table-responsive">
+        <table class="table text-white" style="width: 100%;">
+            <tbody>
+            <tr>
+                <td><h3>Change Username: </h3></td>
+                <td>
+                    <p>New Username: </p>
+                    {#                        d-flex#}
+                    <form class="d-flex" action="#" method="get">
+                        <input type="text" class="form-control me-2" placeholder=" Enter Username" aria-label="Username"
+                               aria-describedby="basic-addon1" required>
+                        <button class="btn mybtn btn-outline-primary" type="submit">Submit</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Change Password: </h3></td>
+                <td>
+                    <p>New Password: </p>
+                    <form class="d-flex pb-2" action="#" method="get">
+                        <input type="password" class="form-control me-2" placeholder="Enter Password" aria-label="email"
+                               aria-describedby="basic-addon1" required>
+                    </form>
+                    <p>Confirm Password: </p>
+                    <form class="d-flex pb-2" action="#" method="get">
+                        <input type="password" class="form-control me-2" placeholder="Enter Password" aria-label="email"
+                               aria-describedby="basic-addon1" required>
+                    </form>
+                    <button class="btn mybtn btn-outline-primary" type="submit">Submit</button>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Change Email: </h3></td>
+                <td>
+                    <p>New Email: </p>
+                    <form class="d-flex" action="#" method="get">
+                        <input type="email" class="form-control me-2" placeholder="Enter email" aria-label="email"
+                               aria-describedby="basic-addon1" required>
+                        <button class="btn mybtn btn-outline-primary" type="submit">Submit</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Delete Account: </h3></td>
+                <td>
+                    <p>Are you sure you want to delete your account?</p>
+{#                    <p>You will lose absolutely everything with no way of recovering it. Are you certain this#}
+{#                    is what you want?</p>#}
+                    <div class="form-check pb-1">
+                        <input type="checkbox" class="form-check-input" id="warning1">
+                        <label class="form-check-label" for="warning1">Yes, I'm sure.</label>
+                    </div>
+                    <button class="btn mybtn btn-outline-danger" id="btncheck" type="submit">Submit</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div><br>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div><br>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

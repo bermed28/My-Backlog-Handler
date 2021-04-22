@@ -86,14 +86,17 @@ class HomeGameView(ListView):
 Checks if game is player's library and if it is it return False else return True
 """
 
+class LibraryDelete(View):
+    def get(self, request, game_id, **kwargs):
+        player_library = Library_Model.objects.filter(
+            owner_id=self.request.user.id
+        )
+        print(player_library)
+        game = Library_Membership.objects.filter(library=player_library[0], game=game_id)
+        print(game)
+        game.delete()
+        return HttpResponseRedirect(reverse("library"))
 
-def checkLibraryForGame(user_id, game_id):
-    player_library = Library_Model.objects.filter(
-        owner_id=user_id
-    )
-    game = player_library[0].games.filter(game_id=game_id)
-    game_available = True if game.count() == 0 else False
-    return game_available
 
 
 class LibraryInsertion(View):
@@ -132,6 +135,15 @@ class LibraryInsertion(View):
         else:
             print(form.errors)
         return HttpResponseRedirect(reverse("library"))
+
+def checkLibraryForGame(user_id, game_id):
+    player_library = Library_Model.objects.filter(
+        owner_id=user_id
+    )
+    game = player_library[0].games.filter(game_id=game_id)
+    game_available = True if game.count() == 0 else False
+    return game_available
+ 
 
 
 # def LibraryInsertion(request, game_id):
@@ -180,9 +192,16 @@ class LibraryGameView(ListView):
         player_library = Library_Model.objects.filter(
             owner_id=self.request.user.id
         )
+        if player_library.exists():
+            library_games = Library_Membership.objects.filter(library=player_library[0])
+            print(library_games)
+        else:
+            new_Library = Library_Model(owner_id=self.request.user)
+            new_Library.save()
+            library_games = Library_Membership.objects.filter(library=new_Library)
+            return []
 
-        library_games = Library_Membership.objects.filter(library=player_library[0])
-        print(library_games)
+
 
         return library_games
 
@@ -196,12 +215,18 @@ class BacklogGameView(ListView):
         player_library = Library_Model.objects.filter(
             owner_id=self.request.user.id
         )
+        if player_library.exists():
+            startdate = date.today()
+            enddate = startdate + timedelta(days=-60)
+            # Sample.objects.filter(date__range=[startdate, enddate])
+            backlog = Library_Membership.objects.filter(library=player_library[0]).filter(last_played__lt=enddate)
+            print(backlog)
+        else:
+            new_Library = Library_Model(owner_id=self.request.user)
+            new_Library.save()
+            library_games = Library_Membership.objects.filter(library=new_Library)
+            return []
 
-        startdate = date.today()
-        enddate = startdate + timedelta(days=-60)
-        # Sample.objects.filter(date__range=[startdate, enddate])
-        backlog = Library_Membership.objects.filter(library=player_library[0]).filter(last_played__lt=enddate)
-        print(backlog)
         return backlog
 
     def get_context_data(self, **kwargs):
