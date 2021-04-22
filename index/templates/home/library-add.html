@@ -25,8 +25,9 @@
         <br>
         <div class="text-white">
         <img class="rounded mx-auto d-block" height="350" width="250" src="{{ gameArticle.img_id.img_url }}" alt="Game Image">
-        <form method = "POST">{% csrf_token %}
+        <form method = "POST" style="font-family: 'arcadeclassicregular', sans-serif">{% csrf_token %}
         {{ game_form.as_p }}
+
         <button class="btn mybtn btn-outline-success" type="submit" value='Add to Library'>Add to Library</button>
     {% else %}
         <br><p style="font-size: xx-large">This game is already in your Library.</p>

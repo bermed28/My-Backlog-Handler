@@ -1,7 +1,7 @@
 from django.urls import include, path
 from rest_framework import routers
 from . import views
-from .views import LibraryInsertion
+from .views import LibraryInsertion, LibraryDelete
 
 
 from register import views as v
@@ -20,6 +20,7 @@ urlpatterns = [
 
     path('library/', views.LibraryGameView.as_view(), name="library"),
     path( r'library/add/^(?P<game_id>\w+)/$', LibraryInsertion.as_view(), name="library-add"),
+    path( r'library/del/^(?P<game_id>\w+)/$', LibraryDelete.as_view(), name="library-delete"),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
 
