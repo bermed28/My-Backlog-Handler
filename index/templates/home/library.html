@@ -46,13 +46,12 @@
                     <th colspan="2" class="nametag">Name</th>
                     <th>Platform</th>
                     <th>Score</th>
-                    <th>Status</th>
                     <th>Last Played</th>
+                    <th>Remove</th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for Entry in object_list %}
-{#                    <p>{{ Entry.game.img_id.img_url }}</p>#}
                     <tr>
                         {% if Entry.game.img_id.img_url is not None %}
                             <td><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ Entry.game.img_id.img_url }}"></a></td>
@@ -97,8 +96,6 @@
                                 </select>
                             </label>
                         </td>
-
-                        <td>Plan to get</td>
                         <td>{{ Entry.last_played }}</td>
                         <td>
                             <button class="btn navbar-btn mybtn btn-outline-primary"
