@@ -31,7 +31,7 @@ class LibraryModelSerializer(serializers.HyperlinkedModelSerializer):
 class LibraryMembershipSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Library_Membership
-        fields = ('game', 'library', 'last_played', 'is_finished')
+        fields = ('game', 'library', 'last_played', 'is_finished', 'forced_to_backlog')
 
 
 class RatingModelSerializer(serializers.HyperlinkedModelSerializer):

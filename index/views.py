@@ -9,7 +9,7 @@ from .serializers import GameModelSerializer, ImageModelSerializer, LibraryModel
 
 from .models import Ratings_Model
 
-from .forms import LibraryAddForm, ProfilePersonalization
+from .forms import LibraryAddForm, ProfilePersonalization, LastPlayedForm
 from django.views import View
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -23,6 +23,8 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.shortcuts import render, redirect
 
 from db_connection_tester import queryDo
+
+import psycopg2
 
 """VIEWSETS"""
 
@@ -48,7 +50,7 @@ class LibraryModelViewSet(viewsets.ModelViewSet):
 
 
 class LibraryMembershipViewSet(viewsets.ModelViewSet):
-    queryset = Library_Membership.objects.all().order_by('library')
+    queryset = Library_Membership.objects.all().order_by('library_id')
     serializer_class = LibraryMembershipSerializer
 
 
@@ -114,6 +116,7 @@ class LibraryInsertion(View):
                 library=player_library,
                 last_played=form.cleaned_data['last_played'],
                 is_finished=form.cleaned_data['is_finished'],
+                forcedToBacklog=False
             )
             membership.save()
 
@@ -124,6 +127,47 @@ class LibraryInsertion(View):
         else:
             print(form.errors)
         return HttpResponseRedirect(reverse("library"))
+
+class LastPlayed(View):
+
+    def get(self, request, game_id, **kwargs):
+        form = LibraryAddForm()
+        gameArticle = Game_Model.objects.get(game_id=game_id)
+        game_available = checkLibraryForGame(self.request.user.id, game_id)
+
+        context = {
+            "game_form": form,
+            "gameArticle": gameArticle,
+            "game_available": game_available
+        }
+
+        return render(request, 'home/last-played-update.html', context)
+
+    def post(self, request, game_id, **kwargs):
+        form = LastPlayedForm(request.POST or None)
+        gameArticle = Game_Model.objects.get(game_id=game_id)
+        if form.is_valid():
+            player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
+
+            newDate = form.cleaned_data['last_played'].strftime("%Y-%m-%d")
+            queryDo(f"UPDATE public.index_library_membership SET last_played=date('{newDate}'::TEXT) WHERE (library_id={player_library.id} AND game_id={game_id})")
+
+        else:
+            print(form.errors)
+        return HttpResponseRedirect(reverse("library"))
+
+class BacklogInsertion(View):
+    def get(self, request, game_id, **kwargs):
+        player_library = Library_Model.objects.filter(
+            owner_id=self.request.user.id
+        )
+        print(player_library)
+        game = Library_Membership.objects.get(library=player_library[0], game=game_id)
+        print(f"BEFORE:\nID: {game.game_id}, FTB: {game.forced_to_backlog}, LIB_ID: {game.library_id}")
+        queryDo(f"UPDATE public.index_library_membership SET forced_to_backlog=True WHERE (library_id={game.library_id} AND game_id={game_id})")
+        print(f"AFTER:\nID: {game.game_id}, FTB: {game.forced_to_backlog}, LIB_ID: {game.library_id}")
+
+        return HttpResponseRedirect(reverse("backlog"))
 
 def checkLibraryForGame(user_id, game_id):
     player_library = Library_Model.objects.filter(
@@ -172,8 +216,8 @@ class BacklogGameView(ListView):
             enddate = startdate + timedelta(days=-60)
             # Sample.objects.filter(date__range=[startdate, enddate])
             library = Library_Membership.objects.filter(library=player_library[0])
-            backlog = (library.filter(last_played__lt=enddate) | library.filter(forcedToBacklog=True)).distinct()
-            print(backlog)
+            backlog = (library.filter(last_played__lt=enddate) | library.exclude(forced_to_backlog=False)).distinct()
+            print("BACKLOG:",backlog)
         else:
             new_Library = Library_Model(owner_id=self.request.user)
             new_Library.save()

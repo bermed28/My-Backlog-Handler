@@ -96,10 +96,25 @@
                                 </select>
                             </label>
                         </td>
-                        <td>{{ Entry.last_played }}</td>
+                        <td><button class="btn navbar-btn mybtn btn-outline-primary"
+                                                onclick='window.location.href="{% url 'last-played' game_id=Entry.game.game_id%}"'> {{ Entry.last_played }}</button></td>
                         <td>
-                            <button class="btn navbar-btn mybtn btn-outline-primary"
-                            onclick='window.location.href="{% url 'library-delete' game_id=Entry.game.game_id%}"'> <i class="far fa-plus-square"></i> Remove</button>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <button class="btn navbar-btn mybtn btn-outline-primary"
+                                                onclick='window.location.href="{% url 'backlog-add' game_id=Entry.game.game_id%}"'> <i class="far fa-plus-square"></i> Add to Backlog</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <button class="btn navbar-btn mybtn btn-outline-primary"
+                                                onclick='window.location.href="{% url 'library-delete' game_id=Entry.game.game_id%}"'> <i class="far fa-plus-square"></i> Remove From Library</button>
+                                    </td>
+                                </tr>
+                            </table>
+
                         </td>
                     </tr>
                 {% endfor %}

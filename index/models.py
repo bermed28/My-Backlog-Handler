@@ -52,7 +52,7 @@ class Library_Membership(models.Model):
     library = models.ForeignKey(Library_Model, on_delete=models.CASCADE)
     last_played = models.DateField()
     is_finished = models.BooleanField(default=False)
-    forcedToBacklog = models.BooleanField(default=False)
+    forced_to_backlog = models.BooleanField(default=False)
 
 
 class Ratings_Model(models.Model):

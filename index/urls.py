@@ -1,8 +1,7 @@
 from django.urls import include, path
 from rest_framework import routers
 from . import views
-from .views import LibraryInsertion, LibraryDelete
-
+from .views import LibraryInsertion, LibraryDelete, BacklogInsertion, LastPlayed
 
 from register import views as v
 router = routers.DefaultRouter()
@@ -21,6 +20,7 @@ urlpatterns = [
     path('library/', views.LibraryGameView.as_view(), name="library"),
     path( r'library/add/^(?P<game_id>\w+)/$', LibraryInsertion.as_view(), name="library-add"),
     path( r'library/del/^(?P<game_id>\w+)/$', LibraryDelete.as_view(), name="library-delete"),
+    path( r'backlog/my-backlog/add/^(?P<game_id>\w+)/$', BacklogInsertion.as_view(), name="backlog-add"),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace="rest framework")),
 
@@ -43,5 +43,6 @@ urlpatterns = [
     path('settings', views.customizeProfile, name='settings'),
     path('password/', views.change_password, name='password'),
     path('deleteAccount', views.deleteUser, name='deleteAccount'),
+    path( r'library/lastPlayed/^(?P<game_id>\w+)/$', LastPlayed.as_view(), name="last-played"),
 ]
 
