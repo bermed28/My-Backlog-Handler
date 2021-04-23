@@ -5,8 +5,7 @@ from rest_framework import viewsets
 from django.views.generic import ListView
 from igdb.wrapper import IGDBWrapper
 from .request import getSummary
-from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, \
-    LibraryModelSerializer, LibraryMembershipSerializer, RatingModelSerializer, PlayerAccountSerializer
+from .serializers import GameModelSerializer, ImageModelSerializer, LibraryModelSerializer, LibraryMembershipSerializer, RatingModelSerializer, PlayerAccountSerializer
 
 from .models import Ratings_Model
 
@@ -15,8 +14,7 @@ from django.views import View
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from datetime import date, timedelta
-from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, \
-    Library_Membership
+from .models import Game_Model, PlayerAccount, Image_Model, Library_Model, Library_Membership
 from django.db.models import Q
 
 from django.contrib import messages
@@ -42,16 +40,6 @@ class GameModelViewSet(viewsets.ModelViewSet):
 class ImageModelViewSet(viewsets.ModelViewSet):
     queryset = Image_Model.objects.all().order_by('img_id')
     serializer_class = ImageModelSerializer
-
-
-class DeveloperModelViewSet(viewsets.ModelViewSet):
-    queryset = Developer_Model.objects.all().order_by('dev_id')
-    serializer_class = DeveloperModelSerializer
-
-
-class GenreModelViewSet(viewsets.ModelViewSet):
-    queryset = Genre_Model.objects.all().order_by('genre_id')
-    serializer_class = GenreModelSerializer
 
 
 class LibraryModelViewSet(viewsets.ModelViewSet):
@@ -177,14 +165,14 @@ class BacklogGameView(ListView):
     template_name = '../templates/home/backlog.html'
 
     def get_queryset(self):
-        player_library = Library_Model.objects.filter(
-            owner_id=self.request.user.id
-        )
+        player_library = Library_Model.objects.filter(owner_id=self.request.user.id)
+
         if player_library.exists():
             startdate = date.today()
             enddate = startdate + timedelta(days=-60)
             # Sample.objects.filter(date__range=[startdate, enddate])
-            backlog = Library_Membership.objects.filter(library=player_library[0]).filter(last_played__lt=enddate)
+            library = Library_Membership.objects.filter(library=player_library[0])
+            backlog = (library.filter(last_played__lt=enddate) | library.filter(forcedToBacklog=True)).distinct()
             print(backlog)
         else:
             new_Library = Library_Model(owner_id=self.request.user)

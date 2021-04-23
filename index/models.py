@@ -15,16 +15,14 @@ class PlayerAccount(models.Model):
         return self.user_name
 
 
+# class Genre_Model(models.Model):
+#     genre_id = models.IntegerField(primary_key=True)
+#     genre_name = models.CharField(max_length=128)
 
 
-class Genre_Model(models.Model):
-    genre_id = models.IntegerField(primary_key=True)
-    genre_name = models.CharField(max_length=128)
-
-
-class Developer_Model(models.Model):
-    dev_id = models.IntegerField(primary_key=True)
-    dev_name = models.CharField(max_length=128)
+# class Developer_Model(models.Model):
+#     dev_id = models.IntegerField(primary_key=True)
+#     dev_name = models.CharField(max_length=128)
 
 
 class Image_Model(models.Model):
@@ -54,6 +52,7 @@ class Library_Membership(models.Model):
     library = models.ForeignKey(Library_Model, on_delete=models.CASCADE)
     last_played = models.DateField()
     is_finished = models.BooleanField(default=False)
+    forcedToBacklog = models.BooleanField(default=False)
 
 
 class Ratings_Model(models.Model):

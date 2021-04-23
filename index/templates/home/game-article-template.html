@@ -36,13 +36,13 @@
                         <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Sign in to add to Library</button>
                     {% endif %}
                 </div>
-                <div class="container">
-                    {% if request.user.is_authenticated %}
-                        <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'library-add' game_id=gameArticle.game_id%}'"><i class="far fa-plus-square"></i> Add to Backlog</button>
-                    {% else %}
-                        <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Sign in to add to Backlog</button>
-                    {% endif %}
-                </div>
+{#                <div class="container">#}
+{#                    {% if request.user.is_authenticated %}#}
+{#                        <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'library-add' game_id=gameArticle.game_id%}'"><i class="far fa-plus-square"></i> Add to Backlog</button>#}
+{#                    {% else %}#}
+{#                        <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Sign in to add to Backlog</button>#}
+{#                    {% endif %}#}
+{#                </div>#}
                 <label>Your score: </label>
                 <label class="pt-2 pb-2">
                     <form method="POST">

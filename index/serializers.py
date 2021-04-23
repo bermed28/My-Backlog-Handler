@@ -1,6 +1,6 @@
 # serializers.py
 from rest_framework import serializers
-from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, \
+from .models import Game_Model, PlayerAccount, Image_Model, Library_Model, \
     Library_Membership, Ratings_Model
 
 
@@ -20,18 +20,6 @@ class ImageModelSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Image_Model
         fields = ('img_id', 'img_url')
-
-
-class DeveloperModelSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Developer_Model
-        fields = ('dev_id', 'dev_name')
-
-
-class GenreModelSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Genre_Model
-        fields = ('genre_id', 'genre_name')
 
 
 class LibraryModelSerializer(serializers.HyperlinkedModelSerializer):
