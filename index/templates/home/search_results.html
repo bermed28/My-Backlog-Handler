@@ -42,8 +42,8 @@
             <th>Image</th>
             <th colspan="2" class="nametag">Name</th>
             <th>Platform</th>
-            <th>Rating</th>
-            <th>Status</th>
+{#            <th>Rating</th>#}
+            <th>Add</th>
         </tr>
         </thead>
         <tbody>
@@ -67,15 +67,15 @@
                     {% elif "PC (Microsoft Windows)" in platform %}
                         <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
                     {% else %}
-                        <td/>No Platform</td>
+                        <td>No Platform</td>
                     {% endif %}
                 {% endfor %}
 
-                <td>10/10</td> {# We have to implement the rating model so we can add the rating average here #}
+{#                <td>10/10</td> {# We have to implement the rating model so we can add the rating average here #}
                 {% if request.user.is_authenticated %}
-                    <td><button class="btn btn-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                    <td><button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
                 {% else %}
-                    <td><button class="btn btn-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                    <td><button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
                 {% endif %}
             </tr>
         {% endfor %}
