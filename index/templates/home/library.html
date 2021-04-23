@@ -34,7 +34,7 @@
                     onclick='window.location.href="{% url 'games' %}"'><i class='far fa-plus-square'></i> Add more games</button>
             {% if messages %}
                 {% for result in messages %}
-                    <b style="color: red; font-family: 'arcadeclassicregular', sans-serif; align-content: center; font-size: medium">{{ result }}</b>
+                    <b class="text-success" style="font-family: 'arcadeclassicregular', sans-serif; align-content: center; font-size: medium">{{ result }}</b>
                 {% endfor %}
             {% endif %}
         </div>
