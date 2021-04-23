@@ -1,26 +1,19 @@
-from django.contrib import messages
-from django.contrib.auth import logout
-from django.shortcuts import render, redirect
+
 # Create your views here.
-from django.urls import reverse_lazy
+
 from rest_framework import viewsets
-from django.views.generic import ListView, RedirectView
-from django.db.models import Q
-from register.views import register
-from django.contrib import messages
+from django.views.generic import ListView
 from igdb.wrapper import IGDBWrapper
 from .request import getSummary
 from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, \
     LibraryModelSerializer, LibraryMembershipSerializer, RatingModelSerializer, PlayerAccountSerializer
 
-from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, \
-    Library_Membership, Ratings_Model
+from .models import Ratings_Model
 
-from .forms import LibraryAddForm
+from .forms import LibraryAddForm, ProfilePersonalization
 from django.views import View
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect
 from django.urls import reverse
-import datetime
 from datetime import date, timedelta
 from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, \
     Library_Membership
@@ -151,42 +144,6 @@ def checkLibraryForGame(user_id, game_id):
     game = player_library[0].games.filter(game_id=game_id)
     game_available = True if game.count() == 0 else False
     return game_available
- 
-
-
-# def LibraryInsertion(request, game_id):
-#     form = LibraryAddForm(request.POST or None)
-#     gameArticle = Game_Model.objects.get(game_id=game_id)
-#     if request.method == "POST":
-#         print("user = ",  request.user)
-#         if form.is_valid():
-#             player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
-#
-#             membership = Library_Membership(
-#             game = gameArticle,
-#             library = player_library,
-#             last_played = form.cleaned_data['last_played'],
-#             is_finished =form.cleaned_data['is_finished'],
-#             )
-#             membership.save()
-#
-#             print("game_id", game_id)
-#             print("last_played = ",form.cleaned_data['last_played'])
-#             print("is_finished = ", form.cleaned_data['is_finished'])
-#             form = LibraryAddForm()
-#         else:
-#             print(form.errors)
-#         return redirect(request.path)
-#     print(Library_Model.objects.all())
-#
-#     # form = LibraryAddForm(request.POST or None)
-#     # gameArticle = Game_Model.objects.get(game_id=game_id)
-#     context = {
-#         "game_form":form,
-#         "gameArticle":gameArticle
-#     }
-#
-#     return render(request, 'home/library-add.html', context)
 
 
 class LibraryGameView(ListView):
@@ -379,6 +336,7 @@ def fourOThree(request, exception):
 def blankQuery(request):
     return render(request=request, template_name='home/errorHandling/blankQuery.html')
 
+
 def change_password(request):
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
@@ -391,9 +349,25 @@ def change_password(request):
             messages.error(request, 'Please correct the error below.')
     else:
         form = PasswordChangeForm(request.user)
+        return render(request, 'home/password.html', {
+            'form': form
+        })
+
+def customizeProfile(request):
+    if request.method == 'POST':
+        form = ProfilePersonalization(request.POST, instance=request.user)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your account was successfully updated!')
+            return redirect('settings')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = ProfilePersonalization(instance=request.user)
         return render(request, 'home/settings.html', {
-        'form': form
-    })
+            'form': form
+        })
 
 def deleteUser(request):
     if request.GET.get('delete'):

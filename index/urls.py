@@ -40,7 +40,8 @@ urlpatterns = [
     path('400/', views.fourHundred, name='400'),
     path('blankQuery/', views.blankQuery, name='blankQuery'),
 
-    path('settings', views.change_password, name='settings'),
+    path('settings', views.customizeProfile, name='settings'),
+    path('password/', views.change_password, name='password'),
     path('deleteAccount', views.deleteUser, name='deleteAccount'),
 ]
 
