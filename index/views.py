@@ -346,7 +346,8 @@ def change_password(request):
             messages.success(request, 'Your password was successfully updated!')
             return redirect('settings')
         else:
-            messages.error(request, 'Please correct the error below.')
+            messages.error(request, 'Please enter your correct password.')
+            return redirect('password')
     else:
         form = PasswordChangeForm(request.user)
         return render(request, 'home/password.html', {
@@ -363,6 +364,7 @@ def customizeProfile(request):
             return redirect('settings')
         else:
             messages.error(request, 'Please correct the error below.')
+            return redirect('settings')
     else:
         form = ProfilePersonalization(instance=request.user)
         return render(request, 'home/settings.html', {

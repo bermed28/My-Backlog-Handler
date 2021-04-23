@@ -27,11 +27,17 @@
 
                 <td><h3>Customize Account Information</h3></td>
                 <td>
+                    {% if messages %}
+                        {% for result in messages %}
+                            <b style="color: red;">{{ result }}</b>
+                        {% endfor %}
+                    {% endif %}
                     <form method="post" style="font-family: pressStart2P,sans-serif; font-size: x-small">
                      {% csrf_token %}
                         {{ form.as_p }}
                          <button class="btn mybtn btn-outline-success" type="submit" style="font-family: 'arcadeclassicregular',sans-serif">Save Profile Settings</button>
                     </form>
+
                 </td>
             </tr>
 
