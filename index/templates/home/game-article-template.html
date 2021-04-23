@@ -28,25 +28,28 @@
             </div>
             <div class="container pt-2 form" style="text-align: center">
                 <h3>Edit status:</h3>
+
                 <div class="container">
-{#                    {% if game_available %}#}
-                    <button class="btn navbar-btn mybtn btn-outline-primary"
-                            onclick='window.location.href="{% url 'library-add' game_id=gameArticle.game_id%}"'>
-                        <i class="far fa-plus-square"></i> Add to Library</button>
-{#                    {% else %}#}
-{#                        <button class="btn navbar-btn mybtn btn-outline-primary"#}
-{#                            onclick="window.location.href='#'">#}
-{#                        <i class="far fa-check-square"></i> Already in library</button>#}
-{#                    {% endif %}#}
+                    {% if request.user.is_authenticated %}
+                        <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'library-add' game_id=gameArticle.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button>
+                    {% else %}
+                        <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Sign in to add to Library</button>
+                    {% endif %}
                 </div>
-                {#                <div><a href="{% url 'library-add' game_id=gameArticle.game_id%}"> Add to library <i class="far fa-plus-square"></i></a></div>#}
-                {#                <div><a href="{% url 'library-add' game_id=gameArticle.game_id%}">Add to backlog <i class="far fa-plus-square"></i></a></div>#}
                 <div class="container">
-                    <label>Your score: </label>
-                    <label class="pt-2 pb-2">
-                        <select class="form-control bg-dark" style="color: white">
+                    {% if request.user.is_authenticated %}
+                        <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'library-add' game_id=gameArticle.game_id%}'"><i class="far fa-plus-square"></i> Add to Backlog</button>
+                    {% else %}
+                        <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Sign in to add to Backlog</button>
+                    {% endif %}
+                </div>
+                <label>Your score: </label>
+                <label class="pt-2 pb-2">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <select name="overall_rating" class="form-control bg-dark" style="color: white">
                             <option>Select</option>
-                            <option>Apalling (1)</option>
+                            <option>Appalling (1)</option>
                             <option>Horrible (2)</option>
                             <option>Very Bad (3)</option>
                             <option>Bad (4)</option>
@@ -57,8 +60,21 @@
                             <option>Great (9)</option>
                             <option>Masterpiece (10)</option>
                         </select>
+
+                        <input type="submit" value="Rate"/>
+                        {% if messages %}
+                            {% for result in messages %}
+                                <b style="color: white;">{{ result }}</b>
+                            {% endfor %}
+                        {% endif %}
+                    </form>
+                </label>
+                </label>
+                </label>
+
                     </label>
                 </div>
+
             </div>
         </div>
         <div class="container col pt-1">

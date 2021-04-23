@@ -30,7 +30,7 @@
     <section class="container site-content animate__animated animate__backInDown animate__faster">
         <h1>Backlog</h1>
     </section>
-    <div class="container site-content animate__animated animate__lightSpeedInRight animate__faster table-responsive">
+    <div class="container site-content animate__animated animate__fadeIn animate__faster table-responsive">
         {% if object_list.count > 0 %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
@@ -39,8 +39,8 @@
                     <th colspan="2" class="nametag">Name</th>
                     <th>Platform</th>
                     <th>Score</th>
-                    <th>Backlog Status</th>
                     <th>Last Played</th>
+                    <th>Remove</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -89,8 +89,10 @@
                                 </select>
                             </label>
                         </td>
-                        <td>In Backlog</td>
-                        <td>{{ Entry.last_played }}</td
+                        <td>{{ Entry.last_played }}</td>
+                        <td>
+                            <button class="btn mybtn btn-outline-primary" onclick="window.location.href='#'"><i class="far fa-times-circle"></i> Remove from Library</button>
+                        </td>
                     </tr>
                 {% endfor %}
                 </tbody>
