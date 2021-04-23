@@ -153,6 +153,7 @@ django_heroku.settings(locals())
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 SOCIAL_AUTH_POSTGRES_JSONFIELD = True
 
