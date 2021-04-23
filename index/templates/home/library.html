@@ -32,6 +32,11 @@
             <h1>Library</h1>
             <button class="btn btn-outline-primary me-1" style="border-radius: 15px; font-family: 'arcadeclassicregular' , sans-serif;"
                     onclick='window.location.href="{% url 'games' %}"'><i class='far fa-plus-square'></i> Add more games</button>
+            {% if messages %}
+                {% for result in messages %}
+                    <b style="color: red; font-family: 'arcadeclassicregular', sans-serif; align-content: center; font-size: medium">{{ result }}</b>
+                {% endfor %}
+            {% endif %}
         </div>
 {#        <h1>Library</h1>#}
 {#        <button class="btn btn-outline-primary me-1"#}
@@ -101,6 +106,7 @@
                         <td>
                             <table>
                                 <tr>
+
                                     <td>
                                         <button class="btn navbar-btn mybtn btn-outline-primary"
                                                 onclick='window.location.href="{% url 'backlog-add' game_id=Entry.game.game_id%}"'> <i class="far fa-plus-square"></i> Add to Backlog</button>

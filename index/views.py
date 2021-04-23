@@ -116,7 +116,7 @@ class LibraryInsertion(View):
                 library=player_library,
                 last_played=form.cleaned_data['last_played'],
                 is_finished=form.cleaned_data['is_finished'],
-                forcedToBacklog=False
+                forced_to_backlog=False
             )
             membership.save()
 
@@ -124,6 +124,7 @@ class LibraryInsertion(View):
             print("last_played = ", form.cleaned_data['last_played'])
             print("is_finished = ", form.cleaned_data['is_finished'])
             form = LibraryAddForm()
+            messages.success(request, "Game Details Successfully Updated")
         else:
             print(form.errors)
         return HttpResponseRedirect(reverse("library"))
@@ -164,7 +165,33 @@ class BacklogInsertion(View):
         print(player_library)
         game = Library_Membership.objects.get(library=player_library[0], game=game_id)
         print(f"BEFORE:\nID: {game.game_id}, FTB: {game.forced_to_backlog}, LIB_ID: {game.library_id}")
+        startdate = date.today()
+        enddate = startdate + timedelta(days=-60)
+
+        if enddate >= game.last_played or game.forced_to_backlog:
+            messages.error(request,"Game is already in backlog")
+            return HttpResponseRedirect(reverse("library"))
+
         queryDo(f"UPDATE public.index_library_membership SET forced_to_backlog=True WHERE (library_id={game.library_id} AND game_id={game_id})")
+        print(f"AFTER:\nID: {game.game_id}, FTB: {game.forced_to_backlog}, LIB_ID: {game.library_id}")
+
+        return HttpResponseRedirect(reverse("backlog"))
+
+
+class BacklogDeletion(View):
+    def get(self, request, game_id, **kwargs):
+        player_library = Library_Model.objects.filter(
+            owner_id=self.request.user.id
+        )
+        print(player_library)
+        game = Library_Membership.objects.get(library=player_library[0], game=game_id)
+        print(f"BEFORE:\nID: {game.game_id}, FTB: {game.forced_to_backlog}, LIB_ID: {game.library_id}")
+        startdate = date.today()
+        enddate = startdate + timedelta(days=-60)
+        if enddate < game.last_played:
+            queryDo(f"UPDATE public.index_library_membership SET forced_to_backlog=False WHERE (library_id={game.library_id} AND game_id={game_id})")
+        else:
+            messages.error(request, "Cannot remove from backlog, last played date exceeds limit")
         print(f"AFTER:\nID: {game.game_id}, FTB: {game.forced_to_backlog}, LIB_ID: {game.library_id}")
 
         return HttpResponseRedirect(reverse("backlog"))

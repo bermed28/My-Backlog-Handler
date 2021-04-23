@@ -29,8 +29,16 @@
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
         <h1>Backlog</h1>
+        {% if messages %}
+            {% for result in messages %}
+                <b style="color: red; font-family: 'arcadeclassicregular', sans-serif;">{{ result }}</b>
+            {% endfor %}
+        {% endif %}
     </section>
+
+
     <div class="container site-content animate__animated animate__fadeIn animate__faster table-responsive">
+
         {% if object_list.count > 0 %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
@@ -91,7 +99,7 @@
                         </td>
                         <td>{{ Entry.last_played }}</td>
                         <td>
-                            <button class="btn mybtn btn-outline-primary" onclick="window.location.href='#'"><i class="far fa-times-circle"></i> Remove from Library</button>
+                            <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'backlog-delete' game_id=Entry.game.game_id%}'"><i class="far fa-times-circle"></i> Remove</button>
                         </td>
                     </tr>
                 {% endfor %}
