@@ -1,3 +1,5 @@
+{% load template_filters %}
+{#{% load define_action %}#}
 <!DOCTYPE html>
 <html>
 
@@ -56,7 +58,13 @@
                 </tr>
                 </thead>
                 <tbody>
+
                 {% for Entry in object_list %}
+                   {#////////////////////////////////////////////////#}
+                    {% define Entry.game.game_id as action %}
+
+                    <tr>{{ Democrats|lookup:action }}</tr>
+                    {#////////////////////////////////////////////////#}
                     <tr>
                         {% if Entry.game.img_id.img_url is not None %}
                             <td><a href="{% url 'game-article-template' game_id=Entry.game.game_id%}"><img class="me-1" width="50" height="70" alt="Game Cover" src="{{ Entry.game.img_id.img_url }}"></a></td>

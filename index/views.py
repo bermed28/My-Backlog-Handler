@@ -6,15 +6,12 @@ from django.views.generic import ListView
 from igdb.wrapper import IGDBWrapper
 from .request import getSummary
 from .serializers import GameModelSerializer, ImageModelSerializer, LibraryModelSerializer, LibraryMembershipSerializer, RatingModelSerializer, PlayerAccountSerializer
-
-from .models import Ratings_Model
-
 from .forms import LibraryAddForm, ProfilePersonalization, LastPlayedForm
 from django.views import View
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from datetime import date, timedelta
-from .models import Game_Model, PlayerAccount, Image_Model, Library_Model, Library_Membership
+from .models import Game_Model, PlayerAccount, Image_Model, Library_Model, Library_Membership, Ratings_Model
 from django.db.models import Q
 
 from django.contrib import messages
@@ -225,10 +222,29 @@ class LibraryGameView(ListView):
             library_games = Library_Membership.objects.filter(library=new_Library)
             return []
 
-
-
         return library_games
 
+    def get_context_data(self, **kwargs):
+        context = super(LibraryGameView, self).get_context_data(**kwargs)
+        player_library = Library_Model.objects.get(
+            owner_id=self.request.user.id
+        )
+        ratings = {}
+        for game in player_library.games.iterator():
+            ratings[game.game_id] = None
+
+        for key in ratings.keys():
+            print("hello")
+
+
+        # ratings = Ratings_Model.objects.filter(game_id=)
+
+        dic = {132972:"THIS IS A TEST"}
+        context["Democrats"] = dic
+        context["Democrats"] = dic
+        return context
+def getAverageRatings(game_id):
+    return 0
 
 class BacklogGameView(ListView):
     paginate_by = 15
@@ -323,14 +339,19 @@ def gameArticleTemplate(request, game_id):
     gameArticle = Game_Model.objects.get(game_id=game_id)
     summary = getSummary(game_id, wrapper)
 
-    if request.method == 'POST' and request.POST.get('overall_rating'):
+
+    if request.method == 'POST':
+        rating_value = int(request.POST.get('overall_rating'))
+        print(rating_value)
         if request.user.is_authenticated:
             saveRating = Ratings_Model(user_id_id=request.user.id, game_id=game_id,
-                                       overall_rating=request.POST.get('overall_rating'))
+                                       overall_rating=rating_value)
+            # print(request.POST.get('overall_rating'))
             saveRating.save()
             messages.success(request, 'Rating Saved Successfully!')
-            return render(request, 'home/game-article-template.html',
-                          {'gameArticle': gameArticle, "gameSummary": summary})
+            return HttpResponseRedirect(reverse("library"))
+            # return render(request, 'home/game-article-template.html',
+            #               {'gameArticle': gameArticle, "gameSummary": summary})
         else:
             return HttpResponseRedirect(reverse("login"))
     else:
