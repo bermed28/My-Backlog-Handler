@@ -29,7 +29,7 @@
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
         <div class="row">
-            <h1>Library</h1>
+            <h1>Library {{ object_list.count }}</h1>
             <button class="btn btn-outline-primary me-1" style="border-radius: 15px; font-family: 'arcadeclassicregular' , sans-serif;"
                     onclick='window.location.href="{% url 'games' %}"'><i class='far fa-plus-square'></i> Add more games</button>
             {% if messages %}

@@ -28,7 +28,7 @@
 <br>
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
-        <h1>Backlog</h1>
+        <h1>Backlog {{ object_list.count }}</h1>
         {% if messages %}
             {% for result in messages %}
                 <b style="color: red; font-family: 'arcadeclassicregular', sans-serif;">{{ result }}</b>

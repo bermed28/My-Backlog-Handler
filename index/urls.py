@@ -31,10 +31,10 @@ urlpatterns = [
     path('games/popular/', views.popGames, name="popGames"),
     path('games/upcoming/', views.upGames, name="upGames"),
     path('search/', views.SearchResultsGameView.as_view(), name='search_results'),
-    path('user/profile/', views.profile, name='profile'),
+
     path('user/favorites/', views.favorites, name='favorites'),
     path('user/wishlist/', views.wishlist, name='wishlist'),
-    path('user/settings/', views.settings, name='settings'),
+    # path('user/settings/', views.settings, name='settings'),
     path('404/', views.fourOFour, name='404'),
     path('500/', views.fiveHundred, name='500'),
     path('403/', views.fourOThree, name='403'),
@@ -45,5 +45,6 @@ urlpatterns = [
     path('password/', views.change_password, name='password'),
     path('deleteAccount', views.deleteUser, name='deleteAccount'),
     path( r'library/lastPlayed/^(?P<game_id>\w+)/$', LastPlayed.as_view(), name="last-played"),
+    path('profile/', views.profile, name='profile')
 ]
 

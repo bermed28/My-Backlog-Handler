@@ -12,8 +12,32 @@
 <br>
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
-        <h1>Profile</h1>
+        <h1> {{ request.user }}'s &nbsp&nbspProfile</h1>
     </section>
+     <h1>&nbsp &nbsp Games owned: {{ lib }}</h1>
+     <h1>&nbsp &nbsp Games in backlog: {{ back }}</h1>
+     <h1>&nbsp &nbsp Games finished: {{ finished }}</h1>
+
+{#    {% with num=0 %}#}
+{#    {% for member in object_list.library %}#}
+{#        {% if member.is_finished %}#}
+{#            {{ num|add:"1" }}#}
+{#        {% endif %}#}
+{#    {% endfor %}#}
+{#   {% endwith %}#}
+
+{#<p id="result">End fuck</p>#}
+{#<script>#}
+{#    function initNum() {#}
+{#        let number = 1#}
+{#    }#}
+{#    function upCount(val) {#}
+{#        val++;#}
+{#        number = val;#}
+{#    }#}
+{#    document.getElementById("result").innerHTML = number;#}
+{##}
+{#</script>#}
 </div><br>
 <div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
