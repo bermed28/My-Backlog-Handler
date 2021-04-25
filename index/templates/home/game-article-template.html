@@ -109,7 +109,7 @@
 
             <h3>Involved Companies</h3>
             {% for attr, list in gameArticle.developers.items %}
-                {% if list.count is not None %}
+                {% if list is not None %}
                     {% for dev in list %}
 
                         <p>{{ dev }}</p>
