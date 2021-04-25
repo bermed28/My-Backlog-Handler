@@ -53,7 +53,7 @@
                     <th>Image</th>
                     <th colspan="2" class="nametag">Name</th>
                     <th>Platform</th>
-{#                    <th>Score</th>#}
+                    <th>Score</th>
                     <th>Last Played</th>
                     <th>Manage</th>
                 </tr>
@@ -89,8 +89,8 @@
                    {#////////////////////////////////////////////////#}
                     {% define Entry.game.game_id as action %}
 
-                    {% if Democrats|lookup:action is not None %}
-                        <td>{{ Democrats|lookup:action }}</td>
+                    {% if Ratings|lookup:action is not None %}
+                        <td>{{ Ratings|lookup:action }}</td>
                     {% else %}
                         <td>N/A</td>
                     {% endif %}

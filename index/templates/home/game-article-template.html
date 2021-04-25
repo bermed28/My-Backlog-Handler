@@ -36,35 +36,34 @@
                     {% endif %}
                 </div>
                 <div class="container">
-{#                <form class="form-inline">#}
                     <label>Your score: </label>
                     <label class="pt-2 pb-2">
-                        <select class="form-control bg-dark" style="color: white">
-                            <option>Select</option>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <select name="overall_rating" class="form-control bg-dark" style="color: white">
+                                <option>Select</option>
+                                <option value = 1 type="number">Appalling (1)</option>
+                                <option value = 2 type="number">Horrible (2)</option>
+                                <option value = 3 type="number">Very Bad (3)</option>
+                                <option value = 4 type="number">Bad (4)</option>
+                                <option value = 5 type="number">Average (5)</option>
+                                <option value = 6 type="number">Fine (6)</option>
+                                <option value = 7 type="number">Good (7)</option>
+                                <option value = 8 type="number">Very Good (8)</option>
+                                <option value = 9 type="number">Great (9)</option>
+                                <option value = 10 type="number">Masterpiece (10)</option>
+                            </select>
 
-                            <option value = 1 type="number">Appalling (1)</option>
-                            <option value = 2 type="number">Horrible (2)</option>
-                            <option value = 3 type="number">Very Bad (3)</option>
-                            <option value = 4 type="number">Bad (4)</option>
-                            <option value = 5 type="number">Average (5)</option>
-                            <option value = 6 type="number">Fine (6)</option>
-                            <option value = 7 type="number">Good (7)</option>
-                            <option value = 8 type="number">Very Good (8)</option>
-                            <option value = 9 type="number">Great (9)</option>
-                            <option value = 10 type="number">Masterpiece (10)</option>
-                        </select>
+                           <button class="btn mybtn btn-outline-success" type="submit" value='Rate'><i class="far fa-edit"></i> Rate</button>
+                            {% if messages %}
+                                {% for result in messages %}
+                                    <b style="color: white;">{{ result }}</b>
+                                {% endfor %}
+                            {% endif %}
+                        </form>
                     </label>
                 </div>
-                <div class="container pb-2">
-{#                    <input type="submit" value="Rate">#}
-                    <button class="btn mybtn btn-outline-success" type="submit" value='Rate'><i class="far fa-edit"></i> Rate</button>
-                    {% if messages %}
-                        {% for result in messages %}
-                            <b style="color: white;">{{ result }}</b>
-                        {% endfor %}
-                    {% endif %}
-                </div>
-{#                </form>#}
+
             </div>
         </div>
         <div class="container col pt-1">

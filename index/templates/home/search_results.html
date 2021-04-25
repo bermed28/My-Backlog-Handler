@@ -1,3 +1,4 @@
+{% load template_filters %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +43,7 @@
             <th>Image</th>
             <th colspan="2" class="nametag">Name</th>
             <th>Platform</th>
-{#            <th>Rating</th>#}
+            <th>Rating</th>
             <th>Add</th>
         </tr>
         </thead>
@@ -71,6 +72,13 @@
                     {% endif %}
                 {% endfor %}
 
+                {% define game.game_id as action %}
+
+                {% if Ratings|lookup:action is not None %}
+                    <td>{{ Ratings|lookup:action }}</td>
+                {% else %}
+                    <td>N/A</td>
+                {% endif %}
 {#                <td>10/10</td> {# We have to implement the rating model so we can add the rating average here #}
                 {% if request.user.is_authenticated %}
                     <td><button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
