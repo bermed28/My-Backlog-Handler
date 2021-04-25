@@ -235,6 +235,59 @@ class LibraryGameView(ListView):
             # ratings[game.game_id] = None
             ratings[game.game_id] = getAverageRatings(game.game_id)
 
+def profile(request):
+    #use in view func or pass to template via context
+    startdate = date.today()
+    enddate = startdate + timedelta(days=-60)
+
+    context = {}
+
+    library = LibraryGameView.model.objects
+    backlog = BacklogGameView.model.objects
+    context['lib'] = library.filter(library__owner_id=request.user.id).count() #Gets all of the user library games and counts them,
+    # passes value to lib which can be used in html as django var
+
+    context['back'] = (backlog.filter(library__owner_id=request.user.id, last_played__lt=enddate)
+                       | backlog.filter(library__owner_id=request.user.id, forced_to_backlog=True)).count()
+
+    context['finished'] = library.filter(library__owner_id=request.user.id, is_finished=True).count()
+
+    return render(request, 'home/profile.html', context=context)
+
+# class profile(ListView):
+#
+#     model = Library_Membership
+#     paginate_by = 15
+#     template_name = '../templates/home/profile.html'
+#
+#     def get_queryset(self):
+#         # query = self.request.GET.get('q')
+#
+#         player_library = Library_Model.objects.filter(owner_id=self.request.user.id)
+#         if player_library.exists():
+#             library_games = Library_Membership.objects.filter(library=player_library[0])
+#             print(library_games)
+#         else:
+#             new_Library = Library_Model(owner_id=self.request.user)
+#             new_Library.save()
+#             library_games = Library_Membership.objects.filter(library=new_Library)
+#             return []
+#
+#         return library_games
+#
+#     def get_context_data(self, **kwargs):
+#
+#         context = super().get_context_data(**kwargs)
+#         context['pato'] = 1
+#
+#         return context
+
+    # def get_queryset(self):
+    #     queryset = {
+    #                 'library': LibraryGameView.get_queryset(self),
+    #                 'backlog': BacklogGameView.get_queryset(self),
+    #                 }
+    #     return queryset
 
         # dic = {132972:"THIS IS A TEST"}
         context["Democrats"] = ratings
@@ -389,7 +442,7 @@ def upGames(request):
     return render(request, 'home/upcoming-games.html')
 
 
-def settings(request):
+def settings(request): #remove\ ----------------------------------
     return render(request, 'home/settings.html')
 
 
@@ -397,8 +450,7 @@ def wishlist(request):
     return render(request, 'home/wishlist.html')
 
 
-def profile(request):
-    return render(request, 'home/profile.html')
+
 
 
 def favorites(request):

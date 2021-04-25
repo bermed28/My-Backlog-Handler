@@ -41,8 +41,9 @@
                     <th>Image</th>
                     <th colspan="2" class="nametag">Name</th>
                     <th>Platform</th>
-                    <th>Score</th>
-                    <th>Status</th>
+{#                    <th>Score</th>#}
+{#                    <th>Status</th>#}
+                    <th>Add</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -68,31 +69,31 @@
                             {% endif %}
                         {% endfor %}
 
-                        <td>
-                            <label class="pt-2 pb-2">
-                                <select class="form-control bg-dark" style="color: white">
-                                    <option>--</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>N/A</option>
-                                </select>
-                            </label>
-                        </td>
+{#                        <td>#}
+{#                            <label class="pt-2 pb-2">#}
+{#                                <select class="form-control bg-dark" style="color: white">#}
+{#                                    <option>--</option>#}
+{#                                    <option>1</option>#}
+{#                                    <option>2</option>#}
+{#                                    <option>3</option>#}
+{#                                    <option>4</option>#}
+{#                                    <option>5</option>#}
+{#                                    <option>6</option>#}
+{#                                    <option>7</option>#}
+{#                                    <option>8</option>#}
+{#                                    <option>9</option>#}
+{#                                    <option>10</option>#}
+{#                                    <option>N/A</option>#}
+{#                                </select>#}
+{#                            </label>#}
+{#                        </td>#}
 
-                        <td>Plan to get</td>
+{#                        <td>Plan to get</td>#}
 
-                        {% if request.user.is_authenticated and game%}
-                            <td><button class="btn btn-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                        {% if request.user.is_authenticated %}
+                            <td><button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'library-add' game_id=game.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
                         {% else %}
-                            <td><button class="btn btn-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
+                            <td><button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Add to Library</button></td>
                         {% endif %}
                     </tr>
                 {% endfor %}

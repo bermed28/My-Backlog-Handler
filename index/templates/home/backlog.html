@@ -35,10 +35,8 @@
             {% endfor %}
         {% endif %}
     </section>
-
-
-    <div class="container site-content animate__animated animate__fadeIn animate__faster table-responsive">
-
+    <div class="container site-content table-responsive">
+    <h3 style="text-align: center;">Total Number of Games: {{ object_list.count }}</h3>
         {% if object_list.count > 0 %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
@@ -46,7 +44,7 @@
                     <th>Image</th>
                     <th colspan="2" class="nametag">Name</th>
                     <th>Platform</th>
-                    <th>Score</th>
+                    {#                    <th>Score</th>#}
                     <th>Last Played</th>
                     <th>Remove</th>
                 </tr>
@@ -75,31 +73,32 @@
                             {% elif "PC (Microsoft Windows)" in platform %}
                                 <td><img src="../../static/Images/platforms/pc.png" alt="PC" width="30" height="30"></td>
                             {% else %}
-                                 <td>No Platform</td>
+                                <td>No Platform</td>
                             {% endif %}
                         {% endfor %}
 
+                        {#                        <td>#}
+                        {#                            <label class="pt-2 pb-2">#}
+                        {#                                <select class="form-control bg-dark" style="color: white">#}
+                        {#                                    <option>--</option>#}
+                        {#                                    <option>1</option>#}
+                        {#                                    <option>2</option>#}
+                        {#                                    <option>3</option>#}
+                        {#                                    <option>4</option>#}
+                        {#                                    <option>5</option>#}
+                        {#                                    <option>6</option>#}
+                        {#                                    <option>7</option>#}
+                        {#                                    <option>8</option>#}
+                        {#                                    <option>9</option>#}
+                        {#                                    <option>10</option>#}
+                        {#                                    <option>N/A</option>#}
+                        {#                                </select>#}
+                        {#                            </label>#}
+                        {#                        </td>#}
+                        <td><button class="btn mybtn btn-outline-info"
+                                    onclick='window.location.href="{% url 'last-played' game_id=Entry.game.game_id%}"'> {{ Entry.last_played }}</button></td>
                         <td>
-                            <label class="pt-2 pb-2">
-                                <select class="form-control bg-dark" style="color: white">
-                                    <option>--</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>N/A</option>
-                                </select>
-                            </label>
-                        </td>
-                        <td>{{ Entry.last_played }}</td>
-                        <td>
-                            <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'backlog-delete' game_id=Entry.game.game_id%}'"><i class="far fa-times-circle"></i> Remove</button>
+                            <button class="btn mybtn btn-outline-danger" onclick="window.location.href='{% url 'backlog-delete' game_id=Entry.game.game_id%}'"><i class="far fa-times-circle"></i> Remove</button>
                         </td>
                     </tr>
                 {% endfor %}

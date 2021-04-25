@@ -36,7 +36,7 @@
                     onclick='window.location.href="{% url 'games' %}"'><i class='far fa-plus-square'></i> Add more games</button>
             {% if messages %}
                 {% for result in messages %}
-                    <b style="color: red; font-family: 'arcadeclassicregular', sans-serif; align-content: center; font-size: medium">{{ result }}</b>
+                    <b class="text-success" style="font-family: 'arcadeclassicregular', sans-serif; align-content: center; font-size: medium">{{ result }}</b>
                 {% endfor %}
             {% endif %}
         </div>
@@ -45,6 +45,7 @@
 {#                                    onclick='window.location.href="{% url 'new-releases' %}"'><i class='far fa-plus-square'></i> Add more games</button>#}
     </section>
     <div class="container site-content table-responsive">
+    <h3 style="text-align: center;">Total Number of Games: {{ object_list.count }}</h3>
         {% if object_list.count > 0 %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
@@ -52,9 +53,9 @@
                     <th>Image</th>
                     <th colspan="2" class="nametag">Name</th>
                     <th>Platform</th>
-                    <th>Score</th>
+{#                    <th>Score</th>#}
                     <th>Last Played</th>
-                    <th>Remove</th>
+                    <th>Manage</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -94,7 +95,6 @@
                         <td>N/A</td>
                     {% endif %}
 
-
                         <td><button class="btn navbar-btn mybtn btn-outline-primary"
                                                 onclick='window.location.href="{% url 'last-played' game_id=Entry.game.game_id%}"'> {{ Entry.last_played }}</button></td>
                         <td>
@@ -102,15 +102,15 @@
                                 <tr>
 
                                     <td>
-                                        <button class="btn navbar-btn mybtn btn-outline-primary"
+                                        <button class="btn mybtn btn-outline-primary"
                                                 onclick='window.location.href="{% url 'backlog-add' game_id=Entry.game.game_id%}"'> <i class="far fa-plus-square"></i> Add to Backlog</button>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>
-                                        <button class="btn navbar-btn mybtn btn-outline-primary"
-                                                onclick='window.location.href="{% url 'library-delete' game_id=Entry.game.game_id%}"'> <i class="far fa-plus-square"></i> Remove From Library</button>
+                                        <button class="btn navbar-btn mybtn btn-outline-danger"
+                                                onclick='window.location.href="{% url 'library-delete' game_id=Entry.game.game_id%}"'><i class="far fa-times-circle"></i> Remove From Library</button>
                                     </td>
                                 </tr>
                             </table>

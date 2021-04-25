@@ -28,7 +28,6 @@
             </div>
             <div class="container pt-2 form" style="text-align: center">
                 <h3>Edit status:</h3>
-
                 <div class="container">
                     {% if request.user.is_authenticated %}
                         <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'library-add' game_id=gameArticle.game_id%}'"><i class="far fa-plus-square"></i> Add to Library</button>
@@ -36,19 +35,13 @@
                         <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Sign in to add to Library</button>
                     {% endif %}
                 </div>
-{#                <div class="container">#}
-{#                    {% if request.user.is_authenticated %}#}
-{#                        <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'library-add' game_id=gameArticle.game_id%}'"><i class="far fa-plus-square"></i> Add to Backlog</button>#}
-{#                    {% else %}#}
-{#                        <button class="btn mybtn btn-outline-primary" onclick="window.location.href='{% url 'login'%}'"><i class="far fa-plus-square"></i> Sign in to add to Backlog</button>#}
-{#                    {% endif %}#}
-{#                </div>#}
-                <label>Your score: </label>
-                <label class="pt-2 pb-2">
-                    <form method="POST">
-                        {% csrf_token %}
-                        <select name="overall_rating" class="form-control bg-dark" style="color: white">
+                <div class="container">
+{#                <form class="form-inline">#}
+                    <label>Your score: </label>
+                    <label class="pt-2 pb-2">
+                        <select class="form-control bg-dark" style="color: white">
                             <option>Select</option>
+
                             <option value = 1 type="number">Appalling (1)</option>
                             <option value = 2 type="number">Horrible (2)</option>
                             <option value = 3 type="number">Very Bad (3)</option>
@@ -60,21 +53,18 @@
                             <option value = 9 type="number">Great (9)</option>
                             <option value = 10 type="number">Masterpiece (10)</option>
                         </select>
-
-                        <input type="submit" value="Rate"/>
-                        {% if messages %}
-                            {% for result in messages %}
-                                <b style="color: white;">{{ result }}</b>
-                            {% endfor %}
-                        {% endif %}
-                    </form>
-                </label>
-                </label>
-                </label>
-
                     </label>
                 </div>
-
+                <div class="container pb-2">
+{#                    <input type="submit" value="Rate">#}
+                    <button class="btn mybtn btn-outline-success" type="submit" value='Rate'><i class="far fa-edit"></i> Rate</button>
+                    {% if messages %}
+                        {% for result in messages %}
+                            <b style="color: white;">{{ result }}</b>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+{#                </form>#}
             </div>
         </div>
         <div class="container col pt-1">
@@ -83,17 +73,15 @@
             <h3>Genres</h3>
 
             {% for attr, list in gameArticle.genres.items %}
-                <p>
-                    {% if list is not None %}
-                        {% for genre in list %}
+                {% if list is not None %}
+                    {% for genre in list %}
 
-                            <p>{{ genre }}</p>
+                        <p>{{ genre }}</p>
 
-                        {% endfor %}
-                    {% else %}
-                        <p>No Genres Available</p>
-                    {% endif %}
-                </p>
+                    {% endfor %}
+                {% else %}
+                    <p>No Genres Available</p>
+                {% endif %}
             {% endfor %}
 
             <h3>Platform</h3>
@@ -116,31 +104,25 @@
                 {% endfor %}
             {% endfor %}
 
-
-
             <h3>Involved Companies</h3>
 
             {% for attr, list in gameArticle.developers.items %}
-                <p>
+                {% if list.count is not None %}
+                    {% for dev in list %}
 
-                    {% if list.count is not None %}
-                        {% for dev in list %}
+                        <p>{{ dev }}</p>
 
-                            <p>{{ dev }}</p>
-
-                        {% endfor %}
-                    {% else %}
-                        <p>No Involved Companies Available</p>
-                    {% endif %}
-                </p>
+                    {% endfor %}
+                {% else %}
+                    <p>No Involved Companies Available</p>
+                {% endif %}
             {% endfor %}
 
         </div>
     </div>
-
 </section>
 <br>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div><br>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
