@@ -29,7 +29,7 @@
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
         <div class="row">
-            <h1>Library {{ object_list.count }}</h1>
+            <h1>Library</h1>
             <button class="btn btn-outline-primary me-1" style="border-radius: 15px; font-family: 'arcadeclassicregular' , sans-serif;"
                     onclick='window.location.href="{% url 'games' %}"'><i class='far fa-plus-square'></i> Add more games</button>
             {% if messages %}
@@ -43,6 +43,7 @@
 {#                                    onclick='window.location.href="{% url 'new-releases' %}"'><i class='far fa-plus-square'></i> Add more games</button>#}
     </section>
     <div class="container site-content table-responsive">
+    <h3 style="text-align: center;">Total Number of Games: {{ object_list.count }}</h3>
         {% if object_list.count > 0 %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
@@ -52,7 +53,7 @@
                     <th>Platform</th>
 {#                    <th>Score</th>#}
                     <th>Last Played</th>
-                    <th>Remove</th>
+                    <th>Manage</th>
                 </tr>
                 </thead>
                 <tbody>

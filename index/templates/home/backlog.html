@@ -28,17 +28,15 @@
 <br>
 <div>
     <section class="container site-content animate__animated animate__backInDown animate__faster">
-        <h1>Backlog {{ object_list.count }}</h1>
+        <h1>Backlog</h1>
         {% if messages %}
             {% for result in messages %}
                 <b style="color: red; font-family: 'arcadeclassicregular', sans-serif;">{{ result }}</b>
             {% endfor %}
         {% endif %}
     </section>
-
-
-    <div class="container site-content animate__animated animate__fadeIn animate__faster table-responsive">
-
+    <div class="container site-content table-responsive">
+    <h3 style="text-align: center;">Total Number of Games: {{ object_list.count }}</h3>
         {% if object_list.count > 0 %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
