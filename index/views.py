@@ -207,12 +207,11 @@ class LibraryGameView(ListView):
         )
         if player_library.exists():
             library_games = Library_Membership.objects.filter(library=player_library[0])
-            print(library_games)
         else:
             new_Library = Library_Model(owner_id=self.request.user)
             new_Library.save()
             library_games = Library_Membership.objects.filter(library=new_Library)
-            return []
+            return library_games
 
         return library_games
 
