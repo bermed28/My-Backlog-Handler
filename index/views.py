@@ -12,7 +12,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from datetime import date, timedelta
 from .models import Game_Model, PlayerAccount, Image_Model, Library_Model, Library_Membership, Ratings_Model
-from django.db.models import Q
+from django.db.models import Q, Sum
 
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
@@ -226,25 +226,33 @@ class LibraryGameView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(LibraryGameView, self).get_context_data(**kwargs)
+
         player_library = Library_Model.objects.get(
             owner_id=self.request.user.id
         )
         ratings = {}
         for game in player_library.games.iterator():
-            ratings[game.game_id] = None
-
-        for key in ratings.keys():
-            print("hello")
+            # ratings[game.game_id] = None
+            ratings[game.game_id] = getAverageRatings(game.game_id)
 
 
-        # ratings = Ratings_Model.objects.filter(game_id=)
-
-        dic = {132972:"THIS IS A TEST"}
-        context["Democrats"] = dic
-        context["Democrats"] = dic
+        # dic = {132972:"THIS IS A TEST"}
+        context["Democrats"] = ratings
         return context
 def getAverageRatings(game_id):
-    return 0
+    game = Ratings_Model.objects.filter(game_id=game_id)
+    gameAmount = game.count()
+    totalSum = game.aggregate(Sum('overall_rating'))
+
+    print("totalSum", totalSum)
+    print("gameAmount", gameAmount)
+
+    if gameAmount > 0:
+        avg = totalSum["overall_rating__sum"] // gameAmount
+        print("average", avg)
+        return avg
+    print("average", None)
+    return None
 
 class BacklogGameView(ListView):
     paginate_by = 15
