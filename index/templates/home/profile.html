@@ -14,8 +14,31 @@
     <section class="container site-content animate__animated animate__backInDown animate__faster">
         <h1>Profile</h1>
     </section>
+    <section class="container site-content animate__animated animate__backInDown animate__faster">
+        <h1>{{ gameArticle.game_title }}</h1>
+    </section>
+    <section class="container site-content animate__animated animate__fadeIn animate__faster">    <br>
+        <div class="row">
+            <div class="container col pb-1" style="margin: auto; text-align: center">
+                <div class="container">
+                    <img class="rounded mx-auto d-block" src="../../static/Images/avatar.svg" alt="Profile Picture" width="300" height="300">
+                </div>
+                <div class="container pt-2 form" style="text-align: center">
+                    <h1>{{ request.user }}</h1>
+                </div>
+            </div>
+            <div class="container col pt-1">
+                <h1>Stats:</h1>
+                <ul>
+                    <li><h1>Games owned: {{ lib }}</h1></li>
+                    <li><h1>Games in backlog: {{ back }}</h1></li>
+                    <li><h1>Games finished: {{ finished }}</h1></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </div><br>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div><br>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

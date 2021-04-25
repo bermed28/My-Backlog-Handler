@@ -15,18 +15,6 @@ class PlayerAccount(models.Model):
         return self.user_name
 
 
-
-
-class Genre_Model(models.Model):
-    genre_id = models.IntegerField(primary_key=True)
-    genre_name = models.CharField(max_length=128)
-
-
-class Developer_Model(models.Model):
-    dev_id = models.IntegerField(primary_key=True)
-    dev_name = models.CharField(max_length=128)
-
-
 class Image_Model(models.Model):
     img_id = models.IntegerField(primary_key=True)
     img_url = models.URLField(max_length=200)
@@ -35,9 +23,6 @@ class Image_Model(models.Model):
 class Game_Model(models.Model):
     game_id = models.IntegerField(primary_key=True)
     game_title = models.CharField(max_length=128)
-
-    # genre_id = models.ForeignKey(Genre_Model, on_delete=models.CASCADE)
-    # dev_id = models.ForeignKey(Developer_Model, on_delete=models.CASCADE)
     genres = JSONField()
     developers = JSONField()
     platforms = JSONField()
@@ -54,12 +39,14 @@ class Library_Membership(models.Model):
     library = models.ForeignKey(Library_Model, on_delete=models.CASCADE)
     last_played = models.DateField()
     is_finished = models.BooleanField(default=False)
+    forced_to_backlog = models.BooleanField(default=False)
 
 
 class Ratings_Model(models.Model):
     game = models.ForeignKey(Game_Model, on_delete=models.CASCADE)
     user_id = models.ForeignKey(oauth_models.USER_MODEL, on_delete=models.CASCADE)
-    overall_rating = models.CharField(max_length=30)
+    # overall_rating = models.CharField(max_length=30)
+    overall_rating = models.IntegerField(primary_key=False)
 
     class Meta:
         db_table = "index_ratings_model"

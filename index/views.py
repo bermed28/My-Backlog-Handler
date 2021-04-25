@@ -5,19 +5,14 @@ from rest_framework import viewsets
 from django.views.generic import ListView
 from igdb.wrapper import IGDBWrapper
 from .request import getSummary
-from .serializers import GameModelSerializer, ImageModelSerializer, DeveloperModelSerializer, GenreModelSerializer, \
-    LibraryModelSerializer, LibraryMembershipSerializer, RatingModelSerializer, PlayerAccountSerializer
-
-from .models import Ratings_Model
-
-from .forms import LibraryAddForm, ProfilePersonalization
+from .serializers import GameModelSerializer, ImageModelSerializer, LibraryModelSerializer, LibraryMembershipSerializer, RatingModelSerializer, PlayerAccountSerializer
+from .forms import LibraryAddForm, ProfilePersonalization, LastPlayedForm
 from django.views import View
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from datetime import date, timedelta
-from .models import Game_Model, PlayerAccount, Image_Model, Developer_Model, Genre_Model, Library_Model, \
-    Library_Membership
-from django.db.models import Q
+from .models import Game_Model, PlayerAccount, Image_Model, Library_Model, Library_Membership, Ratings_Model
+from django.db.models import Q, Sum
 
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
@@ -25,6 +20,8 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.shortcuts import render, redirect
 
 from db_connection_tester import queryDo
+
+import psycopg2
 
 """VIEWSETS"""
 
@@ -44,23 +41,13 @@ class ImageModelViewSet(viewsets.ModelViewSet):
     serializer_class = ImageModelSerializer
 
 
-class DeveloperModelViewSet(viewsets.ModelViewSet):
-    queryset = Developer_Model.objects.all().order_by('dev_id')
-    serializer_class = DeveloperModelSerializer
-
-
-class GenreModelViewSet(viewsets.ModelViewSet):
-    queryset = Genre_Model.objects.all().order_by('genre_id')
-    serializer_class = GenreModelSerializer
-
-
 class LibraryModelViewSet(viewsets.ModelViewSet):
     queryset = Library_Model.objects.all().order_by('owner_id')
     serializer_class = LibraryModelSerializer
 
 
 class LibraryMembershipViewSet(viewsets.ModelViewSet):
-    queryset = Library_Membership.objects.all().order_by('library')
+    queryset = Library_Membership.objects.all().order_by('library_id')
     serializer_class = LibraryMembershipSerializer
 
 
@@ -126,6 +113,7 @@ class LibraryInsertion(View):
                 library=player_library,
                 last_played=form.cleaned_data['last_played'],
                 is_finished=form.cleaned_data['is_finished'],
+                forced_to_backlog=False
             )
             membership.save()
 
@@ -133,18 +121,78 @@ class LibraryInsertion(View):
             print("last_played = ", form.cleaned_data['last_played'])
             print("is_finished = ", form.cleaned_data['is_finished'])
             form = LibraryAddForm()
+            messages.success(request, "Game Details Successfully Updated")
+
         else:
             print(form.errors)
         return HttpResponseRedirect(reverse("library"))
 
-def checkLibraryForGame(user_id, game_id):
-    player_library = Library_Model.objects.filter(
-        owner_id=user_id
-    )
-    game = player_library[0].games.filter(game_id=game_id)
-    game_available = True if game.count() == 0 else False
-    return game_available
+class LastPlayed(View):
 
+    def get(self, request, game_id, **kwargs):
+        form = LibraryAddForm()
+        gameArticle = Game_Model.objects.get(game_id=game_id)
+        game_available = checkLibraryForGame(self.request.user.id, game_id)
+
+        context = {
+            "game_form": form,
+            "gameArticle": gameArticle,
+            "game_available": game_available
+        }
+
+        return render(request, 'home/last-played-update.html', context)
+
+    def post(self, request, game_id, **kwargs):
+        form = LastPlayedForm(request.POST or None)
+        gameArticle = Game_Model.objects.get(game_id=game_id)
+        if form.is_valid():
+            player_library, created = Library_Model.objects.get_or_create(owner_id=request.user)
+
+            newDate = form.cleaned_data['last_played'].strftime("%Y-%m-%d")
+            queryDo(f"UPDATE public.index_library_membership SET last_played=date('{newDate}'::TEXT) WHERE (library_id={player_library.id} AND game_id={game_id})")
+
+        else:
+            print(form.errors)
+        return HttpResponseRedirect(reverse("library"))
+
+class BacklogInsertion(View):
+    def get(self, request, game_id, **kwargs):
+        player_library = Library_Model.objects.filter(
+            owner_id=self.request.user.id
+        )
+        print(player_library)
+        game = Library_Membership.objects.get(library=player_library[0], game=game_id)
+        print(f"BEFORE:\nID: {game.game_id}, FTB: {game.forced_to_backlog}, LIB_ID: {game.library_id}")
+        startdate = date.today()
+        enddate = startdate + timedelta(days=-30)
+
+        if enddate >= game.last_played or game.forced_to_backlog:
+            messages.error(request,"Game is already in backlog")
+            return HttpResponseRedirect(reverse("library"))
+
+        queryDo(f"UPDATE public.index_library_membership SET forced_to_backlog=True WHERE (library_id={game.library_id} AND game_id={game_id})")
+        print(f"AFTER:\nID: {game.game_id}, FTB: {game.forced_to_backlog}, LIB_ID: {game.library_id}")
+
+        return HttpResponseRedirect(reverse("backlog"))
+
+
+class BacklogDeletion(View):
+    def get(self, request, game_id, **kwargs):
+        player_library = Library_Model.objects.filter(
+            owner_id=self.request.user.id
+        )
+        print(player_library)
+        game = Library_Membership.objects.get(library=player_library[0], game=game_id)
+        print(f"BEFORE:\nID: {game.game_id}, FTB: {game.forced_to_backlog}, LIB_ID: {game.library_id}")
+        startdate = date.today()
+        enddate = startdate + timedelta(days=-30)
+        if enddate < game.last_played:
+            queryDo(f"UPDATE public.index_library_membership SET forced_to_backlog=False WHERE (library_id={game.library_id} AND game_id={game_id})")
+        else:
+            messages.error(request, "Cannot remove from backlog, last played date exceeds 30 day limit")
+        print(f"AFTER:\nID: {game.game_id}, FTB: {game.forced_to_backlog}, LIB_ID: {game.library_id}")
+
+        return HttpResponseRedirect(reverse("backlog"))
 
 class LibraryGameView(ListView):
     model = Library_Membership
@@ -166,10 +214,21 @@ class LibraryGameView(ListView):
             library_games = Library_Membership.objects.filter(library=new_Library)
             return []
 
-
-
         return library_games
 
+    def get_context_data(self, **kwargs):
+        context = super(LibraryGameView, self).get_context_data(**kwargs)
+
+        player_library = Library_Model.objects.get(
+            owner_id=self.request.user.id
+        )
+        ratings = {}
+        for game in player_library.games.iterator():
+            # ratings[game.game_id] = None
+            ratings[game.game_id] = getAverageRatings(game.game_id)
+
+        context["Ratings"] = ratings
+        return context
 
 class BacklogGameView(ListView):
     paginate_by = 15
@@ -177,15 +236,15 @@ class BacklogGameView(ListView):
     template_name = '../templates/home/backlog.html'
 
     def get_queryset(self):
-        player_library = Library_Model.objects.filter(
-            owner_id=self.request.user.id
-        )
+        player_library = Library_Model.objects.filter(owner_id=self.request.user.id)
+
         if player_library.exists():
             startdate = date.today()
-            enddate = startdate + timedelta(days=-60)
+            enddate = startdate + timedelta(days=-30)
             # Sample.objects.filter(date__range=[startdate, enddate])
-            backlog = Library_Membership.objects.filter(library=player_library[0]).filter(last_played__lt=enddate)
-            print(backlog)
+            library = Library_Membership.objects.filter(library=player_library[0])
+            backlog = (library.filter(last_played__lt=enddate) | library.exclude(forced_to_backlog=False)).distinct()
+            print("BACKLOG:",backlog)
         else:
             new_Library = Library_Model(owner_id=self.request.user)
             new_Library.save()
@@ -195,8 +254,17 @@ class BacklogGameView(ListView):
         return backlog
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['query'] = self.request.GET.get('q')
+        context = super(BacklogGameView, self).get_context_data(**kwargs)
+
+        player_library = Library_Model.objects.get(
+            owner_id=self.request.user.id
+        )
+        ratings = {}
+        for game in player_library.games.iterator():
+            # ratings[game.game_id] = None
+            ratings[game.game_id] = getAverageRatings(game.game_id)
+
+        context["Ratings"] = ratings
         return context
 
 
@@ -215,6 +283,18 @@ class SearchResultsGameView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['query'] = self.request.GET.get('q')
+
+        games = Game_Model.objects.filter(
+            Q(game_title__icontains=context['query'])
+        )
+
+        ratings = {}
+        for game in games.iterator():
+            # ratings[game.game_id] = None
+            ratings[game.game_id] = getAverageRatings(game.game_id)
+
+        context["Ratings"] = ratings
+
         return context
 
 
@@ -264,14 +344,19 @@ def gameArticleTemplate(request, game_id):
     gameArticle = Game_Model.objects.get(game_id=game_id)
     summary = getSummary(game_id, wrapper)
 
-    if request.method == 'POST' and request.POST.get('overall_rating'):
+
+    if request.method == 'POST':
+        rating_value = int(request.POST.get('overall_rating'))
+        print(rating_value)
         if request.user.is_authenticated:
             saveRating = Ratings_Model(user_id_id=request.user.id, game_id=game_id,
-                                       overall_rating=request.POST.get('overall_rating'))
+                                       overall_rating=rating_value)
+            # print(request.POST.get('overall_rating'))
             saveRating.save()
             messages.success(request, 'Rating Saved Successfully!')
-            return render(request, 'home/game-article-template.html',
-                          {'gameArticle': gameArticle, "gameSummary": summary})
+            return HttpResponseRedirect(reverse("library"))
+            # return render(request, 'home/game-article-template.html',
+            #               {'gameArticle': gameArticle, "gameSummary": summary})
         else:
             return HttpResponseRedirect(reverse("login"))
     else:
@@ -301,17 +386,12 @@ def upGames(request):
     return render(request, 'home/upcoming-games.html')
 
 
-def settings(request):
+def settings(request): #remove\ ----------------------------------
     return render(request, 'home/settings.html')
 
 
 def wishlist(request):
     return render(request, 'home/wishlist.html')
-
-
-def profile(request):
-    return render(request, 'home/profile.html')
-
 
 def favorites(request):
     return render(request, 'home/favorites.html')
@@ -378,3 +458,45 @@ def deleteUser(request):
         return redirect('homepage')
 
     return render(request, 'home/deleteAccount.html')
+
+def profile(request):
+    #use in view func or pass to template via context
+    startdate = date.today()
+    enddate = startdate + timedelta(days=-30)
+
+    context = {}
+
+    library = LibraryGameView.model.objects
+    backlog = BacklogGameView.model.objects
+    context['lib'] = library.filter(library__owner_id=request.user.id).count() #Gets all of the user library games and counts them,
+    # passes value to lib which can be used in html as django var
+
+    context['back'] = (backlog.filter(library__owner_id=request.user.id, last_played__lt=enddate)
+                       | backlog.filter(library__owner_id=request.user.id, forced_to_backlog=True)).count()
+
+    context['finished'] = library.filter(library__owner_id=request.user.id, is_finished=True).count()
+
+    return render(request, 'home/profile.html', context=context)
+
+def getAverageRatings(game_id):
+    game = Ratings_Model.objects.filter(game_id=game_id)
+    gameAmount = game.count()
+    totalSum = game.aggregate(Sum('overall_rating'))
+
+    print("totalSum", totalSum)
+    print("gameAmount", gameAmount)
+
+    if gameAmount > 0:
+        avg = totalSum["overall_rating__sum"] // gameAmount
+        print("average", avg)
+        return avg
+    print("average", None)
+    return None
+
+def checkLibraryForGame(user_id, game_id):
+    player_library = Library_Model.objects.filter(
+        owner_id=user_id
+    )
+    game = player_library[0].games.filter(game_id=game_id)
+    game_available = True if game.count() == 0 else False
+    return game_available

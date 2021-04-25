@@ -7,6 +7,11 @@
     {% else %}
         {% include 'home/navOutTemplate.html' %}
     {% endif %}
+    <style>
+        #mainContent {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <br>
@@ -14,14 +19,17 @@
     <section class="container site-content animate__animated animate__backInDown animate__faster">
         <h1>Delete Account</h1>
     </section>
-    <p style="font-family: 'arcadeclassicregular', sans-serif">Are you sure you want to delete your account?</p>
-    <form action="#" method="get">
-        <input type="submit" class="btn mybtn btn-outline-danger" style="font-family: 'arcadeclassicregular', sans-serif" value="I'm Sure, Delete My Account" name="delete">
-    </form>
+    <div class="container site-content animate__animated animate__fadeIn animate__faster table-responsive pb-2" id="mainContent">
+        <h2>Are you sure you want to delete your account?</h2>
+        <p>This action is irreversible and your details cannot be regained. Are you 100% sure this is what you want?</p>
+        <form action="#" method="get">
+            <input type="submit" class="btn mybtn btn-outline-danger" style="font-family: 'arcadeclassicregular', sans-serif" value=" Yes, I'm Sure. Delete my account." name="delete">
+        </form>
+    </div>
 
 
 </div><br>
-<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div>
+<div class="container text-center">Copyright StackOverflowers Studios&copy; 2021. All rights reserved.</div><br>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

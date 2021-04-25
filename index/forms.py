@@ -16,6 +16,17 @@ class LibraryAddForm(forms.ModelForm):
                                                     'type': 'date'}),
         }
 
+class LastPlayedForm(forms.ModelForm):
+
+    class Meta:
+        model = Library_Membership
+        fields = ['last_played']
+        widgets = {
+            'last_played': forms.DateInput(format=('%m/%d/%Y'),
+                                             attrs={'placeholder': 'mm/dd/yyyy',
+                                                    'type': 'date'}),
+        }
+
 class ProfilePersonalization(UserChangeForm):
     class Meta:
         model = User

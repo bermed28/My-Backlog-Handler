@@ -1,3 +1,5 @@
+{% load template_filters %}
+{#{% load define_action %}#}
 <!DOCTYPE html>
 <html>
 
@@ -32,12 +34,18 @@
             <h1>Library</h1>
             <button class="btn btn-outline-primary me-1" style="border-radius: 15px; font-family: 'arcadeclassicregular' , sans-serif;"
                     onclick='window.location.href="{% url 'games' %}"'><i class='far fa-plus-square'></i> Add more games</button>
+            {% if messages %}
+                {% for result in messages %}
+                    <b class="text-success" style="font-family: 'arcadeclassicregular', sans-serif; align-content: center; font-size: medium">{{ result }}</b>
+                {% endfor %}
+            {% endif %}
         </div>
 {#        <h1>Library</h1>#}
 {#        <button class="btn btn-outline-primary me-1"#}
 {#                                    onclick='window.location.href="{% url 'new-releases' %}"'><i class='far fa-plus-square'></i> Add more games</button>#}
     </section>
     <div class="container site-content table-responsive">
+    <h3 style="text-align: center;">Total Number of Games: {{ object_list.count }}</h3>
         {% if object_list.count > 0 %}
             <table class="table text-white" style="width: 100%;">
                 <thead>
@@ -45,12 +53,13 @@
                     <th>Image</th>
                     <th colspan="2" class="nametag">Name</th>
                     <th>Platform</th>
-                    <th>Score</th>
+                    <th>Average Site Rating</th>
                     <th>Last Played</th>
-                    <th>Remove</th>
+                    <th>Manage</th>
                 </tr>
                 </thead>
                 <tbody>
+
                 {% for Entry in object_list %}
                     <tr>
                         {% if Entry.game.img_id.img_url is not None %}
@@ -77,29 +86,35 @@
                                  <td>No Platform</td>
                             {% endif %}
                         {% endfor %}
+                   {#////////////////////////////////////////////////#}
+                    {% define Entry.game.game_id as action %}
 
+                    {% if Ratings|lookup:action is not None %}
+                        <td>{{ Ratings|lookup:action }}</td>
+                    {% else %}
+                        <td>N/A</td>
+                    {% endif %}
+
+                        <td><button class="btn navbar-btn mybtn btn-outline-info"
+                                                onclick='window.location.href="{% url 'last-played' game_id=Entry.game.game_id%}"'> {{ Entry.last_played }}</button></td>
                         <td>
-                            <label class="pt-2 pb-2">
-                                <select class="form-control bg-dark" style="color: white">
-                                    <option>--</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>N/A</option>
-                                </select>
-                            </label>
-                        </td>
-                        <td>{{ Entry.last_played }}</td>
-                        <td>
-                            <button class="btn navbar-btn mybtn btn-outline-primary"
-                            onclick='window.location.href="{% url 'library-delete' game_id=Entry.game.game_id%}"'> <i class="far fa-plus-square"></i> Remove</button>
+                            <table>
+                                <tr>
+
+                                    <td>
+                                        <button class="btn mybtn btn-outline-primary"
+                                                onclick='window.location.href="{% url 'backlog-add' game_id=Entry.game.game_id%}"'> <i class="far fa-plus-square"></i> Add to Backlog</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <button class="btn navbar-btn mybtn btn-outline-danger"
+                                                onclick='window.location.href="{% url 'library-delete' game_id=Entry.game.game_id%}"'><i class="far fa-times-circle"></i> Remove From Library</button>
+                                    </td>
+                                </tr>
+                            </table>
+
                         </td>
                     </tr>
                 {% endfor %}
