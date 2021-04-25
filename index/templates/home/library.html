@@ -53,7 +53,7 @@
                     <th>Image</th>
                     <th colspan="2" class="nametag">Name</th>
                     <th>Platform</th>
-                    <th>Score</th>
+                    <th>Average Site Rating</th>
                     <th>Last Played</th>
                     <th>Manage</th>
                 </tr>
@@ -95,7 +95,7 @@
                         <td>N/A</td>
                     {% endif %}
 
-                        <td><button class="btn navbar-btn mybtn btn-outline-primary"
+                        <td><button class="btn navbar-btn mybtn btn-outline-info"
                                                 onclick='window.location.href="{% url 'last-played' game_id=Entry.game.game_id%}"'> {{ Entry.last_played }}</button></td>
                         <td>
                             <table>
