@@ -49,16 +49,16 @@
                         {% csrf_token %}
                         <select name="overall_rating" class="form-control bg-dark" style="color: white">
                             <option>Select</option>
-                            <option>Appalling (1)</option>
-                            <option>Horrible (2)</option>
-                            <option>Very Bad (3)</option>
-                            <option>Bad (4)</option>
-                            <option>Average (5)</option>
-                            <option>Fine (6)</option>
-                            <option>Good (7)</option>
-                            <option>Very Good (8)</option>
-                            <option>Great (9)</option>
-                            <option>Masterpiece (10)</option>
+                            <option value = 1 type="number">Appalling (1)</option>
+                            <option value = 2 type="number">Horrible (2)</option>
+                            <option value = 3 type="number">Very Bad (3)</option>
+                            <option value = 4 type="number">Bad (4)</option>
+                            <option value = 5 type="number">Average (5)</option>
+                            <option value = 6 type="number">Fine (6)</option>
+                            <option value = 7 type="number">Good (7)</option>
+                            <option value = 8 type="number">Very Good (8)</option>
+                            <option value = 9 type="number">Great (9)</option>
+                            <option value = 10 type="number">Masterpiece (10)</option>
                         </select>
 
                         <input type="submit" value="Rate"/>
