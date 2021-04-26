@@ -68,8 +68,6 @@ class HomeGameView(ListView):
         return game_model_list
 
 
-# //////////////////////////////////////////////////////////////////////
-
 """
 Checks if game is player's library and if it is it return False else return True
 """
@@ -200,7 +198,6 @@ class LibraryGameView(ListView):
     template_name = '../templates/home/library.html'
 
     def get_queryset(self):
-        # query = self.request.GET.get('q')
 
         player_library = Library_Model.objects.filter(
             owner_id=self.request.user.id
@@ -223,7 +220,6 @@ class LibraryGameView(ListView):
         )
         ratings = {}
         for game in player_library.games.iterator():
-            # ratings[game.game_id] = None
             ratings[game.game_id] = getAverageRatings(game.game_id)
 
         context["Ratings"] = ratings
@@ -240,7 +236,6 @@ class BacklogGameView(ListView):
         if player_library.exists():
             startdate = date.today()
             enddate = startdate + timedelta(days=-30)
-            # Sample.objects.filter(date__range=[startdate, enddate])
             library = Library_Membership.objects.filter(library=player_library[0])
             backlog = (library.filter(last_played__lt=enddate) | library.exclude(forced_to_backlog=False)).distinct()
             print("BACKLOG:",backlog)
@@ -260,7 +255,6 @@ class BacklogGameView(ListView):
         )
         ratings = {}
         for game in player_library.games.iterator():
-            # ratings[game.game_id] = None
             ratings[game.game_id] = getAverageRatings(game.game_id)
 
         context["Ratings"] = ratings
@@ -289,7 +283,6 @@ class SearchResultsGameView(ListView):
 
         ratings = {}
         for game in games.iterator():
-            # ratings[game.game_id] = None
             ratings[game.game_id] = getAverageRatings(game.game_id)
 
         context["Ratings"] = ratings
@@ -350,12 +343,9 @@ def gameArticleTemplate(request, game_id):
         if request.user.is_authenticated:
             saveRating = Ratings_Model(user_id_id=request.user.id, game_id=game_id,
                                        overall_rating=rating_value)
-            # print(request.POST.get('overall_rating'))
             saveRating.save()
             messages.success(request, 'Rating Saved Successfully!')
             return HttpResponseRedirect(reverse("library"))
-            # return render(request, 'home/game-article-template.html',
-            #               {'gameArticle': gameArticle, "gameSummary": summary})
         else:
             return HttpResponseRedirect(reverse("login"))
     else:
@@ -452,7 +442,6 @@ def customizeProfile(request):
 
 def deleteUser(request):
     if request.method == "POST":
-        # queryDo(f'DELETE FROM public.auth_user WHERE id={request.user.id}')
         user = User.objects.get(id=request.user.id)
         user.delete()
         print("User deleted")

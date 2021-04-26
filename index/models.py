@@ -45,7 +45,6 @@ class Library_Membership(models.Model):
 class Ratings_Model(models.Model):
     game = models.ForeignKey(Game_Model, on_delete=models.CASCADE)
     user_id = models.ForeignKey(oauth_models.USER_MODEL, on_delete=models.CASCADE)
-    # overall_rating = models.CharField(max_length=30)
     overall_rating = models.IntegerField(primary_key=False)
 
     class Meta:

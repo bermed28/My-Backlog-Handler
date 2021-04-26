@@ -14,8 +14,6 @@ urlpatterns = [
     path('about-us/', views.aboutUs, name="about-us"),
     path('backlog/my-backlog/', views.BacklogGameView.as_view(), name="backlog"),
     path(r'^(?P<game_id>\w+)/$', views.gameArticleTemplate, name="game-article-template"),
-    #url(r'(?P<first_name>\w+)_(?P<last_name>\w+)/$', view_name, name='url_name')
-    # {% url 'urlname' user.firstname user.lastname %}
 
     path('library/', views.LibraryGameView.as_view(), name="library"),
     path( r'library/add/^(?P<game_id>\w+)/$', LibraryInsertion.as_view(), name="library-add"),
