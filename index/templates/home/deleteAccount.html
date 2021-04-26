@@ -22,7 +22,8 @@
     <div class="container site-content animate__animated animate__fadeIn animate__faster table-responsive pb-2" id="mainContent">
         <h2>Are you sure you want to delete your account?</h2>
         <p>This action is irreversible and your details cannot be regained. Are you 100% sure this is what you want?</p>
-        <form action="#" method="get">
+        <form action="#" method="POST">
+            {% csrf_token %}
             <input type="submit" class="btn mybtn btn-outline-danger" style="font-family: 'arcadeclassicregular', sans-serif" value=" Yes, I'm Sure. Delete my account." name="delete">
         </form>
     </div>
