@@ -20,7 +20,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.shortcuts import render, redirect
 
 from db_connection_tester import queryDo
-
+from django.contrib.auth.models import User
 import psycopg2
 
 """VIEWSETS"""
@@ -451,8 +451,10 @@ def customizeProfile(request):
         })
 
 def deleteUser(request):
-    if request.GET.get('delete'):
-        queryDo(f'DELETE FROM public.auth_user WHERE id={request.user.id}')
+    if request.method == "POST":
+        # queryDo(f'DELETE FROM public.auth_user WHERE id={request.user.id}')
+        user = User.objects.get(id=request.user.id)
+        user.delete()
         print("User deleted")
         return redirect('homepage')
 
