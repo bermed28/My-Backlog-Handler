@@ -90,7 +90,7 @@ class LibraryInsertion(View):
     def get(self, request, game_id, **kwargs):
         form = LibraryAddForm()
         gameArticle = Game_Model.objects.get(game_id=game_id)
-        game_available = checkLibraryForGame(self.request.user.id, game_id)
+        game_available = checkLibraryForGame(self.request.user, game_id)
 
         context = {
             "game_form": form,
@@ -130,7 +130,7 @@ class LastPlayed(View):
     def get(self, request, game_id, **kwargs):
         form = LibraryAddForm()
         gameArticle = Game_Model.objects.get(game_id=game_id)
-        game_available = checkLibraryForGame(self.request.user.id, game_id)
+        game_available = checkLibraryForGame(self.request.user, game_id)
 
         context = {
             "game_form": form,
@@ -484,9 +484,10 @@ def getAverageRatings(game_id):
     return None
 
 def checkLibraryForGame(user_id, game_id):
-    player_library = Library_Model.objects.filter(
-        owner_id=user_id
-    )
-    game = player_library[0].games.filter(game_id=game_id)
+    player_library, created = Library_Model.objects.get_or_create(owner_id=user_id)
+    print(created)
+    if created:
+        return True
+    game = player_library.games.filter(game_id=game_id)
     game_available = True if game.count() == 0 else False
     return game_available
