@@ -91,5 +91,6 @@
   </ul>
 </details>
 
-
+<h3>StackOverflowers Studios&copy;, all rights reserved</h3>
+<h3>Cloning, Contribution or Duplication of this repository is PROHIBITED unless authorized by the developers</h3>
 </hr>
