@@ -130,7 +130,7 @@ def extractAPIGames(endpoint: str, query: str, fileNumber:int):
 #Command to initialize game extraction every time this file is ran
 if __name__ == "__main__":
 
-    wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "uyf74ydmblc1ay0r4up77v6knkzcrz")
+    wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "h5cqps8rmc4j5zrmeln9jp82d6595m")
 
     # extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=48 & category=0; limit 200;',1) #PS4
     # extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=49 & category=0; limit 200;', 2) #XB1
