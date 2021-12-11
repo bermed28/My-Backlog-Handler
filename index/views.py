@@ -332,7 +332,7 @@ def aboutUs(request):
 
 
 def gameArticleTemplate(request, game_id):
-    wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "h5cqps8rmc4j5zrmeln9jp82d6595m")
+    wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "9tvwz8wnwyjuqvn5h4nmq8k413wzwt")
     gameArticle = Game_Model.objects.get(game_id=game_id)
     summary = getSummary(game_id, wrapper)
 

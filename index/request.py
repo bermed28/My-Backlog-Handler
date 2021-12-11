@@ -129,8 +129,14 @@ def extractAPIGames(endpoint: str, query: str, fileNumber:int):
 
 #Command to initialize game extraction every time this file is ran
 if __name__ == "__main__":
-
-    wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "h5cqps8rmc4j5zrmeln9jp82d6595m")
+    """
+    TO FIX UNAUTHORIZED URL FROM API:
+    
+    SEND POST REQUEST TO THIS ENDPOINT:
+    
+    https://id.twitch.tv/oauth2/token?client_id=yourClientID&client_secret=yourClientSecret&grant_type=client_credentials
+    """
+    wrapper = IGDBWrapper("2zu4l0leu7rrc9i8ysagqlxuu5rh89", "9tvwz8wnwyjuqvn5h4nmq8k413wzwt")
 
     # extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=48 & category=0; limit 200;',1) #PS4
     # extractAPIGames('games', 'fields name,genres,platforms,cover,involved_companies; where platforms=49 & category=0; limit 200;', 2) #XB1
